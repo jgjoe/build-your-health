@@ -44,6 +44,10 @@
 측정 조건: Docker의 Oracle Free(VM 4 CPU), 회원 22,021·주문 600,000·주문상품 1,499,546행(고정 시드), 케이스당 워밍업 5회 후 30회 측정을 2회 반복, 웜 캐시, 1회차 클라이언트 중앙값.
 설계·전체 결과·실행계획 원문은 [`docs/db-tuning.md`](docs/db-tuning.md)에 있습니다.
 
+## 부하 측정 (k6)
+상품 조회·주문 내역·로그인·주문 생성을 섞은 부하를 단계적으로 올려 160 TPS까지 오류 0%(p95 76ms 이내)를 확인했고, 320 TPS에서 한계에 닿았습니다. 원인은 DB가 아니라 로그인 비밀번호 검증(BCrypt)의 앱 CPU 포화였습니다(앱 2 CPU·2GiB, 단계별 120초 2회 측정).
+설계·결과·원자료는 [`docs/load-test.md`](docs/load-test.md)에 있습니다.
+
 ## 원본 (2024)
 
 ### 주요 기능
@@ -93,6 +97,7 @@ asis-runtime/      원본을 수정 없이 띄우는 Docker 실행 환경
 remake/            2026 리메이크 (Spring Boot + MyBatis + Oracle), 측정 도구 perf/
 docs/si/           현행분석서 · 요구사항정의서 · 테스트 시나리오
 docs/db-tuning.md  인덱스·실행계획 측정 설계와 결과
+docs/load-test.md  k6 부하·처리 한계 측정 설계와 결과
 ```
 
 ## 실행

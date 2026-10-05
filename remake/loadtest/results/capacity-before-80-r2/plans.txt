@@ -1,0 +1,698 @@
+3ajktry7fs6b9|0|4163253942|SQL_ID  3ajktry7fs6b9, child number 0
+3ajktry7fs6b9|0|4163253942|-------------------------------------
+3ajktry7fs6b9|0|4163253942|SELECT username FROM all_users WHERE UPPER(username) = 'RDSADMIN'
+3ajktry7fs6b9|0|4163253942|
+3ajktry7fs6b9|0|4163253942|Plan hash value: 4163253942
+3ajktry7fs6b9|0|4163253942|
+3ajktry7fs6b9|0|4163253942|---------------------------------------------------------------------------
+3ajktry7fs6b9|0|4163253942|| Id  | Operation	     | Name  | Rows  | Bytes | Cost (%CPU)| Time     |
+3ajktry7fs6b9|0|4163253942|---------------------------------------------------------------------------
+3ajktry7fs6b9|0|4163253942||   0 | SELECT STATEMENT  |	     |	     |	     |	   4 (100)|	     |
+3ajktry7fs6b9|0|4163253942||*  1 |  TABLE ACCESS FULL| USER$ |	   1 |	  19 |	   4   (0)| 00:00:01 |
+3ajktry7fs6b9|0|4163253942|---------------------------------------------------------------------------
+3ajktry7fs6b9|0|4163253942|
+3ajktry7fs6b9|0|4163253942|Predicate Information (identified by operation id):
+3ajktry7fs6b9|0|4163253942|---------------------------------------------------
+3ajktry7fs6b9|0|4163253942|
+3ajktry7fs6b9|0|4163253942|   1 - filter(("U"."TYPE#"=1 AND UPPER("U"."NAME")='RDSADMIN'))
+3ajktry7fs6b9|0|4163253942|
+3ajktry7fs6b9|0|4163253942|SQL Analysis Report (identified by operation id/Query Block Name/Object Alias):
+3ajktry7fs6b9|0|4163253942|-------------------------------------------------------------------------------
+3ajktry7fs6b9|0|4163253942|
+3ajktry7fs6b9|0|4163253942|   1 -  SEL$F5BB74E1 / "U"@"SEL$2"
+3ajktry7fs6b9|0|4163253942|	      -  The following columns have predicates which preclude their
+3ajktry7fs6b9|0|4163253942|		 use as keys in index range scan. Consider rewriting the
+3ajktry7fs6b9|0|4163253942|		 predicates.
+3ajktry7fs6b9|0|4163253942|		   "NAME"
+3ajktry7fs6b9|0|4163253942|
+akzdz01tm894j|0|3328140328|SQL_ID  akzdz01tm894j, child number 0
+akzdz01tm894j|0|3328140328|
+akzdz01tm894j|0|3328140328|SELECT /* OPT_DYN_SAMP */ /*+ ALL_ROWS IGNORE_WHERE_CLAUSE
+akzdz01tm894j|0|3328140328|RESULT_CACHE(SNAPSHOT=3600) opt_param('parallel_execution_enabled',
+akzdz01tm894j|0|3328140328|'false') NO_PARALLEL(SAMPLESUB) NO_PARALLEL_INDEX(SAMPLESUB)
+akzdz01tm894j|0|3328140328|NO_SQL_TUNE */ NVL(SUM(C1),0), NVL(SUM(C2),0) FROM (SELECT /*+
+akzdz01tm894j|0|3328140328|IGNORE_WHERE_CLAUSE NO_PARALLEL("flyway_schema_history")
+akzdz01tm894j|0|3328140328|FULL("flyway_schema_history") NO_PARALLEL_INDEX("flyway_schema_history")
+akzdz01tm894j|0|3328140328| */ 1 AS C1, CASE WHEN "flyway_schema_history"."installed_rank">:B1
+akzdz01tm894j|0|3328140328|THEN 1 ELSE 0 END AS C2 FROM "BYH_LOAD"."flyway_schema_history"
+akzdz01tm894j|0|3328140328|"flyway_schema_history") SAMPLESUB
+akzdz01tm894j|0|3328140328|
+akzdz01tm894j|0|3328140328|NOTE: cannot fetch plan for SQL_ID: akzdz01tm894j, CHILD_NUMBER: 0
+akzdz01tm894j|0|3328140328|	 Please verify value of SQL_ID and CHILD_NUMBER;
+akzdz01tm894j|0|3328140328|	 It could also be that the plan is no longer in cursor cache (check v$sql_plan)
+akzdz01tm894j|0|3328140328|
+2spftpy0r0gya|0|415205717|SQL_ID  2spftpy0r0gya, child number 0
+2spftpy0r0gya|0|415205717|-------------------------------------
+2spftpy0r0gya|0|415205717|SELECT GLOBAL_NAME FROM GLOBAL_NAME
+2spftpy0r0gya|0|415205717|
+2spftpy0r0gya|0|415205717|Plan hash value: 415205717
+2spftpy0r0gya|0|415205717|
+2spftpy0r0gya|0|415205717|----------------------------------------------------------------------------
+2spftpy0r0gya|0|415205717|| Id	| Operation	    | Name   | Rows  | Bytes | Cost (%CPU)| Time     |
+2spftpy0r0gya|0|415205717|----------------------------------------------------------------------------
+2spftpy0r0gya|0|415205717||   0 | SELECT STATEMENT  |	     |	     |	     |	   2 (100)|	     |
+2spftpy0r0gya|0|415205717||*  1 |  TABLE ACCESS FULL| PROPS$ |	   1 |	  28 |	   2   (0)| 00:00:01 |
+2spftpy0r0gya|0|415205717|----------------------------------------------------------------------------
+2spftpy0r0gya|0|415205717|
+2spftpy0r0gya|0|415205717|Predicate Information (identified by operation id):
+2spftpy0r0gya|0|415205717|---------------------------------------------------
+2spftpy0r0gya|0|415205717|
+2spftpy0r0gya|0|415205717|   1 - filter("NAME"='GLOBAL_DB_NAME')
+2spftpy0r0gya|0|415205717|
+gc0476mjrx469|0|288282702|SQL_ID  gc0476mjrx469, child number 0
+gc0476mjrx469|0|288282702|-------------------------------------
+gc0476mjrx469|0|288282702|SELECT PRODUCT_ID,		    DISCOUNT_PRICE	   FROM PRODUCT
+gc0476mjrx469|0|288282702|	WHERE PRODUCT_ID IN	     (		     :1 ,	       :2
+gc0476mjrx469|0|288282702|)
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|Plan hash value: 288282702
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|-------------------------------------------------------------------------------------------
+gc0476mjrx469|0|288282702|| Id	| Operation		       | Name	    | Rows  | Bytes | Cost (%CPU)| Time     |
+gc0476mjrx469|0|288282702|-------------------------------------------------------------------------------------------
+gc0476mjrx469|0|288282702||   0 | SELECT STATEMENT	       |	    |	    |	    |	  3 (100)|	    |
+gc0476mjrx469|0|288282702||   1 |  INLIST ITERATOR	       |	    |	    |	    |		 |	    |
+gc0476mjrx469|0|288282702||   2 |   TABLE ACCESS BY INDEX ROWID| PRODUCT    |	  2 |	 24 |	  3   (0)| 00:00:01 |
+gc0476mjrx469|0|288282702||*  3 |    INDEX UNIQUE SCAN	       | PK_PRODUCT |	  2 |	    |	  2   (0)| 00:00:01 |
+gc0476mjrx469|0|288282702|-------------------------------------------------------------------------------------------
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|Peeked Binds (identified by position):
+gc0476mjrx469|0|288282702|--------------------------------------
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|   1 - :1 (VARCHAR2(30), CSID=873): 'X00001'
+gc0476mjrx469|0|288282702|   2 - :2 (VARCHAR2(30), CSID=873): 'X00002'
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|Predicate Information (identified by operation id):
+gc0476mjrx469|0|288282702|---------------------------------------------------
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|   3 - access(("PRODUCT_ID"=:1 OR "PRODUCT_ID"=:2))
+gc0476mjrx469|0|288282702|
+dhprmt1mw9f4n|0|1772926977|SQL_ID  dhprmt1mw9f4n, child number 0
+dhprmt1mw9f4n|0|1772926977|
+dhprmt1mw9f4n|0|1772926977|SELECT /* OPT_DYN_SAMP */ /*+ ALL_ROWS  RESULT_CACHE(SNAPSHOT=3600)
+dhprmt1mw9f4n|0|1772926977|opt_param('parallel_execution_enabled', 'false') NO_PARALLEL(SAMPLESUB)
+dhprmt1mw9f4n|0|1772926977|NO_PARALLEL_INDEX(SAMPLESUB) NO_SQL_TUNE */ NVL(SUM(C1),0),
+dhprmt1mw9f4n|0|1772926977|NVL(SUM(C2),0), NVL(SUM(C3),0) FROM (SELECT /*+
+dhprmt1mw9f4n|0|1772926977|NO_PARALLEL("flyway_schema_history") INDEX("flyway_schema_history"
+dhprmt1mw9f4n|0|1772926977|flyway_schema_history_pk) NO_PARALLEL_INDEX("flyway_schema_history") */
+dhprmt1mw9f4n|0|1772926977|1 AS C1, 1 AS C2, 1 AS C3  FROM "BYH_LOAD"."flyway_schema_history"
+dhprmt1mw9f4n|0|1772926977|"flyway_schema_history" WHERE "flyway_schema_history"."installed_rank">:
+dhprmt1mw9f4n|0|1772926977|B1 AND ROWNUM <= 2500) SAMPLESUB
+dhprmt1mw9f4n|0|1772926977|
+dhprmt1mw9f4n|0|1772926977|NOTE: cannot fetch plan for SQL_ID: dhprmt1mw9f4n, CHILD_NUMBER: 0
+dhprmt1mw9f4n|0|1772926977|	 Please verify value of SQL_ID and CHILD_NUMBER;
+dhprmt1mw9f4n|0|1772926977|	 It could also be that the plan is no longer in cursor cache (check v$sql_plan)
+dhprmt1mw9f4n|0|1772926977|
+3tbr80mcz9gad|0|598019367|SQL_ID  3tbr80mcz9gad, child number 0
+3tbr80mcz9gad|0|598019367|-------------------------------------
+3tbr80mcz9gad|0|598019367|SELECT o.ORDER_ID,		    o.ORDER_DATE,
+3tbr80mcz9gad|0|598019367|o.DELIVERY_DATE,		  o.TOTAL_PRICE,
+3tbr80mcz9gad|0|598019367|o.RECIPIENT_NAME,		   o.SHIPPING_ADDRESS,
+3tbr80mcz9gad|0|598019367|oi.ITEM_ID,		     oi.PRODUCT_ID,		   oi.QUANTITY,
+3tbr80mcz9gad|0|598019367|	       oi.PRICE,		p.PRODUCT_NAME	       FROM (
+3tbr80mcz9gad|0|598019367|	  SELECT ORDER_ID,		      ORDER_DATE,
+3tbr80mcz9gad|0|598019367|   DELIVERY_DATE,		       TOTAL_PRICE,
+3tbr80mcz9gad|0|598019367|RECIPIENT_NAME,		     SHIPPING_ADDRESS		  FROM
+3tbr80mcz9gad|0|598019367|ORDERS	     WHERE USER_ID = :1 ORDER BY ORDER_DATE DESC,
+3tbr80mcz9gad|0|598019367|ORDER_ID DESC 	    OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY
+3tbr80mcz9gad|0|598019367| ) o	       LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID
+3tbr80mcz9gad|0|598019367|  LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID 	ORDER BY
+3tbr80mcz9gad|0|598019367|o.ORDER_DATE DESC, o.ORDER_ID DESC
+3tbr80mcz9gad|0|598019367|
+3tbr80mcz9gad|0|598019367|Plan hash value: 598019367
+3tbr80mcz9gad|0|598019367|
+3tbr80mcz9gad|0|598019367|---------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|0|598019367|| Id	| Operation				 | Name 		| Rows	| Bytes | Cost (%CPU)| Time	|
+3tbr80mcz9gad|0|598019367|---------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|0|598019367||   0 | SELECT STATEMENT			 |			|	|	|    82 (100)|		|
+3tbr80mcz9gad|0|598019367||   1 |  SORT ORDER BY			 |			|    45 |  6570 |    82   (2)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||   2 |   NESTED LOOPS OUTER			 |			|    45 |  6570 |    81   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||   3 |    NESTED LOOPS OUTER 		 |			|    45 |  5355 |    74   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||*  4 |     VIEW				 |			|    18 |  1692 |    20   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||*  5 |      WINDOW NOSORT STOPKEY		 |			|    18 |  1602 |    20   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||*  6 |	FILTER				 |			|	|	|	     |		|
+3tbr80mcz9gad|0|598019367||   7 |	 TABLE ACCESS BY INDEX ROWID	 | ORDERS		|    18 |  1602 |    20   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||*  8 |	  INDEX RANGE SCAN DESCENDING	 | IX_ORDERS_USER_DATE	|    18 |	|     3   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||   9 |     TABLE ACCESS BY INDEX ROWID BATCHED| ORDER_ITEMS		|     2 |    50 |     3   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||* 10 |      INDEX RANGE SCAN 		 | IX_ORDER_ITEMS_ORDER |     2 |	|     2   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||  11 |    TABLE ACCESS BY INDEX ROWID	 | PRODUCT		|     1 |    27 |     7   (0)| 00:00:01 |
+3tbr80mcz9gad|0|598019367||* 12 |     INDEX UNIQUE SCAN 		 | PK_PRODUCT		|	|	|	     |		|
+3tbr80mcz9gad|0|598019367|---------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|0|598019367|
+3tbr80mcz9gad|0|598019367|Peeked Binds (identified by position):
+3tbr80mcz9gad|0|598019367|--------------------------------------
+3tbr80mcz9gad|0|598019367|
+3tbr80mcz9gad|0|598019367|   1 - :1 (VARCHAR2(30), CSID=873): 'u002109'
+3tbr80mcz9gad|0|598019367|
+3tbr80mcz9gad|0|598019367|Predicate Information (identified by operation id):
+3tbr80mcz9gad|0|598019367|---------------------------------------------------
+3tbr80mcz9gad|0|598019367|
+3tbr80mcz9gad|0|598019367|   4 - filter(("from$_subquery$_003"."rowlimit_$$_rownumber"<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)
+3tbr80mcz9gad|0|598019367|		+:3 AND "from$_subquery$_003"."rowlimit_$$_rownumber">:2))
+3tbr80mcz9gad|0|598019367|   5 - filter(ROW_NUMBER() OVER ( ORDER BY "ORDER_DATE" DESC ,"ORDER_ID" DESC
+3tbr80mcz9gad|0|598019367|		)<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+3tbr80mcz9gad|0|598019367|   6 - filter(:2<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+3tbr80mcz9gad|0|598019367|   8 - access("USER_ID"=:1)
+3tbr80mcz9gad|0|598019367|  10 - access("OI"."ORDER_ID"="from$_subquery$_003"."ORDER_ID")
+3tbr80mcz9gad|0|598019367|  12 - access("P"."PRODUCT_ID"="OI"."PRODUCT_ID")
+3tbr80mcz9gad|0|598019367|
+3tbr80mcz9gad|0|598019367|Note
+3tbr80mcz9gad|0|598019367|-----
+3tbr80mcz9gad|0|598019367|   - this is an adaptive plan
+3tbr80mcz9gad|0|598019367|
+1v1kf9s0x1hg0|0|4144652430|SQL_ID  1v1kf9s0x1hg0, child number 0
+1v1kf9s0x1hg0|0|4144652430|-------------------------------------
+1v1kf9s0x1hg0|0|4144652430|SELECT CASE WHEN EXISTS(SELECT * FROM ALL_USERS WHERE USERNAME = :1 )
+1v1kf9s0x1hg0|0|4144652430|THEN 1 ELSE 0 END FROM DUAL
+1v1kf9s0x1hg0|0|4144652430|
+1v1kf9s0x1hg0|0|4144652430|Plan hash value: 4144652430
+1v1kf9s0x1hg0|0|4144652430|
+1v1kf9s0x1hg0|0|4144652430|---------------------------------------------------------------------------------------
+1v1kf9s0x1hg0|0|4144652430|| Id  | Operation		       | Name	 | Rows  | Bytes | Cost (%CPU)| Time	 |
+1v1kf9s0x1hg0|0|4144652430|---------------------------------------------------------------------------------------
+1v1kf9s0x1hg0|0|4144652430||   0 | SELECT STATEMENT	       |	 |	 |	 |     3 (100)| 	 |
+1v1kf9s0x1hg0|0|4144652430||*  1 |  TABLE ACCESS BY INDEX ROWID| USER$	 |     1 |    19 |     1   (0)| 00:00:01 |
+1v1kf9s0x1hg0|0|4144652430||*  2 |   INDEX UNIQUE SCAN	       | I_USER1 |     1 |	 |     0   (0)| 	 |
+1v1kf9s0x1hg0|0|4144652430||   3 |  FAST DUAL		       |	 |     1 |	 |     2   (0)| 00:00:01 |
+1v1kf9s0x1hg0|0|4144652430|---------------------------------------------------------------------------------------
+1v1kf9s0x1hg0|0|4144652430|
+1v1kf9s0x1hg0|0|4144652430|Peeked Binds (identified by position):
+1v1kf9s0x1hg0|0|4144652430|--------------------------------------
+1v1kf9s0x1hg0|0|4144652430|
+1v1kf9s0x1hg0|0|4144652430|   1 - :1 (VARCHAR2(30), CSID=873): 'BYH_LOAD'
+1v1kf9s0x1hg0|0|4144652430|
+1v1kf9s0x1hg0|0|4144652430|Predicate Information (identified by operation id):
+1v1kf9s0x1hg0|0|4144652430|---------------------------------------------------
+1v1kf9s0x1hg0|0|4144652430|
+1v1kf9s0x1hg0|0|4144652430|   1 - filter("U"."TYPE#"=1)
+1v1kf9s0x1hg0|0|4144652430|   2 - access("U"."NAME"=:1)
+1v1kf9s0x1hg0|0|4144652430|
+b4xr1nw5vtk2v|0|1388734953|SQL_ID  b4xr1nw5vtk2v, child number 0
+b4xr1nw5vtk2v|0|1388734953|-------------------------------------
+b4xr1nw5vtk2v|0|1388734953|SELECT SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') FROM DUAL
+b4xr1nw5vtk2v|0|1388734953|
+b4xr1nw5vtk2v|0|1388734953|Plan hash value: 1388734953
+b4xr1nw5vtk2v|0|1388734953|
+b4xr1nw5vtk2v|0|1388734953|-----------------------------------------------------------------
+b4xr1nw5vtk2v|0|1388734953|| Id  | Operation	    | Name | Rows  | Cost (%CPU)| Time	   |
+b4xr1nw5vtk2v|0|1388734953|-----------------------------------------------------------------
+b4xr1nw5vtk2v|0|1388734953||   0 | SELECT STATEMENT |	   |	   |	 2 (100)|	   |
+b4xr1nw5vtk2v|0|1388734953||   1 |  FAST DUAL	    |	   |	 1 |	 2   (0)| 00:00:01 |
+b4xr1nw5vtk2v|0|1388734953|-----------------------------------------------------------------
+b4xr1nw5vtk2v|0|1388734953|
+1n4a2va1rxptz|0|210329678|SQL_ID  1n4a2va1rxptz, child number 0
+1n4a2va1rxptz|0|210329678|-------------------------------------
+1n4a2va1rxptz|0|210329678|SELECT COUNT(*)	  FROM ORDERS	      WHERE USER_ID = :1
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|Plan hash value: 210329678
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|-----------------------------------------------------------------------------------------
+1n4a2va1rxptz|0|210329678|| Id	| Operation	    | Name		  | Rows  | Bytes | Cost (%CPU)| Time	  |
+1n4a2va1rxptz|0|210329678|-----------------------------------------------------------------------------------------
+1n4a2va1rxptz|0|210329678||   0 | SELECT STATEMENT  |			  |	  |	  |	3 (100)|	  |
+1n4a2va1rxptz|0|210329678||   1 |  SORT AGGREGATE   |			  |	1 |	8 |	       |	  |
+1n4a2va1rxptz|0|210329678||*  2 |   INDEX RANGE SCAN| IX_ORDERS_USER_DATE |    18 |   144 |	3   (0)| 00:00:01 |
+1n4a2va1rxptz|0|210329678|-----------------------------------------------------------------------------------------
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|Peeked Binds (identified by position):
+1n4a2va1rxptz|0|210329678|--------------------------------------
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|   1 - :1 (VARCHAR2(30), CSID=873): 'u002109'
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|Predicate Information (identified by operation id):
+1n4a2va1rxptz|0|210329678|---------------------------------------------------
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|   2 - access("USER_ID"=:1)
+1n4a2va1rxptz|0|210329678|
+g0ckkjt0nxt2c|0|2793277868|SQL_ID  g0ckkjt0nxt2c, child number 0
+g0ckkjt0nxt2c|0|2793277868|-------------------------------------
+g0ckkjt0nxt2c|0|2793277868|SELECT ID,		     PASSWORD_HASH,		   NAME
+g0ckkjt0nxt2c|0|2793277868|FROM MEMBER	       WHERE ID = :1
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|Plan hash value: 2793277868
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|-----------------------------------------------------------------------------------------
+g0ckkjt0nxt2c|0|2793277868|| Id  | Operation		       | Name	   | Rows  | Bytes | Cost (%CPU)| Time	   |
+g0ckkjt0nxt2c|0|2793277868|-----------------------------------------------------------------------------------------
+g0ckkjt0nxt2c|0|2793277868||   0 | SELECT STATEMENT	       |	   |	   |	   |	 2 (100)|	   |
+g0ckkjt0nxt2c|0|2793277868||   1 |  TABLE ACCESS BY INDEX ROWID| MEMBER    |	 1 |	82 |	 2   (0)| 00:00:01 |
+g0ckkjt0nxt2c|0|2793277868||*  2 |   INDEX UNIQUE SCAN	       | PK_MEMBER |	 1 |	   |	 1   (0)| 00:00:01 |
+g0ckkjt0nxt2c|0|2793277868|-----------------------------------------------------------------------------------------
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|Peeked Binds (identified by position):
+g0ckkjt0nxt2c|0|2793277868|--------------------------------------
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|   1 - :1 (VARCHAR2(30), CSID=873): 'u000001'
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|Predicate Information (identified by operation id):
+g0ckkjt0nxt2c|0|2793277868|---------------------------------------------------
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|   2 - access("ID"=:1)
+g0ckkjt0nxt2c|0|2793277868|
+dp30vgv8qdwqd|0|3077335621|SQL_ID  dp30vgv8qdwqd, child number 0
+dp30vgv8qdwqd|0|3077335621|-------------------------------------
+dp30vgv8qdwqd|0|3077335621|SELECT COUNT(*)	   FROM PRODUCT
+dp30vgv8qdwqd|0|3077335621|
+dp30vgv8qdwqd|0|3077335621|Plan hash value: 3077335621
+dp30vgv8qdwqd|0|3077335621|
+dp30vgv8qdwqd|0|3077335621|----------------------------------------------------------------------------
+dp30vgv8qdwqd|0|3077335621|| Id  | Operation		 | Name       | Rows  | Cost (%CPU)| Time     |
+dp30vgv8qdwqd|0|3077335621|----------------------------------------------------------------------------
+dp30vgv8qdwqd|0|3077335621||   0 | SELECT STATEMENT	 |	      |       |     4 (100)|	      |
+dp30vgv8qdwqd|0|3077335621||   1 |  SORT AGGREGATE	 |	      |     1 | 	   |	      |
+dp30vgv8qdwqd|0|3077335621||   2 |   INDEX FAST FULL SCAN| PK_PRODUCT |  2001 |     4	(0)| 00:00:01 |
+dp30vgv8qdwqd|0|3077335621|----------------------------------------------------------------------------
+dp30vgv8qdwqd|0|3077335621|
+b2x93083564g5|0|3597435071|SQL_ID  b2x93083564g5, child number 0
+b2x93083564g5|0|3597435071|-------------------------------------
+b2x93083564g5|0|3597435071|INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE)
+b2x93083564g5|0|3597435071|VALUES (:1 , :2 , :3 , :4 )
+b2x93083564g5|0|3597435071|
+b2x93083564g5|0|3597435071|Plan hash value: 3597435071
+b2x93083564g5|0|3597435071|
+b2x93083564g5|0|3597435071|---------------------------------------------------------
+b2x93083564g5|0|3597435071|| Id  | Operation		    | Name	   | Cost  |
+b2x93083564g5|0|3597435071|---------------------------------------------------------
+b2x93083564g5|0|3597435071||   0 | INSERT STATEMENT	    |		   |	 1 |
+b2x93083564g5|0|3597435071||   1 |  LOAD TABLE CONVENTIONAL | ORDER_ITEMS  |	   |
+b2x93083564g5|0|3597435071||   2 |   SEQUENCE		    | ISEQ$$_73615 |	   |
+b2x93083564g5|0|3597435071|---------------------------------------------------------
+b2x93083564g5|0|3597435071|
+b2x93083564g5|0|3597435071|Note
+b2x93083564g5|0|3597435071|-----
+b2x93083564g5|0|3597435071|   - cpu costing is off (consider enabling it)
+b2x93083564g5|0|3597435071|
+69srm4czkq898|0|1334561136|SQL_ID  69srm4czkq898, child number 0
+69srm4czkq898|0|1334561136|-------------------------------------
+69srm4czkq898|0|1334561136|SELECT PRODUCT_ID,		     PRODUCT_NAME,
+69srm4czkq898|0|1334561136|REGULAR_PRICE,		 DISCOUNT_PRICE,
+69srm4czkq898|0|1334561136|MANUFACTURER 	FROM PRODUCT			WHERE PRODUCT_NAME
+69srm4czkq898|0|1334561136|LIKE '%' || :1 || '%'		ORDER BY PRODUCT_ID	    OFFSET
+69srm4czkq898|0|1334561136|:2 ROWS FETCH NEXT :3 ROWS ONLY
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|Plan hash value: 1334561136
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|------------------------------------------------------------------------------------
+69srm4czkq898|0|1334561136|| Id  | Operation		    | Name    | Rows  | Bytes | Cost (%CPU)| Time     |
+69srm4czkq898|0|1334561136|------------------------------------------------------------------------------------
+69srm4czkq898|0|1334561136||   0 | SELECT STATEMENT	    |	      |       |       |     8 (100)|	      |
+69srm4czkq898|0|1334561136||*  1 |  VIEW		    |	      |   100 |  7000 |     8  (13)| 00:00:01 |
+69srm4czkq898|0|1334561136||*  2 |   WINDOW SORT PUSHED RANK|	      |   100 |  5000 |     8  (13)| 00:00:01 |
+69srm4czkq898|0|1334561136||*  3 |    FILTER		    |	      |       |       | 	   |	      |
+69srm4czkq898|0|1334561136||*  4 |     TABLE ACCESS FULL    | PRODUCT |   100 |  5000 |     7	(0)| 00:00:01 |
+69srm4czkq898|0|1334561136|------------------------------------------------------------------------------------
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|Peeked Binds (identified by position):
+69srm4czkq898|0|1334561136|--------------------------------------
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|   1 - :1 (VARCHAR2(30), CSID=873): 'perf'
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|Predicate Information (identified by operation id):
+69srm4czkq898|0|1334561136|---------------------------------------------------
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|   1 - filter(("from$_subquery$_002"."rowlimit_$$_rownumber"<=GREATEST(FLOOR
+69srm4czkq898|0|1334561136|		 (TO_NUMBER(TO_CHAR(:2))),0)+:3 AND "from$_subquery$_002"."rowlimit_$$_rownum
+69srm4czkq898|0|1334561136|		 ber">:2))
+69srm4czkq898|0|1334561136|   2 - filter(ROW_NUMBER() OVER ( ORDER BY
+69srm4czkq898|0|1334561136|		 "PRODUCT_ID")<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+69srm4czkq898|0|1334561136|   3 - filter(:2<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+69srm4czkq898|0|1334561136|   4 - filter("PRODUCT_NAME" LIKE '%'||:1||'%')
+69srm4czkq898|0|1334561136|
+9bm07uda6amh3|0|2833289586|SQL_ID  9bm07uda6amh3, child number 0
+9bm07uda6amh3|0|2833289586|-------------------------------------
+9bm07uda6amh3|0|2833289586|SELECT NULL AS table_cat,	    o.owner AS table_schem,
+9bm07uda6amh3|0|2833289586|o.object_name AS table_name,        o.object_type AS table_type,
+9bm07uda6amh3|0|2833289586|NULL AS remarks   FROM sys.all_objects o   WHERE o.owner LIKE :1 ESCAPE
+9bm07uda6amh3|0|2833289586|'/'	   AND o.object_name LIKE :2 ESCAPE '/'     AND o.object_type IN
+9bm07uda6amh3|0|2833289586|('TABLE', 'SYNONYM', 'VIEW')   ORDER BY table_type, table_schem,
+9bm07uda6amh3|0|2833289586|table_name
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|Plan hash value: 2833289586
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|----------------------------------------------------------------------------------------------------------------
+9bm07uda6amh3|0|2833289586|| Id  | Operation				     | Name		  | Rows  | Bytes | Cost (%CPU)| Time	  |
+9bm07uda6amh3|0|2833289586|----------------------------------------------------------------------------------------------------------------
+9bm07uda6amh3|0|2833289586||   0 | SELECT STATEMENT			     |			  |	  |	  |    13 (100)|	  |
+9bm07uda6amh3|0|2833289586||   1 |  SORT ORDER BY			     |			  |	2 |   290 |    13   (8)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||*  2 |   VIEW				     | ALL_OBJECTS	  |	2 |   290 |    12   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||   3 |    UNION-ALL 			     |			  |	2 |   253 |	       |	  |
+9bm07uda6amh3|0|2833289586||   4 |     TABLE ACCESS BY INDEX ROWID	     | SUM$		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*  5 |	INDEX UNIQUE SCAN		     | I_SUM$_1 	  |	1 |	  |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*  6 |     FILTER				     |			  |	  |	  |	       |	  |
+9bm07uda6amh3|0|2833289586||*  7 |	HASH JOIN			     |			  |	1 |   154 |	5   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||   8 |	 NESTED LOOPS			     |			  |	1 |   129 |	4   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||   9 |	  TABLE ACCESS BY INDEX ROWID BATCHED| USER$		  |	1 |    20 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 10 |	   INDEX RANGE SCAN		     | I_USER1		  |	1 |	  |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 11 |	  TABLE ACCESS BY INDEX ROWID BATCHED| OBJ$		  |	1 |   109 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 12 |	   INDEX RANGE SCAN		     | I_OBJ5		  |	1 |	  |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  13 |	 INDEX FULL SCAN		     | I_USER2		  |	1 |    25 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 14 |	TABLE ACCESS BY INDEX ROWID BATCHED  | USER_EDITIONING$   |	1 |	6 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 15 |	 INDEX RANGE SCAN		     | I_USER_EDITIONING  |	2 |	  |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 16 |	TABLE ACCESS BY INDEX ROWID BATCHED  | USER_EDITIONING$   |	1 |	6 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 17 |	 INDEX RANGE SCAN		     | I_USER_EDITIONING  |	2 |	  |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  18 |	NESTED LOOPS			     |			  |	1 |    29 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 19 |	 INDEX SKIP SCAN		     | I_USER2		  |	1 |    20 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 20 |	 INDEX RANGE SCAN		     | I_OBJ4		  |	1 |	9 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 21 |	TABLE ACCESS BY INDEX ROWID	     | IND$		  |	1 |	8 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 22 |	 INDEX UNIQUE SCAN		     | I_IND1		  |	1 |	  |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  23 |	NESTED LOOPS			     |			  |	1 |    32 |	4   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  24 |	 NESTED LOOPS			     |			  |	1 |    23 |	3   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  25 |	  TABLE ACCESS BY INDEX ROWID	     | IND$		  |	1 |    10 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 26 |	   INDEX UNIQUE SCAN		     | I_IND1		  |	1 |	  |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 27 |	  TABLE ACCESS CLUSTER		     | TAB$		  |	1 |    13 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 28 |	 INDEX RANGE SCAN		     | I_OBJ1		  |	1 |	9 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 29 |	TABLE ACCESS CLUSTER		     | TAB$		  |	1 |    13 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 30 |	 INDEX UNIQUE SCAN		     | I_OBJ#		  |	1 |	  |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 31 |	TABLE ACCESS BY INDEX ROWID	     | SEQ$		  |	1 |	8 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 32 |	 INDEX UNIQUE SCAN		     | I_SEQ1		  |	1 |	  |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||  33 |	NESTED LOOPS			     |			  |	1 |    38 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 34 |	 FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 35 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  36 |	NESTED LOOPS			     |			  |	1 |    48 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  37 |	 NESTED LOOPS			     |			  |	1 |    36 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  38 |	  TABLE ACCESS BY INDEX ROWID	     | TABPART$ 	  |	1 |    10 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 39 |	   INDEX UNIQUE SCAN		     | I_TABPART_OBJ$	  |	1 |	  |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 40 |	  FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 41 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  42 |	NESTED LOOPS			     |			  |	1 |    48 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  43 |	 NESTED LOOPS			     |			  |	1 |    36 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  44 |	  TABLE ACCESS BY INDEX ROWID	     | TABCOMPART$	  |	1 |    10 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 45 |	   INDEX UNIQUE SCAN		     | I_TABCOMPART$	  |	1 |	  |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 46 |	  FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 47 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  48 |	NESTED LOOPS			     |			  |	1 |    58 |	3   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  49 |	 NESTED LOOPS			     |			  |	1 |    46 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  50 |	  NESTED LOOPS			     |			  |	1 |    20 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  51 |	   TABLE ACCESS BY INDEX ROWID	     | TABSUBPART$	  |	1 |    10 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 52 |	    INDEX UNIQUE SCAN		     | I_TABSUBPART$_OBJ$ |	1 |	  |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||  53 |	   TABLE ACCESS BY INDEX ROWID	     | TABCOMPART$	  |	1 |    10 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 54 |	    INDEX UNIQUE SCAN		     | I_TABCOMPART$	  |	1 |	  |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 55 |	  FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 56 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  57 |	NESTED LOOPS			     |			  |	1 |    45 |	3   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  58 |	 NESTED LOOPS			     |			  |	1 |    36 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  59 |	  TABLE ACCESS BY INDEX ROWID	     | IND$		  |	1 |    10 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 60 |	   INDEX UNIQUE SCAN		     | I_IND1		  |	1 |	  |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 61 |	  FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 62 |	 INDEX RANGE SCAN		     | I_OBJAUTH2	  |	1 |	9 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  63 |	NESTED LOOPS			     |			  |	1 |    38 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 64 |	 FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 65 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  66 |	NESTED LOOPS			     |			  |	1 |    38 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 67 |	 FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 68 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  69 |	NESTED LOOPS			     |			  |	1 |    52 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  70 |	 NESTED LOOPS			     |			  |	1 |    40 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 71 |	  TABLE ACCESS BY INDEX ROWID	     | TRIGGER$ 	  |	1 |    14 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 72 |	   INDEX UNIQUE SCAN		     | I_TRIGGER2	  |	1 |	  |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 73 |	  FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 74 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  75 |	NESTED LOOPS			     |			  |	1 |    88 |	4   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  76 |	 NESTED LOOPS			     |			  |	1 |    76 |	3   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  77 |	  NESTED LOOPS			     |			  |	1 |    66 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  78 |	   MERGE JOIN CARTESIAN 	     |			  |	1 |    62 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 79 |	    FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||  80 |	    BUFFER SORT 		     |			  |	1 |    36 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 81 |	     INDEX RANGE SCAN		     | I_OBJ5		  |	1 |    36 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 82 |	   INDEX RANGE SCAN		     | I_USER2		  |	1 |	4 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 83 |	  INDEX RANGE SCAN		     | I_DEPENDENCY3	  |	1 |    10 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 84 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  85 |	NESTED LOOPS			     |			  |	1 |    38 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 86 |	 FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||* 87 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  88 |	NESTED LOOPS			     |			  |	1 |    88 |	4   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  89 |	 NESTED LOOPS			     |			  |	1 |    76 |	3   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  90 |	  NESTED LOOPS			     |			  |	1 |    66 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  91 |	   MERGE JOIN CARTESIAN 	     |			  |	1 |    62 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 92 |	    FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||  93 |	    BUFFER SORT 		     |			  |	1 |    36 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 94 |	     INDEX RANGE SCAN		     | I_OBJ5		  |	1 |    36 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 95 |	   INDEX RANGE SCAN		     | I_USER2		  |	1 |	4 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 96 |	  INDEX RANGE SCAN		     | I_DEPENDENCY3	  |	1 |    10 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 97 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||  98 |	NESTED LOOPS			     |			  |	1 |    38 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||* 99 |	 FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*100 |	 INDEX RANGE SCAN		     | I_OBJAUTH1	  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586|| 101 |	VIEW				     |			  |	1 |    13 |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586|| 102 |	 FAST DUAL			     |			  |	1 |	  |	2   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586|| 103 |	NESTED LOOPS			     |			  |	1 |    35 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||*104 |	 FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*105 |	 INDEX RANGE SCAN		     | I_OBJAUTH2	  |	1 |	9 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586|| 106 |	VIEW				     |			  |	1 |    16 |	4   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586|| 107 |	 SORT GROUP BY NOSORT		     |			  |	1 |    35 |	4   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586|| 108 |	  NESTED LOOPS			     |			  |	2 |    70 |	3   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586|| 109 |	   NESTED LOOPS 		     |			  |	2 |    46 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||*110 |	    INDEX UNIQUE SCAN		     | I_OLAP_CUBES$	  |	1 |    13 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*111 |	    INDEX RANGE SCAN		     | I_DEPENDENCY3	  |	2 |    20 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||*112 |	   INDEX RANGE SCAN		     | I_OBJ1		  |	1 |    12 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586|| 113 |	NESTED LOOPS			     |			  |	1 |    35 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||*114 |	 FIXED TABLE FULL		     | X$KZSRO		  |	1 |    26 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*115 |	 INDEX RANGE SCAN		     | I_OBJAUTH2	  |	1 |	9 |	1   (0)| 00:00:01 |
+9bm07uda6amh3|0|2833289586||*116 |     FILTER				     |			  |	  |	  |	       |	  |
+9bm07uda6amh3|0|2833289586|| 117 |	NESTED LOOPS			     |			  |	1 |    99 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*118 |	 INDEX FULL SCAN		     | I_LINK1		  |	1 |    79 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*119 |	 TABLE ACCESS CLUSTER		     | USER$		  |	1 |    20 |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586||*120 |	  INDEX UNIQUE SCAN		     | I_USER#		  |	1 |	  |	0   (0)|	  |
+9bm07uda6amh3|0|2833289586|----------------------------------------------------------------------------------------------------------------
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|Peeked Binds (identified by position):
+9bm07uda6amh3|0|2833289586|--------------------------------------
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|   1 - :1 (VARCHAR2(30), CSID=873): 'BYH_LOAD'
+9bm07uda6amh3|0|2833289586|   2 - :2 (VARCHAR2(30), CSID=873): 'flyway_schema_history'
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|Predicate Information (identified by operation id):
+9bm07uda6amh3|0|2833289586|---------------------------------------------------
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|   2 - filter(("O"."OBJECT_TYPE"='SYNONYM' OR "O"."OBJECT_TYPE"='TABLE' OR "O"."OBJECT_TYPE"='VIEW'))
+9bm07uda6amh3|0|2833289586|   5 - access("S"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|   6 - filter(((BITAND("O"."FLAGS",1048576)=1048576 OR BITAND("U"."SPARE1",16)=0 OR ("O"."TYPE#"<>88
+9bm07uda6amh3|0|2833289586|		 AND  IS NULL) OR ( IS NOT NULL AND ((SYS_CONTEXT('userenv','current_edition_name')='ORA$BASE' AND
+9bm07uda6amh3|0|2833289586|		 "U"."TYPE#"<>2) OR ("U"."TYPE#"=2 AND "U"."SPARE2"=TO_NUMBER(SYS_CONTEXT('userenv','current_edition_id')
+9bm07uda6amh3|0|2833289586|		 )) OR	IS NOT NULL))) AND (("O"."TYPE#"<>1 AND "O"."TYPE#"<>10) OR ("O"."TYPE#"=1 AND =1)) AND
+9bm07uda6amh3|0|2833289586|		 (("O"."TYPE#"<>1 AND "O"."TYPE#"<>2 AND "O"."TYPE#"<>6) OR ("O"."TYPE#"=1 AND	IS NULL) OR
+9bm07uda6amh3|0|2833289586|		 ("O"."TYPE#"=2 AND =1) OR ("O"."TYPE#"=6 AND =1)) AND (INTERNAL_FUNCTION("O"."TYPE#") OR
+9bm07uda6amh3|0|2833289586|		 INTERNAL_FUNCTION("O"."SPARE3") OR (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 AND
+9bm07uda6amh3|0|2833289586|		 INTERNAL_FUNCTION("O"."TYPE#")) OR (INTERNAL_FUNCTION("O"."TYPE#") AND
+9bm07uda6amh3|0|2833289586|		 ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1) OR ("O"."TYPE#"<>7 AND "O"."TYPE#"<>8 AND
+9bm07uda6amh3|0|2833289586|		 "O"."TYPE#"<>9 AND "O"."TYPE#"<>11 AND "O"."TYPE#"<>12 AND "O"."TYPE#"<>13 AND "O"."TYPE#"<>14 AND
+9bm07uda6amh3|0|2833289586|		 "O"."TYPE#"<>28 AND "O"."TYPE#"<>29 AND "O"."TYPE#"<>30 AND "O"."TYPE#"<>56 AND "O"."TYPE#"<>93 AND  IS
+9bm07uda6amh3|0|2833289586|		 NOT NULL) OR ("O"."TYPE#"=19 AND ( IS NOT NULL OR  IS NOT NULL)) OR ("O"."TYPE#"=34 AND  IS NOT NULL)
+9bm07uda6amh3|0|2833289586|		 OR ("O"."TYPE#"=1 AND	IS NOT NULL) OR (INTERNAL_FUNCTION("O"."TYPE#") AND
+9bm07uda6amh3|0|2833289586|		 (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 OR  IS NOT NULL)) OR
+9bm07uda6amh3|0|2833289586|		 (INTERNAL_FUNCTION("O"."TYPE#") AND (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 OR  IS NOT
+9bm07uda6amh3|0|2833289586|		 NULL)) OR ("O"."TYPE#"=12 AND (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 OR	IS NOT NULL)) OR
+9bm07uda6amh3|0|2833289586|		 ("O"."TYPE#"=11 AND (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 OR  IS NOT NULL)) OR
+9bm07uda6amh3|0|2833289586|		 ("O"."TYPE#"=13 AND (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 OR  IS NOT NULL)) OR
+9bm07uda6amh3|0|2833289586|		 ("O"."TYPE#"=14 AND (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 OR  IS NOT NULL)) OR
+9bm07uda6amh3|0|2833289586|		 ("O"."TYPE#"=114 AND (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 OR  IS NOT NULL)) OR
+9bm07uda6amh3|0|2833289586|		 ("O"."TYPE#"=55 AND =1) OR ("O"."TYPE#"=93 AND =1 AND
+9bm07uda6amh3|0|2833289586|		 (ORA_CHECK_SYS_PRIVILEGE("O"."SPARE3","O"."TYPE#")=1 OR  IS NOT NULL)))))
+9bm07uda6amh3|0|2833289586|   7 - access("O"."OWNER#"="U"."USER#")
+9bm07uda6amh3|0|2833289586|  10 - access("U"."NAME" LIKE :1 ESCAPE '/')
+9bm07uda6amh3|0|2833289586|	  filter("U"."NAME" LIKE :1 ESCAPE '/')
+9bm07uda6amh3|0|2833289586|  11 - filter(BITAND("O"."FLAGS",128)=0)
+9bm07uda6amh3|0|2833289586|  12 - access("O"."SPARE3"="U"."USER#" AND "O"."NAME" LIKE :2 ESCAPE '/' AND "O"."LINKNAME" IS NULL)
+9bm07uda6amh3|0|2833289586|	  filter(("O"."NAME" LIKE :2 ESCAPE '/' AND "O"."NAME"<>'_NEXT_OBJECT' AND
+9bm07uda6amh3|0|2833289586|		 "O"."NAME"<>'_default_auditing_options_' AND "O"."LINKNAME" IS NULL))
+9bm07uda6amh3|0|2833289586|  14 - filter("TYPE#"=:B1)
+9bm07uda6amh3|0|2833289586|  15 - access("UE"."USER#"=:B1)
+9bm07uda6amh3|0|2833289586|  16 - filter("UE"."TYPE#"=:B1)
+9bm07uda6amh3|0|2833289586|  17 - access("UE"."USER#"=:B1)
+9bm07uda6amh3|0|2833289586|  19 - access("U2"."TYPE#"=2 AND "U2"."SPARE2"=TO_NUMBER(SYS_CONTEXT('userenv','current_edition_id')))
+9bm07uda6amh3|0|2833289586|	  filter(("U2"."TYPE#"=2 AND "U2"."SPARE2"=TO_NUMBER(SYS_CONTEXT('userenv','current_edition_id'))))
+9bm07uda6amh3|0|2833289586|  20 - access("O2"."DATAOBJ#"=:B1 AND "O2"."TYPE#"=88 AND "O2"."OWNER#"="U2"."USER#")
+9bm07uda6amh3|0|2833289586|  21 - filter(("I"."TYPE#"=1 OR "I"."TYPE#"=2 OR "I"."TYPE#"=3 OR "I"."TYPE#"=4 OR "I"."TYPE#"=6 OR
+9bm07uda6amh3|0|2833289586|		 "I"."TYPE#"=7 OR "I"."TYPE#"=9 OR "I"."TYPE#"=10))
+9bm07uda6amh3|0|2833289586|  22 - access("I"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  26 - access("I"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  27 - filter(("I"."BO#"="T"."OBJ#" AND BITAND("T"."PROPERTY",36893488147419103232)=36893488147419103232
+9bm07uda6amh3|0|2833289586|		 ))
+9bm07uda6amh3|0|2833289586|  28 - access("IO"."OBJ#"="I"."BO#" AND "IO"."TYPE#"=2)
+9bm07uda6amh3|0|2833289586|	  filter("IO"."TYPE#"=2)
+9bm07uda6amh3|0|2833289586|  29 - filter(BITAND("T"."PROPERTY",36893488147419103232)=0)
+9bm07uda6amh3|0|2833289586|  30 - access("T"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  31 - filter((BITAND("S"."FLAGS",1024)=0 OR "S"."FLAGS" IS NULL))
+9bm07uda6amh3|0|2833289586|  32 - access("S"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  34 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  35 - access("OBJ#"=:B1 AND "GRANTEE#"="KZSROROL")
+9bm07uda6amh3|0|2833289586|	  filter(("GRANTEE#"="KZSROROL" AND INTERNAL_FUNCTION("PRIVILEGE#")))
+9bm07uda6amh3|0|2833289586|  39 - access("OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  40 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  41 - access("BO#"="OBJ#" AND "GRANTEE#"="KZSROROL")
+9bm07uda6amh3|0|2833289586|	  filter(("GRANTEE#"="KZSROROL" AND INTERNAL_FUNCTION("PRIVILEGE#")))
+9bm07uda6amh3|0|2833289586|  45 - access("OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  46 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  47 - access("BO#"="OBJ#" AND "GRANTEE#"="KZSROROL")
+9bm07uda6amh3|0|2833289586|	  filter(("GRANTEE#"="KZSROROL" AND INTERNAL_FUNCTION("PRIVILEGE#")))
+9bm07uda6amh3|0|2833289586|  52 - access("SP"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  54 - access("SP"."POBJ#"="CP"."OBJ#")
+9bm07uda6amh3|0|2833289586|  55 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  56 - access("CP"."BO#"="OBJ#" AND "GRANTEE#"="KZSROROL")
+9bm07uda6amh3|0|2833289586|	  filter(("GRANTEE#"="KZSROROL" AND INTERNAL_FUNCTION("PRIVILEGE#")))
+9bm07uda6amh3|0|2833289586|  60 - access("I"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  61 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  62 - access("OA"."GRANTEE#"="KZSROROL" AND "OA"."OBJ#"="I"."BO#")
+9bm07uda6amh3|0|2833289586|  64 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  65 - access("OA"."OBJ#"=:B1 AND "OA"."GRANTEE#"="KZSROROL")
+9bm07uda6amh3|0|2833289586|	  filter(("OA"."GRANTEE#"="KZSROROL" AND INTERNAL_FUNCTION("OA"."PRIVILEGE#")))
+9bm07uda6amh3|0|2833289586|  67 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  68 - access("OA"."OBJ#"=:B1 AND "OA"."GRANTEE#"="KZSROROL" AND "OA"."PRIVILEGE#"=12)
+9bm07uda6amh3|0|2833289586|	  filter(("OA"."PRIVILEGE#"=12 AND "OA"."GRANTEE#"="KZSROROL"))
+9bm07uda6amh3|0|2833289586|  71 - filter(BITAND("T"."PROPERTY",24)=0)
+9bm07uda6amh3|0|2833289586|  72 - access("T"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586|  73 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  74 - access("OA"."OBJ#"="T"."BASEOBJECT" AND "OA"."GRANTEE#"="KZSROROL" AND "OA"."PRIVILEGE#"=26)
+9bm07uda6amh3|0|2833289586|	  filter(("OA"."GRANTEE#"="KZSROROL" AND "OA"."PRIVILEGE#"=26))
+9bm07uda6amh3|0|2833289586|  79 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  81 - access("O"."SPARE3"=:B1 AND "O"."NAME"=:B2 AND "O"."TYPE#"=9)
+9bm07uda6amh3|0|2833289586|	  filter("O"."TYPE#"=9)
+9bm07uda6amh3|0|2833289586|  82 - access("O"."OWNER#"="U"."USER#")
+9bm07uda6amh3|0|2833289586|  83 - access("DEP"."D_OBJ#"=:B1 AND "DEP"."P_OBJ#"="O"."OBJ#")
+9bm07uda6amh3|0|2833289586|  84 - access("OA"."OBJ#"="O"."OBJ#" AND "OA"."GRANTEE#"="KZSROROL" AND "OA"."PRIVILEGE#"=26)
+9bm07uda6amh3|0|2833289586|	  filter(("OA"."GRANTEE#"="KZSROROL" AND "OA"."PRIVILEGE#"=26))
+9bm07uda6amh3|0|2833289586|  86 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  87 - access("OA"."OBJ#"=:B1 AND "OA"."GRANTEE#"="KZSROROL")
+9bm07uda6amh3|0|2833289586|	  filter(("OA"."GRANTEE#"="KZSROROL" AND INTERNAL_FUNCTION("OA"."PRIVILEGE#")))
+9bm07uda6amh3|0|2833289586|  92 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586|  94 - access("O"."SPARE3"=:B1 AND "O"."NAME"=:B2 AND "O"."TYPE#"=13)
+9bm07uda6amh3|0|2833289586|	  filter("O"."TYPE#"=13)
+9bm07uda6amh3|0|2833289586|  95 - access("O"."OWNER#"="U"."USER#")
+9bm07uda6amh3|0|2833289586|  96 - access("DEP"."D_OBJ#"=:B1 AND "DEP"."P_OBJ#"="O"."OBJ#")
+9bm07uda6amh3|0|2833289586|  97 - access("OA"."OBJ#"="O"."OBJ#" AND "OA"."GRANTEE#"="KZSROROL" AND "OA"."PRIVILEGE#"=26)
+9bm07uda6amh3|0|2833289586|	  filter(("OA"."GRANTEE#"="KZSROROL" AND "OA"."PRIVILEGE#"=26))
+9bm07uda6amh3|0|2833289586|  99 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586| 100 - access("OA"."OBJ#"=:B1 AND "OA"."GRANTEE#"="KZSROROL")
+9bm07uda6amh3|0|2833289586|	  filter(("OA"."GRANTEE#"="KZSROROL" AND INTERNAL_FUNCTION("OA"."PRIVILEGE#")))
+9bm07uda6amh3|0|2833289586| 104 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586| 105 - access("GRANTEE#"="KZSROROL" AND "OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586| 110 - access("C"."OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586| 111 - access("D"."D_OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586| 112 - access("DO"."OBJ#"="D"."P_OBJ#" AND "DO"."TYPE#"=92)
+9bm07uda6amh3|0|2833289586|	  filter("DO"."TYPE#"=92)
+9bm07uda6amh3|0|2833289586| 114 - filter(("CON_ID"=0 OR "CON_ID"=3))
+9bm07uda6amh3|0|2833289586| 115 - access("GRANTEE#"="KZSROROL" AND "OBJ#"=:B1)
+9bm07uda6amh3|0|2833289586| 116 - filter((NULL IS NOT NULL AND NULL IS NOT NULL))
+9bm07uda6amh3|0|2833289586| 118 - access("L"."NAME" LIKE :2 ESCAPE '/')
+9bm07uda6amh3|0|2833289586|	  filter("L"."NAME" LIKE :2 ESCAPE '/')
+9bm07uda6amh3|0|2833289586| 119 - filter("U"."NAME" LIKE :1 ESCAPE '/')
+9bm07uda6amh3|0|2833289586| 120 - access("L"."OWNER#"="U"."USER#")
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|Note
+9bm07uda6amh3|0|2833289586|-----
+9bm07uda6amh3|0|2833289586|   - this is an adaptive plan
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|SQL Analysis Report (identified by operation id/Query Block Name/Object Alias):
+9bm07uda6amh3|0|2833289586|-------------------------------------------------------------------------------
+9bm07uda6amh3|0|2833289586|
+9bm07uda6amh3|0|2833289586|  11 -  SEL$E029B2FF / "O"@"SEL$5"
+9bm07uda6amh3|0|2833289586|	      -  The following columns have predicates which preclude their
+9bm07uda6amh3|0|2833289586|		 use as keys in index range scan. Consider rewriting the
+9bm07uda6amh3|0|2833289586|		 predicates.
+9bm07uda6amh3|0|2833289586|		   "NAME"
+9bm07uda6amh3|0|2833289586|
+8ux1sycjdv90y|0|1279372316|SQL_ID  8ux1sycjdv90y, child number 0
+8ux1sycjdv90y|0|1279372316|-------------------------------------
+8ux1sycjdv90y|0|1279372316|SELECT COUNT(*)	   FROM PRODUCT 		   WHERE
+8ux1sycjdv90y|0|1279372316|PRODUCT_NAME LIKE '%' || :1 || '%'
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|Plan hash value: 1279372316
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|------------------------------------------------------------------------------
+8ux1sycjdv90y|0|1279372316|| Id  | Operation	      | Name	| Rows	| Bytes | Cost (%CPU)| Time	|
+8ux1sycjdv90y|0|1279372316|------------------------------------------------------------------------------
+8ux1sycjdv90y|0|1279372316||   0 | SELECT STATEMENT   | 	|	|	|     7 (100)|		|
+8ux1sycjdv90y|0|1279372316||   1 |  SORT AGGREGATE    | 	|     1 |    20 |	     |		|
+8ux1sycjdv90y|0|1279372316||*  2 |   TABLE ACCESS FULL| PRODUCT |   100 |  2000 |     7   (0)| 00:00:01 |
+8ux1sycjdv90y|0|1279372316|------------------------------------------------------------------------------
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|Peeked Binds (identified by position):
+8ux1sycjdv90y|0|1279372316|--------------------------------------
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|   1 - :1 (VARCHAR2(30), CSID=873): 'perf'
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|Predicate Information (identified by operation id):
+8ux1sycjdv90y|0|1279372316|---------------------------------------------------
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|   2 - filter("PRODUCT_NAME" LIKE '%'||:1||'%')
+8ux1sycjdv90y|0|1279372316|
+g8tv8sq6urbbq|0|3370002280|SQL_ID  g8tv8sq6urbbq, child number 0
+g8tv8sq6urbbq|0|3370002280|-------------------------------------
+g8tv8sq6urbbq|0|3370002280|INSERT INTO ORDERS (USER_ID, DELIVERY_DATE, TOTAL_PRICE,
+g8tv8sq6urbbq|0|3370002280|RECIPIENT_NAME, SHIPPING_ADDRESS, SHIPPING_ZIPCODE)	       VALUES (:1
+g8tv8sq6urbbq|0|3370002280|, :2 , :3 , :4 , :5 , :6 ) RETURNING ORDER_ID INTO :7
+g8tv8sq6urbbq|0|3370002280|
+g8tv8sq6urbbq|0|3370002280|Plan hash value: 3370002280
+g8tv8sq6urbbq|0|3370002280|
+g8tv8sq6urbbq|0|3370002280|---------------------------------------------------------
+g8tv8sq6urbbq|0|3370002280|| Id  | Operation		    | Name	   | Cost  |
+g8tv8sq6urbbq|0|3370002280|---------------------------------------------------------
+g8tv8sq6urbbq|0|3370002280||   0 | INSERT STATEMENT	    |		   |	 1 |
+g8tv8sq6urbbq|0|3370002280||   1 |  LOAD TABLE CONVENTIONAL | ORDERS	   |	   |
+g8tv8sq6urbbq|0|3370002280||   2 |   SEQUENCE		    | ISEQ$$_73619 |	   |
+g8tv8sq6urbbq|0|3370002280|---------------------------------------------------------
+g8tv8sq6urbbq|0|3370002280|
+g8tv8sq6urbbq|0|3370002280|Note
+g8tv8sq6urbbq|0|3370002280|-----
+g8tv8sq6urbbq|0|3370002280|   - cpu costing is off (consider enabling it)
+g8tv8sq6urbbq|0|3370002280|
+41c39c0y83bm4|0|2798399657|SQL_ID  41c39c0y83bm4, child number 0
+41c39c0y83bm4|0|2798399657|-------------------------------------
+41c39c0y83bm4|0|2798399657|SELECT "installed_rank","version","description","type","script","checksu
+41c39c0y83bm4|0|2798399657|m","installed_on","installed_by","execution_time","success" FROM
+41c39c0y83bm4|0|2798399657|"BYH_LOAD"."flyway_schema_history" WHERE "installed_rank" > :1 ORDER BY
+41c39c0y83bm4|0|2798399657|"installed_rank"
+41c39c0y83bm4|0|2798399657|
+41c39c0y83bm4|0|2798399657|Plan hash value: 2798399657
+41c39c0y83bm4|0|2798399657|
+41c39c0y83bm4|0|2798399657|--------------------------------------------------------------------------------------------------------
+41c39c0y83bm4|0|2798399657|| Id  | Operation		       | Name			  | Rows  | Bytes | Cost (%CPU)| Time	  |
+41c39c0y83bm4|0|2798399657|--------------------------------------------------------------------------------------------------------
+41c39c0y83bm4|0|2798399657||   0 | SELECT STATEMENT	       |			  |	  |	  |	2 (100)|	  |
+41c39c0y83bm4|0|2798399657||   1 |  TABLE ACCESS BY INDEX ROWID| flyway_schema_history	  |	3 |  2280 |	2   (0)| 00:00:01 |
+41c39c0y83bm4|0|2798399657||*  2 |   INDEX RANGE SCAN	       | flyway_schema_history_pk |	3 |	  |	1   (0)| 00:00:01 |
+41c39c0y83bm4|0|2798399657|--------------------------------------------------------------------------------------------------------
+41c39c0y83bm4|0|2798399657|
+41c39c0y83bm4|0|2798399657|Peeked Binds (identified by position):
+41c39c0y83bm4|0|2798399657|--------------------------------------
+41c39c0y83bm4|0|2798399657|
+41c39c0y83bm4|0|2798399657|   1 - :1 (NUMBER): -1
+41c39c0y83bm4|0|2798399657|
+41c39c0y83bm4|0|2798399657|Predicate Information (identified by operation id):
+41c39c0y83bm4|0|2798399657|---------------------------------------------------
+41c39c0y83bm4|0|2798399657|
+41c39c0y83bm4|0|2798399657|   2 - access("installed_rank">:1)
+41c39c0y83bm4|0|2798399657|
+41c39c0y83bm4|0|2798399657|Note
+41c39c0y83bm4|0|2798399657|-----
+41c39c0y83bm4|0|2798399657|   - dynamic statistics used: dynamic sampling (level=2)
+41c39c0y83bm4|0|2798399657|
+61ktzmkxwbc0q|0|1334561136|SQL_ID  61ktzmkxwbc0q, child number 0
+61ktzmkxwbc0q|0|1334561136|-------------------------------------
+61ktzmkxwbc0q|0|1334561136|SELECT PRODUCT_ID,		     PRODUCT_NAME,
+61ktzmkxwbc0q|0|1334561136|REGULAR_PRICE,		 DISCOUNT_PRICE,
+61ktzmkxwbc0q|0|1334561136|MANUFACTURER 	FROM PRODUCT
+61ktzmkxwbc0q|0|1334561136|ORDER BY PRODUCT_ID	       OFFSET :1 ROWS FETCH NEXT :2 ROWS ONLY
+61ktzmkxwbc0q|0|1334561136|
+61ktzmkxwbc0q|0|1334561136|Plan hash value: 1334561136
+61ktzmkxwbc0q|0|1334561136|
+61ktzmkxwbc0q|0|1334561136|------------------------------------------------------------------------------------
+61ktzmkxwbc0q|0|1334561136|| Id  | Operation		    | Name    | Rows  | Bytes | Cost (%CPU)| Time     |
+61ktzmkxwbc0q|0|1334561136|------------------------------------------------------------------------------------
+61ktzmkxwbc0q|0|1334561136||   0 | SELECT STATEMENT	    |	      |       |       |     8 (100)|	      |
+61ktzmkxwbc0q|0|1334561136||*  1 |  VIEW		    |	      |  2001 |   136K|     8  (13)| 00:00:01 |
+61ktzmkxwbc0q|0|1334561136||*  2 |   WINDOW SORT PUSHED RANK|	      |  2001 |    97K|     8  (13)| 00:00:01 |
+61ktzmkxwbc0q|0|1334561136||*  3 |    FILTER		    |	      |       |       | 	   |	      |
+61ktzmkxwbc0q|0|1334561136||   4 |     TABLE ACCESS FULL    | PRODUCT |  2001 |    97K|     7	(0)| 00:00:01 |
+61ktzmkxwbc0q|0|1334561136|------------------------------------------------------------------------------------
+61ktzmkxwbc0q|0|1334561136|
+61ktzmkxwbc0q|0|1334561136|Predicate Information (identified by operation id):
+61ktzmkxwbc0q|0|1334561136|---------------------------------------------------
+61ktzmkxwbc0q|0|1334561136|
+61ktzmkxwbc0q|0|1334561136|   1 - filter(("from$_subquery$_002"."rowlimit_$$_rownumber"<=GREATEST(FLOOR
+61ktzmkxwbc0q|0|1334561136|		 (TO_NUMBER(TO_CHAR(:1))),0)+:2 AND "from$_subquery$_002"."rowlimit_$$_rownum
+61ktzmkxwbc0q|0|1334561136|		 ber">:1))
+61ktzmkxwbc0q|0|1334561136|   2 - filter(ROW_NUMBER() OVER ( ORDER BY
+61ktzmkxwbc0q|0|1334561136|		 "PRODUCT_ID")<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:1))),0)+:2)
+61ktzmkxwbc0q|0|1334561136|   3 - filter(:1<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:1))),0)+:2)
+61ktzmkxwbc0q|0|1334561136|

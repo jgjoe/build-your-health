@@ -1,0 +1,21 @@
+UTC|2026-10-05T16:37:01.126
+ROWS|22021|2001|600000|1499546
+WAIT|Disk file operations I/O|6|666
+WAIT|SQL*Net message to client|49|165
+WAIT|db file scattered read|5|4175
+WAIT|db file sequential read|129|47830
+WAIT|events in waitclass Other|226|2748
+WAIT|log file sync|9|4529
+SQL|1v1kf9s0x1hg0|0|4144652430|2|9|2710|894|0|0|0|2|SELECT CASE WHEN EXISTS(SELECT * FROM ALL_USERS WHERE USERNAME = :1 ) THEN 1 ELSE 0 END FROM DUAL
+SQL|2spftpy0r0gya|0|415205717|3|112|4777|3422|1519|0|0|3|SELECT GLOBAL_NAME FROM GLOBAL_NAME
+SQL|3ajktry7fs6b9|0|4163253942|2|906|35183|21662|14652|0|0|0|SELECT username FROM all_users WHERE UPPER(username) = 'RDSADMIN'
+SQL|41c39c0y83bm4|0|2798399657|2|878|71478|60895|9180|0|0|3|SELECT "installed_rank","version","description","type","script","checksum","installed_on","installed_by","execution_time","success" FROM "BYH_LOAD"."flyway_schema_history" WHERE "installed_rank" > :1 ORDER BY "installed_rank"
+SQL|61ktzmkxwbc0q|0|1334561136|1|50|10785|4211|3228|0|0|10|SELECT PRODUCT_ID, PRODUCT_NAME, REGULAR_PRICE, DISCOUNT_PRICE, MANUFACTURER FROM PRODUCT ORDER BY PRODUCT_ID OFFSET :1 ROWS FETCH NEXT :2 ROWS ONLY
+SQL|8n26fp2kzsdjw|0|0|1|17|2278|1776|428|0|0|0|LOCK TABLE "BYH_LOAD"."flyway_schema_history" IN EXCLUSIVE MODE
+SQL|9bm07uda6amh3|0|2833289586|5|3555|107073|95258|11047|0|0|5|SELECT NULL AS table_cat, o.owner AS table_schem, o.object_name AS table_name, o.object_type AS table_type, NULL AS remarks FROM sys.all_objects o WHERE o.owner LIKE :1 ESCAPE '/' AND o.object_name LIKE :2 ESCAPE '/' AND o.object_type IN ('TABLE', 'SYNONYM', 'VIEW') ORDER BY table_type, table_schem, table_name
+SQL|akzdz01tm894j|0|3328140328|1|7|2751|1755|974|0|0|1|SELECT /* OPT_DYN_SAMP */ /*+ ALL_ROWS IGNORE_WHERE_CLAUSE RESULT_CACHE(SNAPSHOT=3600) opt_param('parallel_execution_enabled', 'false') NO_PARALLEL(SAMPLESUB) NO_PARALLEL_INDEX(SAMPLESUB) NO_SQL_TUNE */ NVL(SUM(C1),0), NVL(SUM(C2),0) FROM (SELECT /*+ IGNORE_WHERE_CLAUSE NO_PARALLEL("flyway_schema_history") FULL("flyway_schema_history") NO_PARALLEL_INDEX("flyway_schema_history") */ 1 AS C1, CASE WHEN "flyway_schema_history"."installed_rank">:B1 THEN 1 ELSE 0 END AS C2 FROM "BYH_LOAD"."flyway_schema_history" "flyway_schema_history") SAMPLESUB
+SQL|b4xr1nw5vtk2v|0|1388734953|4|28|7791|6640|760|0|0|4|SELECT SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') FROM DUAL
+SQL|d6r1mk4p3j2uf|0|1388734953|1|0|660|660|0|0|0|1|SELECT USER FROM DUAL
+SQL|dhprmt1mw9f4n|0|1772926977|1|2|1968|1882|269|0|0|1|SELECT /* OPT_DYN_SAMP */ /*+ ALL_ROWS RESULT_CACHE(SNAPSHOT=3600) opt_param('parallel_execution_enabled', 'false') NO_PARALLEL(SAMPLESUB) NO_PARALLEL_INDEX(SAMPLESUB) NO_SQL_TUNE */ NVL(SUM(C1),0), NVL(SUM(C2),0), NVL(SUM(C3),0) FROM (SELECT /*+ NO_PARALLEL("flyway_schema_history") INDEX("flyway_schema_history" flyway_schema_history_pk) NO_PARALLEL_INDEX("flyway_schema_history") */ 1 AS C1, 1 AS C2, 1 AS C3 FROM "BYH_LOAD"."flyway_schema_history" "flyway_schema_history" WHERE "flyway_schema_history"."installed_rank">:B1 AND ROWNUM <= 2500) SAMPLESUB
+SQL|dp30vgv8qdwqd|0|3077335621|1|125|4806|3438|1342|0|0|1|SELECT COUNT(*) FROM PRODUCT
+POOLSESSION|INACTIVE|10

@@ -1,0 +1,28 @@
+name: byh-loadtest
+services:
+  app:
+    build:
+      context: ..
+    cpus: 2
+    mem_limit: 2g
+    environment:
+      DB_URL: jdbc:oracle:thin:@byh-perf-perfdb-1:1521/FREEPDB1
+      DB_USERNAME: byh_load
+      DB_PASSWORD: ${LOAD_DB_PASSWORD:-byhload123}
+      SPRING_DATASOURCE_HIKARI_REGISTER_MBEANS: 'true'
+      JAVA_TOOL_OPTIONS: >-
+        -Xms512m -Xmx1024m
+        -Dcom.sun.management.jmxremote
+        -Dcom.sun.management.jmxremote.port=9010
+        -Dcom.sun.management.jmxremote.rmi.port=9010
+        -Dcom.sun.management.jmxremote.authenticate=false
+        -Dcom.sun.management.jmxremote.ssl=false
+        -Djava.rmi.server.hostname=app
+    ports:
+      - '127.0.0.1:8082:8081'
+    networks:
+      - measurement
+networks:
+  measurement:
+    external: true
+    name: byh-perf_default

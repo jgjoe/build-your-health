@@ -1,0 +1,7 @@
+create user byh_load identified by byhload123 quota unlimited on users; grant create session, create table, create sequence, create trigger to byh_load; create or replace directory BYH_LOAD_DP as '/opt/oracle/oradata'
+                                                                        *
+ERROR at line 1:
+ORA-03405: End of query reached; no additional text should follow.
+Help: https://docs.oracle.com/error-help/db/ora-03405/
+
+

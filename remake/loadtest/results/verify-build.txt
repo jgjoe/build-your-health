@@ -1,0 +1,47 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 488B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:17-jdk
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [build 1/6] FROM docker.io/library/eclipse-temurin:17-jdk@sha256:5d6042fb8cdc14d614e4e421f52e3211fc5aeadddce44cbf9de8ed37c791f824
+#4 resolve docker.io/library/eclipse-temurin:17-jdk@sha256:5d6042fb8cdc14d614e4e421f52e3211fc5aeadddce44cbf9de8ed37c791f824 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 7.40kB done
+#5 DONE 0.0s
+
+#6 [build 4/6] COPY .mvn/ .mvn/
+#6 CACHED
+
+#7 [build 5/6] COPY src/ src/
+#7 CACHED
+
+#8 [build 2/6] WORKDIR /build
+#8 CACHED
+
+#9 [build 3/6] COPY mvnw pom.xml ./
+#9 CACHED
+
+#10 [build 6/6] RUN sh mvnw -B -DskipTests package
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 6.4s done
+#11 exporting manifest sha256:7c5eeadc28d6b7e0c2c48d59ce20a570e3c20099e75c37312215607f3f171cb4 0.0s done
+#11 exporting config sha256:98a51574e82be7fc38817fbc48357fdd44d27ec4d47409d165d25be93d3e0e74 0.0s done
+#11 exporting attestation manifest sha256:7033f983fa8620d90552755170707f4fba4a6c84e8d8346c2ce459e31015e1bf 0.0s done
+#11 exporting manifest list sha256:00cbfd71433537b978dc72fdaeb0d050c7e3b3a39098958348f5f24416841cd2 0.0s done
+#11 naming to docker.io/library/byh-loadtest-build:latest done
+#11 unpacking to docker.io/library/byh-loadtest-build:latest
+#11 unpacking to docker.io/library/byh-loadtest-build:latest 1.3s done
+#11 DONE 7.8s

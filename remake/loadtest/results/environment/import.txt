@@ -1,0 +1,32 @@
+
+Import: Release 23.26.3.0.0 - Production on Mon Oct 5 23:48:59 2026
+Version 23.26.3.0.0
+
+Copyright (c) 1982, 2026, Oracle and/or its affiliates.  All rights reserved.
+
+Connected to: Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Master table "SYSTEM"."SYS_IMPORT_FULL_01" successfully loaded/unloaded
+Starting "SYSTEM"."SYS_IMPORT_FULL_01":  system/********@FREEPDB1 directory=BYH_LOAD_DP dumpfile=byh_load_seed.dmp logfile=byh_load_import.log remap_schema=BYH_PERF:BYH_LOAD 
+Processing object type SCHEMA_EXPORT/USER
+ORA-31684: Object type USER:"BYH_LOAD" already exists
+
+Processing object type SCHEMA_EXPORT/ROLE_GRANT
+Processing object type SCHEMA_EXPORT/DEFAULT_ROLE
+Processing object type SCHEMA_EXPORT/TABLESPACE_QUOTA
+Processing object type SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA/LOGREP
+Processing object type SCHEMA_EXPORT/SYNONYM/SYNONYM
+Processing object type SCHEMA_EXPORT/TABLE/TABLE
+Processing object type SCHEMA_EXPORT/TABLE/TABLE_DATA
+. . imported "BYH_LOAD"."ORDERS"                          54.7 MB  600000 rows
+. . imported "BYH_LOAD"."ORDER_ITEMS"                     41.6 MB 1499546 rows
+. . imported "BYH_LOAD"."MEMBER"                         845.2 KB   22021 rows
+. . imported "BYH_LOAD"."PRODUCT"                        106.4 KB    2001 rows
+. . imported "BYH_LOAD"."flyway_schema_history"            9.4 KB       2 rows
+Processing object type SCHEMA_EXPORT/TABLE/IDENTITY_COLUMN
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/INDEX
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+Processing object type SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Job "SYSTEM"."SYS_IMPORT_FULL_01" completed with 1 error(s) at Mon Oct 5 23:49:39 2026 elapsed 0 00:00:29
+

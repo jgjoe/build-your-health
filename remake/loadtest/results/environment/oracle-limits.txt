@@ -1,0 +1,17 @@
+processes=200
+sessions=322
+cpu_count=2
+pga_aggregate_limit=2147483648
+memory_target=0
+memory_max_target=0
+buffer_cache=838860800
+IX_ORDERS_USER_DATE|USER_ID|1
+IX_ORDERS_USER_DATE|ORDER_DATE|2
+IX_ORDERS_USER_DATE|ORDER_ID|3
+IX_ORDER_ITEMS_ORDER|ORDER_ID|1
+PK_MEMBER|ID|1
+PK_ORDERS|ORDER_ID|1
+PK_ORDER_ITEMS|ITEM_ID|1
+PK_PRODUCT|PRODUCT_ID|1
+flyway_schema_history_pk|installed_rank|1
+flyway_schema_history_s_idx|success|1

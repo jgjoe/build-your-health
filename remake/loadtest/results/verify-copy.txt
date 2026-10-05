@@ -1,0 +1,719 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< io.github.jgjoe:byh-remake >---------------------
+[INFO] Building byh-remake 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ byh-remake ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 6 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ byh-remake ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ byh-remake ---
+[INFO] skip non existing resourceDirectory /build/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ byh-remake ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ byh-remake ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.6/surefire-junit-platform-3.5.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.6/surefire-junit-platform-3.5.6.pom (5.2 kB at 6.8 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.6/surefire-providers-3.5.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.6/surefire-providers-3.5.6.pom (2.5 kB at 115 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.6/common-java5-3.5.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.6/common-java5-3.5.6.pom (3.1 kB at 122 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.pom (3.2 kB at 139 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.pom (2.8 kB at 123 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.2/junit-platform-launcher-1.12.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.2/junit-platform-launcher-1.12.2.pom (3.0 kB at 121 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.6/surefire-junit-platform-3.5.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.6/surefire-junit-platform-3.5.6.jar (35 kB at 1.3 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.6/common-java5-3.5.6.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.2/junit-platform-launcher-1.12.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.6/common-java5-3.5.6.jar (18 kB at 766 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.12.2/junit-platform-launcher-1.12.2.jar (208 kB at 2.1 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar (256 kB at 2.3 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar (152 kB at 1.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/6.0.3/junit-platform-launcher-6.0.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/6.0.3/junit-platform-launcher-6.0.3.pom (3.2 kB at 153 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/6.0.3/junit-platform-launcher-6.0.3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/6.0.3/junit-platform-launcher-6.0.3.jar (246 kB at 7.9 MB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running io.github.jgjoe.byh.ProductCatalogApiTest
+14:57:59.891 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.github.jgjoe.byh.ProductCatalogApiTest]: ProductCatalogApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:58:00.041 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.ProductCatalogApiTest
+14:58:00.100 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.github.jgjoe.byh.ProductCatalogApiTest]: ProductCatalogApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:58:00.101 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.github.jgjoe.byh.support.IntegrationTestBase]: IntegrationTestBase does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:58:00.107 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.ProductCatalogApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-05T14:58:00.432Z  INFO 177 --- [byh-remake] [           main] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2026-10-05T14:58:00.437Z  INFO 177 --- [byh-remake] [           main] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-10-05T14:58:00.455Z  INFO 177 --- [byh-remake] [           main] org.testcontainers.DockerClientFactory   : Testcontainers version: 2.0.5
+2026-10-05T14:58:01.036Z  INFO 177 --- [byh-remake] [           main] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2026-10-05T14:58:01.038Z  INFO 177 --- [byh-remake] [           main] org.testcontainers.DockerClientFactory   : Docker host IP address is host.docker.internal
+2026-10-05T14:58:01.057Z  INFO 177 --- [byh-remake] [           main] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 29.8.1
+  API Version: 1.56
+  Operating System: Docker Desktop
+  Total Memory: 9950 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+2026-10-05T14:58:01.384Z  INFO 177 --- [byh-remake] [           main] tc.testcontainers/ryuk:0.14.0            : Creating container for image: testcontainers/ryuk:0.14.0
+2026-10-05T14:58:01.389Z  INFO 177 --- [byh-remake] [           main] o.t.utility.RegistryAuthLocator          : Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.14.0, configFile: /root/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /root/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2026-10-05T14:58:01.526Z  INFO 177 --- [byh-remake] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 is starting: 53bf408b23d0769c41faf412a15bf0735ab82ff579bea7a902f4763e597cf1d7
+2026-10-05T14:58:01.914Z  INFO 177 --- [byh-remake] [           main] tc.testcontainers/ryuk:0.14.0            : Container testcontainers/ryuk:0.14.0 started in PT0.529050839S
+2026-10-05T14:58:01.922Z  INFO 177 --- [byh-remake] [           main] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2026-10-05T14:58:01.922Z  INFO 177 --- [byh-remake] [           main] org.testcontainers.DockerClientFactory   : Checking the system...
+2026-10-05T14:58:01.923Z  INFO 177 --- [byh-remake] [           main] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2026-10-05T14:58:01.923Z  INFO 177 --- [byh-remake] [           main] t.gvenzl/oracle-free:23-slim-faststart   : Creating container for image: gvenzl/oracle-free:23-slim-faststart
+2026-10-05T14:58:01.986Z  INFO 177 --- [byh-remake] [           main] t.gvenzl/oracle-free:23-slim-faststart   : Container gvenzl/oracle-free:23-slim-faststart is starting: a9b460c5879448a9cb314d0452b543f34cc1967cb39bc25bd7bd850bed50da1d
+2026-10-05T14:58:34.206Z  INFO 177 --- [byh-remake] [           main] t.gvenzl/oracle-free:23-slim-faststart   : Container gvenzl/oracle-free:23-slim-faststart started in PT32.282366821S
+2026-10-05T14:58:34.206Z  INFO 177 --- [byh-remake] [           main] t.gvenzl/oracle-free:23-slim-faststart   : Container is started (JDBC URL: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1)
+2026-10-05T14:58:34.222Z  INFO 177 --- [byh-remake] [           main] i.g.jgjoe.byh.ProductCatalogApiTest      : Starting ProductCatalogApiTest using Java 17.0.20.1 with PID 177 (started by root in /build)
+2026-10-05T14:58:34.223Z  INFO 177 --- [byh-remake] [           main] i.g.jgjoe.byh.ProductCatalogApiTest      : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T14:58:35.383Z  INFO 177 --- [byh-remake] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-05T14:58:35.873Z  INFO 177 --- [byh-remake] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@b3a8455
+2026-10-05T14:58:35.875Z  INFO 177 --- [byh-remake] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-05T14:58:35.890Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:58:36.275Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "TEST"."flyway_schema_history" does not exist yet
+2026-10-05T14:58:36.278Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.104s)
+2026-10-05T14:58:36.755Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "TEST"."flyway_schema_history" ...
+2026-10-05T14:58:36.970Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "TEST": << Empty Schema >>
+2026-10-05T14:58:36.987Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "TEST" to version "1 - schema"
+2026-10-05T14:58:38.083Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "TEST" to version "2 - seed"
+2026-10-05T14:58:38.138Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "TEST" to version "3 - order indexes"
+2026-10-05T14:58:38.200Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "TEST", now at version v3 (execution time 00:00.111s)
+2026-10-05T14:58:38.818Z  INFO 177 --- [byh-remake] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-05T14:58:38.818Z  INFO 177 --- [byh-remake] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-05T14:58:38.819Z  INFO 177 --- [byh-remake] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-05T14:58:38.840Z  INFO 177 --- [byh-remake] [           main] i.g.jgjoe.byh.ProductCatalogApiTest      : Started ProductCatalogApiTest in 38.693 seconds (process running for 39.851)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.26 s -- in io.github.jgjoe.byh.ProductCatalogApiTest
+[INFO] Running io.github.jgjoe.byh.OrderHistoryApiTest
+2026-10-05T14:58:39.983Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.OrderHistoryApiTest]: OrderHistoryApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:58:39.988Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.OrderHistoryApiTest
+2026-10-05T14:58:39.989Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.OrderHistoryApiTest]: OrderHistoryApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:58:39.990Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.support.IntegrationTestBase]: IntegrationTestBase does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:58:39.994Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.OrderHistoryApiTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.997 s -- in io.github.jgjoe.byh.OrderHistoryApiTest
+[INFO] Running io.github.jgjoe.byh.LoginApiTest
+2026-10-05T14:58:40.981Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.LoginApiTest]: LoginApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:58:40.984Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.LoginApiTest
+2026-10-05T14:58:40.985Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.LoginApiTest]: LoginApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:58:40.985Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.support.IntegrationTestBase]: IntegrationTestBase does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:58:40.988Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.LoginApiTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.355 s -- in io.github.jgjoe.byh.LoginApiTest
+[INFO] Running io.github.jgjoe.byh.perf.ScenarioTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s -- in io.github.jgjoe.byh.perf.ScenarioTest
+[INFO] Running io.github.jgjoe.byh.perf.MapperSqlTest
+2026-10-05T14:58:41.587Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:58:41.681Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_09E1F26F88AD"."flyway_schema_history" does not exist yet
+2026-10-05T14:58:41.682Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.075s)
+2026-10-05T14:58:41.995Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_09E1F26F88AD"."flyway_schema_history" ...
+2026-10-05T14:58:43.090Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_09E1F26F88AD": << Empty Schema >>
+2026-10-05T14:58:43.096Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_09E1F26F88AD" to version "1 - schema"
+2026-10-05T14:58:43.184Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_09E1F26F88AD" to version "2 - seed"
+2026-10-05T14:58:43.234Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_09E1F26F88AD", now at version v2 (execution time 00:00.080s)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.629 s -- in io.github.jgjoe.byh.perf.MapperSqlTest
+[INFO] Running io.github.jgjoe.byh.perf.PerfMeasureTest
+2026-10-05T14:58:45.183Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:58:45.285Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_046991094109"."flyway_schema_history" does not exist yet
+2026-10-05T14:58:45.286Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.083s)
+2026-10-05T14:58:45.609Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_046991094109"."flyway_schema_history" ...
+2026-10-05T14:58:46.723Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_046991094109": << Empty Schema >>
+2026-10-05T14:58:46.728Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_046991094109" to version "1 - schema"
+2026-10-05T14:58:46.820Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_046991094109" to version "2 - seed"
+2026-10-05T14:58:46.898Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_046991094109", now at version v2 (execution time 00:00.111s)
+S0 Q1 heavy medianMs=3.580 bufferGetsPerExec=36.000
+S0 Q2 heavy medianMs=1.902 bufferGetsPerExec=15.000
+S0 Q1 mid medianMs=2.050 bufferGetsPerExec=36.000
+S0 Q2 mid medianMs=1.363 bufferGetsPerExec=15.000
+S0 Q1 light medianMs=2.155 bufferGetsPerExec=36.000
+S0 Q2 light medianMs=1.519 bufferGetsPerExec=15.000
+S0 Q3 mid medianMs=1.311 bufferGetsPerExec=20.000
+S1 Q1 heavy medianMs=2.280 bufferGetsPerExec=36.000
+S1 Q2 heavy medianMs=1.484 bufferGetsPerExec=15.000
+S1 Q1 mid medianMs=1.999 bufferGetsPerExec=36.000
+S1 Q2 mid medianMs=1.571 bufferGetsPerExec=15.000
+S1 Q1 light medianMs=2.229 bufferGetsPerExec=27.000
+S1 Q2 light medianMs=1.414 bufferGetsPerExec=15.000
+S1 Q3 mid medianMs=1.648 bufferGetsPerExec=8.000
+S2A Q1 heavy medianMs=2.027 bufferGetsPerExec=36.000
+S2A Q2 heavy medianMs=1.274 bufferGetsPerExec=2.000
+S2A Q1 mid medianMs=2.178 bufferGetsPerExec=36.000
+S2A Q2 mid medianMs=1.162 bufferGetsPerExec=2.000
+S2A Q1 light medianMs=1.755 bufferGetsPerExec=16.000
+S2A Q2 light medianMs=1.524 bufferGetsPerExec=2.000
+S2A Q3 mid medianMs=1.383 bufferGetsPerExec=8.000
+S2B Q1 heavy medianMs=3.703 bufferGetsPerExec=36.000
+S2B Q2 heavy medianMs=1.345 bufferGetsPerExec=2.000
+S2B Q1 mid medianMs=1.624 bufferGetsPerExec=36.000
+S2B Q2 mid medianMs=1.175 bufferGetsPerExec=2.000
+S2B Q1 light medianMs=1.478 bufferGetsPerExec=16.000
+S2B Q2 light medianMs=1.340 bufferGetsPerExec=2.000
+S2B Q3 mid medianMs=1.381 bufferGetsPerExec=8.000
+S2C Q1 heavy medianMs=1.681 bufferGetsPerExec=36.000
+S2C Q2 heavy medianMs=1.378 bufferGetsPerExec=7.000
+S2C Q1 mid medianMs=1.707 bufferGetsPerExec=29.000
+S2C Q2 mid medianMs=1.080 bufferGetsPerExec=7.000
+S2C Q1 light medianMs=1.379 bufferGetsPerExec=19.000
+S2C Q2 light medianMs=1.138 bufferGetsPerExec=7.000
+S2C Q3 mid medianMs=1.172 bufferGetsPerExec=8.000
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.375 s -- in io.github.jgjoe.byh.perf.PerfMeasureTest
+[INFO] Running io.github.jgjoe.byh.perf.PerfDataGeneratorTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 s -- in io.github.jgjoe.byh.perf.PerfDataGeneratorTest
+[INFO] Running io.github.jgjoe.byh.perf.PerfDataLoaderTest
+2026-10-05T14:58:54.638Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:58:54.727Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_27BDA1CC86FC"."flyway_schema_history" does not exist yet
+2026-10-05T14:58:54.728Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.071s)
+2026-10-05T14:58:55.024Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_27BDA1CC86FC"."flyway_schema_history" ...
+2026-10-05T14:58:56.117Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_27BDA1CC86FC": << Empty Schema >>
+2026-10-05T14:58:56.122Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_27BDA1CC86FC" to version "1 - schema"
+2026-10-05T14:58:56.218Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_27BDA1CC86FC" to version "2 - seed"
+2026-10-05T14:58:56.271Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_27BDA1CC86FC", now at version v2 (execution time 00:00.090s)
+2026-10-05T14:58:56.958Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:58:57.037Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_D8B4D54C3ACD"."flyway_schema_history" does not exist yet
+2026-10-05T14:58:57.037Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.060s)
+2026-10-05T14:58:57.338Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_D8B4D54C3ACD"."flyway_schema_history" ...
+2026-10-05T14:58:58.477Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_D8B4D54C3ACD": << Empty Schema >>
+2026-10-05T14:58:58.485Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_D8B4D54C3ACD" to version "1 - schema"
+2026-10-05T14:58:58.602Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_D8B4D54C3ACD" to version "2 - seed"
+2026-10-05T14:58:58.653Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_D8B4D54C3ACD", now at version v2 (execution time 00:00.110s)
+2026-10-05T14:58:59.833Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:58:59.906Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_382D39FCEB50"."flyway_schema_history" does not exist yet
+2026-10-05T14:58:59.906Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.058s)
+2026-10-05T14:59:00.215Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_382D39FCEB50"."flyway_schema_history" ...
+2026-10-05T14:59:01.342Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_382D39FCEB50": << Empty Schema >>
+2026-10-05T14:59:01.348Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_382D39FCEB50" to version "1 - schema"
+2026-10-05T14:59:01.450Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_382D39FCEB50" to version "2 - seed"
+2026-10-05T14:59:01.542Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_382D39FCEB50", now at version v2 (execution time 00:00.133s)
+2026-10-05T14:59:02.414Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:59:02.497Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_9CAA9E79276C"."flyway_schema_history" does not exist yet
+2026-10-05T14:59:02.498Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.067s)
+2026-10-05T14:59:02.802Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_9CAA9E79276C"."flyway_schema_history" ...
+2026-10-05T14:59:03.907Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_9CAA9E79276C": << Empty Schema >>
+2026-10-05T14:59:03.912Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_9CAA9E79276C" to version "1 - schema"
+2026-10-05T14:59:04.003Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_9CAA9E79276C" to version "2 - seed"
+2026-10-05T14:59:04.056Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_9CAA9E79276C", now at version v2 (execution time 00:00.092s)
+2026-10-05T14:59:04.811Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:59:04.918Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_4389CF2E7206"."flyway_schema_history" does not exist yet
+2026-10-05T14:59:04.919Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.091s)
+2026-10-05T14:59:05.294Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_4389CF2E7206"."flyway_schema_history" ...
+2026-10-05T14:59:06.414Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_4389CF2E7206": << Empty Schema >>
+2026-10-05T14:59:06.420Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_4389CF2E7206" to version "1 - schema"
+2026-10-05T14:59:06.546Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_4389CF2E7206" to version "2 - seed"
+2026-10-05T14:59:06.638Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_4389CF2E7206", now at version v2 (execution time 00:00.153s)
+2026-10-05T14:59:07.390Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:59:07.485Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_2C3F7EA1BC75"."flyway_schema_history" does not exist yet
+2026-10-05T14:59:07.486Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.073s)
+2026-10-05T14:59:07.814Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_2C3F7EA1BC75"."flyway_schema_history" ...
+2026-10-05T14:59:08.905Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_2C3F7EA1BC75": << Empty Schema >>
+2026-10-05T14:59:08.909Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_2C3F7EA1BC75" to version "1 - schema"
+2026-10-05T14:59:08.992Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_2C3F7EA1BC75" to version "2 - seed"
+2026-10-05T14:59:09.089Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_2C3F7EA1BC75", now at version v2 (execution time 00:00.129s)
+2026-10-05T14:59:09.885Z  INFO 177 --- [byh-remake] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:oracle:thin:@host.docker.internal:30919/freepdb1 (Oracle 23.26)
+2026-10-05T14:59:09.970Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PERF_A42E16F637F1"."flyway_schema_history" does not exist yet
+2026-10-05T14:59:09.971Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.066s)
+2026-10-05T14:59:10.258Z  INFO 177 --- [byh-remake] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PERF_A42E16F637F1"."flyway_schema_history" ...
+2026-10-05T14:59:11.367Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PERF_A42E16F637F1": << Empty Schema >>
+2026-10-05T14:59:11.373Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_A42E16F637F1" to version "1 - schema"
+2026-10-05T14:59:11.502Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PERF_A42E16F637F1" to version "2 - seed"
+2026-10-05T14:59:11.567Z  INFO 177 --- [byh-remake] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PERF_A42E16F637F1", now at version v2 (execution time 00:00.125s)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.74 s -- in io.github.jgjoe.byh.perf.PerfDataLoaderTest
+[INFO] Running io.github.jgjoe.byh.perf.StatsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in io.github.jgjoe.byh.perf.StatsTest
+[INFO] Running io.github.jgjoe.byh.SchemaIndexTest
+2026-10-05T14:59:12.253Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.SchemaIndexTest]: SchemaIndexTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.257Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.SchemaIndexTest
+2026-10-05T14:59:12.257Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.SchemaIndexTest]: SchemaIndexTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.258Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.support.IntegrationTestBase]: IntegrationTestBase does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.260Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.SchemaIndexTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.157 s -- in io.github.jgjoe.byh.SchemaIndexTest
+[INFO] Running io.github.jgjoe.byh.LoginSessionTest
+2026-10-05T14:59:12.411Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.LoginSessionTest]: LoginSessionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.415Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.LoginSessionTest
+2026-10-05T14:59:12.416Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.LoginSessionTest]: LoginSessionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.416Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.support.IntegrationTestBase]: IntegrationTestBase does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.419Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.LoginSessionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.179 s -- in io.github.jgjoe.byh.LoginSessionTest
+[INFO] Running io.github.jgjoe.byh.SchemaCascadeTest
+2026-10-05T14:59:12.592Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.SchemaCascadeTest]: SchemaCascadeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.597Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.SchemaCascadeTest
+2026-10-05T14:59:12.598Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.SchemaCascadeTest]: SchemaCascadeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.598Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.support.IntegrationTestBase]: IntegrationTestBase does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.602Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.SchemaCascadeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.339 s -- in io.github.jgjoe.byh.SchemaCascadeTest
+[INFO] Running io.github.jgjoe.byh.SourceHygieneTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in io.github.jgjoe.byh.SourceHygieneTest
+[INFO] Running io.github.jgjoe.byh.OrderApiTest
+2026-10-05T14:59:12.962Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.OrderApiTest]: OrderApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.967Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.OrderApiTest
+2026-10-05T14:59:12.968Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.OrderApiTest]: OrderApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.969Z  INFO 177 --- [byh-remake] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [io.github.jgjoe.byh.support.IntegrationTestBase]: IntegrationTestBase does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-05T14:59:12.972Z  INFO 177 --- [byh-remake] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration io.github.jgjoe.byh.ByhApplication for test class io.github.jgjoe.byh.OrderApiTest
+2026-10-05T14:59:13.372Z ERROR 177 --- [byh-remake] [           main] i.g.j.byh.common.ApiExceptionHandler     : Unhandled exception while processing POST /api/orders
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+https://docs.oracle.com/error-help/db/ora-20001/
+### The error may exist in file [/build/target/classes/mapper/OrderMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE)         VALUES (?, ?, ?, ?)
+### Cause: java.sql.SQLException: ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+https://docs.oracle.com/error-help/db/ora-20001/
+; uncategorized SQLException; SQL state [72000]; error code [20001]; ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+https://docs.oracle.com/error-help/db/ora-20001/
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96) ~[mybatis-spring-4.1.0.jar:4.1.0]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362) ~[mybatis-spring-4.1.0.jar:4.1.0]
+	at jdk.proxy2/jdk.proxy2.$Proxy117.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:239) ~[mybatis-spring-4.1.0.jar:4.1.0]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy2/jdk.proxy2.$Proxy122.insertOrderItem(Unknown Source) ~[na:na]
+	at io.github.jgjoe.byh.order.OrderService.createOrder(OrderService.java:66) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at io.github.jgjoe.byh.order.OrderService$$SpringCGLIB$$0.createOrder(<generated>) ~[classes/:na]
+	at io.github.jgjoe.byh.order.OrderController.create(OrderController.java:36) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.9.jar:7.0.9]
+	at io.github.jgjoe.byh.OrderApiTest.tc207_errorBodyHasNoStackTraceOrExceptionName(OrderApiTest.java:135) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+Caused by: java.sql.SQLException: ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+https://docs.oracle.com/error-help/db/ora-20001/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:719) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:619) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1382) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:788) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:241) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:307) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1521) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2022) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1635) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3986) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecute(OraclePreparedStatement.java:4460) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:4446) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1033) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at io.github.jgjoe.byh.support.CountingDataSource.invokeTarget(CountingDataSource.java:132) ~[test-classes/:na]
+	at io.github.jgjoe.byh.support.CountingDataSource$StatementHandler.invoke(CountingDataSource.java:118) ~[test-classes/:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy114.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348) ~[mybatis-spring-4.1.0.jar:4.1.0]
+	... 140 common frames omitted
+Caused by: Error : 20001, Position : 12, SQL = INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE)
+        VALUES (:1 , :2 , :3 , :4 ), Original SQL = INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE)
+        VALUES (?, ?, ?, ?), Error Message = ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:727) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	... 174 common frames omitted
+
+2026-10-05T14:59:13.623Z ERROR 177 --- [byh-remake] [           main] i.g.j.byh.common.ApiExceptionHandler     : Unhandled exception while processing POST /api/orders
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+https://docs.oracle.com/error-help/db/ora-20001/
+### The error may exist in file [/build/target/classes/mapper/OrderMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE)         VALUES (?, ?, ?, ?)
+### Cause: java.sql.SQLException: ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+https://docs.oracle.com/error-help/db/ora-20001/
+; uncategorized SQLException; SQL state [72000]; error code [20001]; ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+https://docs.oracle.com/error-help/db/ora-20001/
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96) ~[mybatis-spring-4.1.0.jar:4.1.0]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362) ~[mybatis-spring-4.1.0.jar:4.1.0]
+	at jdk.proxy2/jdk.proxy2.$Proxy117.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:239) ~[mybatis-spring-4.1.0.jar:4.1.0]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy2/jdk.proxy2.$Proxy122.insertOrderItem(Unknown Source) ~[na:na]
+	at io.github.jgjoe.byh.order.OrderService.createOrder(OrderService.java:66) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at io.github.jgjoe.byh.order.OrderService$$SpringCGLIB$$0.createOrder(<generated>) ~[classes/:na]
+	at io.github.jgjoe.byh.order.OrderController.create(OrderController.java:36) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.9.jar:7.0.9]
+	at io.github.jgjoe.byh.OrderApiTest.tc206_failureWhileStoringItemsRollsBackWholeOrder(OrderApiTest.java:83) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+Caused by: java.sql.SQLException: ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+https://docs.oracle.com/error-help/db/ora-20001/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:719) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:619) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1382) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:788) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:241) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:307) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1521) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2022) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1635) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3986) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecute(OraclePreparedStatement.java:4460) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:4446) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1033) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at io.github.jgjoe.byh.support.CountingDataSource.invokeTarget(CountingDataSource.java:132) ~[test-classes/:na]
+	at io.github.jgjoe.byh.support.CountingDataSource$StatementHandler.invoke(CountingDataSource.java:118) ~[test-classes/:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy114.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348) ~[mybatis-spring-4.1.0.jar:4.1.0]
+	... 140 common frames omitted
+Caused by: Error : 20001, Position : 0, SQL = INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE)
+        VALUES (:1 , :2 , :3 , :4 ), Original SQL = INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE)
+        VALUES (?, ?, ?, ?), Error Message = ORA-20001: injected
+ORA-06512: at "TEST.TRG_TEST_FAIL", line 2
+ORA-04088: error during execution of trigger 'TEST.TRG_TEST_FAIL'
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:727) ~[ojdbc11-23.26.3.0.0.jar:23.26.3.0.0]
+	... 174 common frames omitted
+
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.429 s -- in io.github.jgjoe.byh.OrderApiTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 54, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ byh-remake ---
+[INFO] 
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ byh-remake ---
+[INFO] Replacing main artifact /build/target/byh-remake-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /build/target/byh-remake-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:18 min
+[INFO] Finished at: 2026-10-05T14:59:15Z
+[INFO] ------------------------------------------------------------------------

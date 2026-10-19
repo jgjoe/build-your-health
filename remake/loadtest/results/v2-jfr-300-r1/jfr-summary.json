@@ -1,0 +1,34 @@
+{
+  "run": "v2-jfr-300-r1",
+  "measured_start_utc": "2026-10-19T14:53:30.145296+00:00",
+  "samples_in_window": 1234,
+  "samples_in_recording": 2185,
+  "stack_depth": 16,
+  "share_by_category": {
+    "bcrypt": 0.9457050243111832,
+    "other": 0.029983792544570502,
+    "jdbc_and_pool": 0.01539708265802269,
+    "mybatis": 0.008914100486223663
+  },
+  "share_by_thread": {
+    "http": 0.9983792544570502,
+    "other": 0.0016207455429497568
+  },
+  "top_frames": {
+    "org.springframework.security.crypto.bcrypt.BCrypt.key": 0.9246353322528363,
+    "org.springframework.security.crypto.bcrypt.BCrypt.streamtowords": 0.014586709886547812,
+    "org.springframework.security.crypto.bcrypt.BCrypt.streamtoword": 0.0032414910858995136,
+    "java.lang.StringLatin1.toUpperCase": 0.0024311183144246355,
+    "java.util.concurrent.ConcurrentHashMap.get": 0.0024311183144246355,
+    "java.lang.StringBuilder.append": 0.0016207455429497568,
+    "com.zaxxer.hikari.pool.ProxyStatement.checkException": 0.0008103727714748784,
+    "oracle.jdbc.driver.T4C8Kpcdsc.<init>": 0.0008103727714748784,
+    "java.util.concurrent.LinkedBlockingQueue.poll": 0.0008103727714748784,
+    "oracle.jdbc.driver.InsensitiveScrollableResultSet.next": 0.0008103727714748784,
+    "oracle.jdbc.driver.T4CMAREngine.marshalPTR": 0.0008103727714748784,
+    "oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe": 0.0008103727714748784,
+    "org.springframework.security.crypto.bcrypt.BCrypt.encode_base64": 0.0008103727714748784,
+    "java.util.HashMap.entrySet": 0.0008103727714748784,
+    "oracle.jdbc.driver.T4CPreparedStatement.doClearDefines": 0.0008103727714748784
+  }
+}

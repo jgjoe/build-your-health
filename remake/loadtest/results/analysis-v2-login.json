@@ -1,0 +1,1968 @@
+[
+  {
+    "run": "v2-login-20-r1",
+    "target_tps": 20,
+    "mix": "login",
+    "vus_per_scenario": 256,
+    "actual_tps": 19.991666666666667,
+    "valid_response_tps": 19.991666666666667,
+    "completed_in_window": 2399,
+    "completed_after_window": 1,
+    "completed_per_scheduled_second_including_grace": 20.0,
+    "completed": {
+      "login": 2400
+    },
+    "started": {
+      "login": 2400
+    },
+    "started_without_completed_sample": 0,
+    "error_percent": 0.0,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "login": 0
+    },
+    "stop_reasons": [],
+    "latency": {
+      "all": {
+        "n": 2400,
+        "mean": 61.82974582999992,
+        "p50": 61.2925325,
+        "p95": 66.88384075,
+        "p99": 70.77476939999994,
+        "max": 84.792307
+      },
+      "login": {
+        "n": 2400,
+        "mean": 61.82974582999992,
+        "p50": 61.2925325,
+        "p95": 66.88384075,
+        "p99": 70.77476939999994,
+        "max": 84.792307
+      }
+    },
+    "measured_start_utc": "2026-10-19T13:29:18.944357+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 119,
+        "mean": 0.008403361344537815,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 1
+      },
+      "awaiting": {
+        "n": 119,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0
+      },
+      "total": {
+        "n": 119,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 119,
+        "mean": 3.2100840336134455,
+        "p50": 3.0,
+        "p95": 4.0,
+        "p99": 4.0,
+        "max": 4
+      },
+      "bcrypt_runnable": {
+        "n": 119,
+        "mean": 1.184873949579832,
+        "p50": 1.0,
+        "p95": 2.0,
+        "p99": 2.0,
+        "max": 2
+      }
+    },
+    "app_cpu_cores_jmx": 1.2626159235720733,
+    "http_cpu_cores_jmx": 1.2249647865819315,
+    "jmx_sample_interval_seconds": {
+      "n": 118,
+      "mean": 1.0069892627118642,
+      "p50": 1.006539,
+      "p95": 1.01066125,
+      "p99": 1.0125464400000002,
+      "max": 1.013223
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.36910994764397903,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 120.59052631578949,
+        "p50": 120.12,
+        "p95": 129.153,
+        "p99": 132.48659999999998,
+        "max": 133.32
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 1.5410526315789475,
+        "p50": 1.1,
+        "p95": 2.314999999999986,
+        "p99": 6.959000000000001,
+        "max": 8.12
+      },
+      "byh-k6-v2-login-20-r1": {
+        "n": 19,
+        "mean": 2.75421052631579,
+        "p50": 2.16,
+        "p95": 6.676999999999995,
+        "p99": 8.383400000000002,
+        "max": 8.81
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 143655330,
+      "user_usec": 142974854,
+      "system_usec": 680477,
+      "nr_periods": 1132,
+      "nr_throttled": 6,
+      "throttled_usec": 74322,
+      "observed_seconds": 113.190031,
+      "throttled_period_percent": 0.5300353356890459
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 531.4631578947369,
+        "p50": 531.4,
+        "p95": 535.16,
+        "p99": 536.312,
+        "max": 536.6
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 1777.9873684210531,
+        "p50": 1764.352,
+        "p95": 1794.048,
+        "p99": 1794.048,
+        "max": 1794.048
+      },
+      "byh-k6-v2-login-20-r1": {
+        "n": 19,
+        "mean": 107.60894736842106,
+        "p50": 103.6,
+        "p95": 116.21000000000001,
+        "p99": 116.282,
+        "max": 116.3
+      }
+    },
+    "vm_and_host_cpu": {
+      "vm_busy_cores": {
+        "n": 18,
+        "mean": 1.5464802167074554,
+        "p50": 1.5461161052852703,
+        "p95": 1.5879932725148995,
+        "p99": 1.6308421431488427,
+        "max": 1.6415543608073286
+      },
+      "vm_steal_cores": {
+        "n": 18,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "host_cpu_percent": {
+        "n": 19,
+        "mean": 23.68421052631579,
+        "p50": 22.0,
+        "p95": 41.3,
+        "p99": 43.46,
+        "max": 44.0
+      },
+      "host_top_process_max_percent": {
+        "SearchIndexer": 185.0,
+        "Mixdog#2": 180.0,
+        "vmmemWSL": 152.0,
+        "Mixdog#5": 102.0,
+        "System": 89.0,
+        "chrome": 85.0,
+        "MsMpEng": 82.0,
+        "chrome#3": 70.0
+      }
+    },
+    "oracle": {
+      "samples": 20,
+      "seconds": 119.551,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate UGA memory from OS": [
+          286,
+          1465
+        ],
+        "Disk file operations I/O": [
+          20,
+          135
+        ],
+        "Free private memory to OS": [
+          19,
+          321
+        ],
+        "KSV master wait": [
+          1,
+          17
+        ],
+        "SQL*Net message to client": [
+          2630,
+          5149
+        ],
+        "db file sequential read": [
+          8,
+          135
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 624844,
+        "DB CPU": 635820
+      },
+      "byh_load_active_session_samples": 0,
+      "byh_load_active_events": {}
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 3101,
+        "elapsed_ms": 0.06726668816510803,
+        "gets": 3.6610770719122865,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      }
+    ]
+  },
+  {
+    "run": "v2-login-20-r2",
+    "target_tps": 20,
+    "mix": "login",
+    "vus_per_scenario": 256,
+    "actual_tps": 20.0,
+    "valid_response_tps": 20.0,
+    "completed_in_window": 2400,
+    "completed_after_window": 1,
+    "completed_per_scheduled_second_including_grace": 20.008333333333333,
+    "completed": {
+      "login": 2401
+    },
+    "started": {
+      "login": 2401
+    },
+    "started_without_completed_sample": 0,
+    "error_percent": 0.0,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "login": 0
+    },
+    "stop_reasons": [],
+    "latency": {
+      "all": {
+        "n": 2401,
+        "mean": 61.01354372136624,
+        "p50": 60.438186,
+        "p95": 65.41336,
+        "p99": 71.246887,
+        "max": 83.70624
+      },
+      "login": {
+        "n": 2401,
+        "mean": 61.01354372136624,
+        "p50": 60.438186,
+        "p95": 65.41336,
+        "p99": 71.246887,
+        "max": 83.70624
+      }
+    },
+    "measured_start_utc": "2026-10-19T13:32:17.313134+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 119,
+        "mean": 0.025210084033613446,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 1.0,
+        "max": 1
+      },
+      "awaiting": {
+        "n": 119,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0
+      },
+      "total": {
+        "n": 119,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 119,
+        "mean": 3.2184873949579833,
+        "p50": 3.0,
+        "p95": 4.0,
+        "p99": 4.0,
+        "max": 4
+      },
+      "bcrypt_runnable": {
+        "n": 119,
+        "mean": 1.2016806722689075,
+        "p50": 1.0,
+        "p95": 2.0,
+        "p99": 2.0,
+        "max": 2
+      }
+    },
+    "app_cpu_cores_jmx": 1.2504264241831577,
+    "http_cpu_cores_jmx": 1.2076378044921479,
+    "jmx_sample_interval_seconds": {
+      "n": 118,
+      "mean": 1.0073173813559322,
+      "p50": 1.0070320000000001,
+      "p95": 1.0096253000000002,
+      "p99": 1.01365754,
+      "max": 1.017891
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.3733681462140992,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 120.57526315789472,
+        "p50": 117.33,
+        "p95": 149.95499999999998,
+        "p99": 150.06300000000002,
+        "max": 150.09
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 2.2694736842105265,
+        "p50": 1.4,
+        "p95": 8.056999999999999,
+        "p99": 8.179400000000001,
+        "max": 8.21
+      },
+      "byh-k6-v2-login-20-r2": {
+        "n": 19,
+        "mean": 2.4157894736842107,
+        "p50": 2.12,
+        "p95": 3.2729999999999926,
+        "p99": 5.814600000000001,
+        "max": 6.45
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 141724074,
+      "user_usec": 140875283,
+      "system_usec": 848791,
+      "nr_periods": 1125,
+      "nr_throttled": 21,
+      "throttled_usec": 382412,
+      "observed_seconds": 112.506397,
+      "throttled_period_percent": 1.8666666666666667
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 549.0368421052631,
+        "p50": 547.0,
+        "p95": 556.01,
+        "p99": 556.082,
+        "max": 556.1
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 1765.2682105263157,
+        "p50": 1765.376,
+        "p95": 1767.424,
+        "p99": 1767.424,
+        "max": 1767.424
+      },
+      "byh-k6-v2-login-20-r2": {
+        "n": 19,
+        "mean": 108.75578947368419,
+        "p50": 103.7,
+        "p95": 118.21000000000001,
+        "p99": 118.282,
+        "max": 118.3
+      }
+    },
+    "vm_and_host_cpu": {
+      "vm_busy_cores": {
+        "n": 18,
+        "mean": 1.5154974906344174,
+        "p50": 1.4987944662570922,
+        "p95": 1.621979692121502,
+        "p99": 1.6374889601331326,
+        "max": 1.6413662771360402
+      },
+      "vm_steal_cores": {
+        "n": 18,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "host_cpu_percent": {
+        "n": 19,
+        "mean": 19.57894736842105,
+        "p50": 18.0,
+        "p95": 35.69999999999996,
+        "p99": 47.940000000000005,
+        "max": 51.0
+      },
+      "host_top_process_max_percent": {
+        "vmmemWSL": 146.0,
+        "mt64agnt": 96.0,
+        "chrome": 64.0,
+        "chrome#3": 59.0,
+        "chrome#33": 41.0,
+        "AdguardSvc": 40.0,
+        "System": 39.0,
+        "dwm": 39.0
+      }
+    },
+    "oracle": {
+      "samples": 20,
+      "seconds": 118.748,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate CGA memory from OS": [
+          1,
+          12
+        ],
+        "Allocate PGA memory from OS": [
+          1,
+          8
+        ],
+        "Allocate UGA memory from OS": [
+          288,
+          1493
+        ],
+        "Disk file operations I/O": [
+          20,
+          160
+        ],
+        "Free private memory to OS": [
+          19,
+          350
+        ],
+        "SQL*Net message to client": [
+          2702,
+          4746
+        ],
+        "control file sequential read": [
+          3,
+          18
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 585363,
+        "DB CPU": 581075
+      },
+      "byh_load_active_session_samples": 0,
+      "byh_load_active_events": {}
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 3102,
+        "elapsed_ms": 0.057142166344294004,
+        "gets": 3.660863958736299,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      }
+    ]
+  },
+  {
+    "run": "v2-login-25-r1",
+    "target_tps": 25,
+    "mix": "login",
+    "vus_per_scenario": 256,
+    "actual_tps": 24.991666666666667,
+    "valid_response_tps": 24.991666666666667,
+    "completed_in_window": 2999,
+    "completed_after_window": 2,
+    "completed_per_scheduled_second_including_grace": 25.008333333333333,
+    "completed": {
+      "login": 3001
+    },
+    "started": {
+      "login": 3001
+    },
+    "started_without_completed_sample": 0,
+    "error_percent": 0.0,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "login": 0
+    },
+    "stop_reasons": [],
+    "latency": {
+      "all": {
+        "n": 3001,
+        "mean": 60.7939051682774,
+        "p50": 60.280721,
+        "p95": 64.682275,
+        "p99": 70.090373,
+        "max": 89.562625
+      },
+      "login": {
+        "n": 3001,
+        "mean": 60.7939051682774,
+        "p50": 60.280721,
+        "p95": 64.682275,
+        "p99": 70.090373,
+        "max": 89.562625
+      }
+    },
+    "measured_start_utc": "2026-10-19T13:35:14.179768+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 119,
+        "mean": 0.008403361344537815,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 1
+      },
+      "awaiting": {
+        "n": 119,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0
+      },
+      "total": {
+        "n": 119,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 119,
+        "mean": 3.46218487394958,
+        "p50": 3.0,
+        "p95": 4.0,
+        "p99": 4.0,
+        "max": 4
+      },
+      "bcrypt_runnable": {
+        "n": 119,
+        "mean": 1.4369747899159664,
+        "p50": 1.0,
+        "p95": 2.0,
+        "p99": 2.0,
+        "max": 2
+      }
+    },
+    "app_cpu_cores_jmx": 1.519817451075632,
+    "http_cpu_cores_jmx": 1.5039361884827867,
+    "jmx_sample_interval_seconds": {
+      "n": 118,
+      "mean": 1.0080381016949154,
+      "p50": 1.00754,
+      "p95": 1.0120318,
+      "p99": 1.0145916899999998,
+      "max": 1.014935
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.41504854368932037,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 144.28736842105266,
+        "p50": 143.75,
+        "p95": 149.58099999999996,
+        "p99": 157.7962,
+        "max": 159.85
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 2.547894736842106,
+        "p50": 1.48,
+        "p95": 8.45,
+        "p99": 8.666,
+        "max": 8.72
+      },
+      "byh-k6-v2-login-25-r1": {
+        "n": 19,
+        "mean": 2.8636842105263156,
+        "p50": 2.54,
+        "p95": 4.738999999999996,
+        "p99": 5.883800000000001,
+        "max": 6.17
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 172594630,
+      "user_usec": 171835493,
+      "system_usec": 759137,
+      "nr_periods": 1129,
+      "nr_throttled": 12,
+      "throttled_usec": 308345,
+      "observed_seconds": 112.851028,
+      "throttled_period_percent": 1.0628875110717448
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 563.2842105263157,
+        "p50": 561.3,
+        "p95": 567.3,
+        "p99": 567.3,
+        "max": 567.3
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 1774.969263157895,
+        "p50": 1775.616,
+        "p95": 1783.5008,
+        "p99": 1788.66176,
+        "max": 1789.952
+      },
+      "byh-k6-v2-login-25-r1": {
+        "n": 19,
+        "mean": 109.85263157894735,
+        "p50": 106.0,
+        "p95": 116.6,
+        "p99": 118.04,
+        "max": 118.4
+      }
+    },
+    "vm_and_host_cpu": {
+      "vm_busy_cores": {
+        "n": 18,
+        "mean": 1.8615656803546305,
+        "p50": 1.8557306554872888,
+        "p95": 1.929520671007081,
+        "p99": 1.9374189811620646,
+        "max": 1.9393935587008104
+      },
+      "vm_steal_cores": {
+        "n": 18,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "host_cpu_percent": {
+        "n": 19,
+        "mean": 18.94736842105263,
+        "p50": 19.0,
+        "p95": 31.39999999999999,
+        "p99": 34.28,
+        "max": 35.0
+      },
+      "host_top_process_max_percent": {
+        "vmmemWSL": 203.0,
+        "SearchIndexer": 104.0,
+        "mt64agnt": 99.0,
+        "chrome": 81.0,
+        "svchost#26": 73.0,
+        "KOSinj": 71.0,
+        "MsMpEng": 66.0,
+        "chrome#3": 50.0
+      }
+    },
+    "oracle": {
+      "samples": 20,
+      "seconds": 119.088,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate UGA memory from OS": [
+          285,
+          1752
+        ],
+        "Disk file operations I/O": [
+          19,
+          117
+        ],
+        "Free private memory to OS": [
+          19,
+          316
+        ],
+        "SQL*Net message to client": [
+          3382,
+          5304
+        ],
+        "row cache mutex": [
+          1,
+          6
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 645125,
+        "DB CPU": 637372
+      },
+      "byh_load_active_session_samples": 0,
+      "byh_load_active_events": {}
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 3851,
+        "elapsed_ms": 0.04831004933783433,
+        "gets": 3.6619059984419633,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      }
+    ]
+  },
+  {
+    "run": "v2-login-25-r2",
+    "target_tps": 25,
+    "mix": "login",
+    "vus_per_scenario": 256,
+    "actual_tps": 24.991666666666667,
+    "valid_response_tps": 24.991666666666667,
+    "completed_in_window": 2999,
+    "completed_after_window": 2,
+    "completed_per_scheduled_second_including_grace": 25.008333333333333,
+    "completed": {
+      "login": 3001
+    },
+    "started": {
+      "login": 3001
+    },
+    "started_without_completed_sample": 0,
+    "error_percent": 0.0,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "login": 0
+    },
+    "stop_reasons": [],
+    "latency": {
+      "all": {
+        "n": 3001,
+        "mean": 60.48912535621461,
+        "p50": 59.980633,
+        "p95": 64.494531,
+        "p99": 67.771732,
+        "max": 88.933386
+      },
+      "login": {
+        "n": 3001,
+        "mean": 60.48912535621461,
+        "p50": 59.980633,
+        "p95": 64.494531,
+        "p99": 67.771732,
+        "max": 88.933386
+      }
+    },
+    "measured_start_utc": "2026-10-19T13:38:12.052983+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 119,
+        "mean": 0.008403361344537815,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 1
+      },
+      "awaiting": {
+        "n": 119,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0
+      },
+      "total": {
+        "n": 119,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 119,
+        "mean": 3.4873949579831933,
+        "p50": 3.0,
+        "p95": 4.0,
+        "p99": 4.0,
+        "max": 4
+      },
+      "bcrypt_runnable": {
+        "n": 119,
+        "mean": 1.4621848739495797,
+        "p50": 1.0,
+        "p95": 2.0,
+        "p99": 2.0,
+        "max": 2
+      }
+    },
+    "app_cpu_cores_jmx": 1.5095048299784783,
+    "http_cpu_cores_jmx": 1.498084382656138,
+    "jmx_sample_interval_seconds": {
+      "n": 118,
+      "mean": 1.008468542372881,
+      "p50": 1.0079470000000001,
+      "p95": 1.0121488,
+      "p99": 1.0169856099999999,
+      "max": 1.018036
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.41927710843373495,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 142.99315789473687,
+        "p50": 142.6,
+        "p95": 148.114,
+        "p99": 149.1508,
+        "max": 149.41
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 2.1763157894736844,
+        "p50": 1.44,
+        "p95": 7.506999999999998,
+        "p99": 8.1334,
+        "max": 8.29
+      },
+      "byh-k6-v2-login-25-r2": {
+        "n": 19,
+        "mean": 2.717368421052632,
+        "p50": 2.52,
+        "p95": 3.197999999999993,
+        "p99": 5.703600000000002,
+        "max": 6.33
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 170917614,
+      "user_usec": 170422881,
+      "system_usec": 494732,
+      "nr_periods": 1125,
+      "nr_throttled": 3,
+      "throttled_usec": 60062,
+      "observed_seconds": 112.471257,
+      "throttled_period_percent": 0.26666666666666666
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 571.3894736842105,
+        "p50": 570.6,
+        "p95": 574.71,
+        "p99": 574.7819999999999,
+        "max": 574.8
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 1775.7237894736843,
+        "p50": 1775.616,
+        "p95": 1777.7664,
+        "p99": 1778.50368,
+        "max": 1778.688
+      },
+      "byh-k6-v2-login-25-r2": {
+        "n": 19,
+        "mean": 110.46789473684213,
+        "p50": 116.2,
+        "p95": 116.4,
+        "p99": 116.4,
+        "max": 116.4
+      }
+    },
+    "vm_and_host_cpu": {
+      "vm_busy_cores": {
+        "n": 18,
+        "mean": 1.8399822930135334,
+        "p50": 1.842956668278474,
+        "p95": 1.8718883103617237,
+        "p99": 1.8789267216653762,
+        "max": 1.8806863244912893
+      },
+      "vm_steal_cores": {
+        "n": 18,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "host_cpu_percent": {
+        "n": 19,
+        "mean": 19.94736842105263,
+        "p50": 19.0,
+        "p95": 31.199999999999996,
+        "p99": 32.64,
+        "max": 33.0
+      },
+      "host_top_process_max_percent": {
+        "vmmemWSL": 178.0,
+        "SearchIndexer": 98.0,
+        "mt64agnt": 95.0,
+        "powershell#7": 93.0,
+        "MsMpEng": 62.0,
+        "KOSinj": 40.0,
+        "chrome#3": 40.0,
+        "WmiPrvSE": 40.0
+      }
+    },
+    "oracle": {
+      "samples": 20,
+      "seconds": 118.724,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate DGA memory from OS": [
+          1,
+          8
+        ],
+        "Allocate UGA memory from OS": [
+          290,
+          1505
+        ],
+        "Disk file operations I/O": [
+          21,
+          218
+        ],
+        "Free private memory to OS": [
+          19,
+          316
+        ],
+        "SQL*Net message to client": [
+          3278,
+          4900
+        ],
+        "asynch descriptor resize": [
+          1,
+          13
+        ],
+        "db file sequential read": [
+          8,
+          111
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 605679,
+        "DB CPU": 600597
+      },
+      "byh_load_active_session_samples": 0,
+      "byh_load_active_events": {}
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 3852,
+        "elapsed_ms": 0.04495976116303219,
+        "gets": 3.661993769470405,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      }
+    ]
+  },
+  {
+    "run": "v2-login-30-r1",
+    "target_tps": 30,
+    "mix": "login",
+    "vus_per_scenario": 256,
+    "actual_tps": 29.983333333333334,
+    "valid_response_tps": 29.983333333333334,
+    "completed_in_window": 3598,
+    "completed_after_window": 3,
+    "completed_per_scheduled_second_including_grace": 30.008333333333333,
+    "completed": {
+      "login": 3601
+    },
+    "started": {
+      "login": 3601
+    },
+    "started_without_completed_sample": 0,
+    "error_percent": 0.0,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "login": 0
+    },
+    "stop_reasons": [],
+    "latency": {
+      "all": {
+        "n": 3601,
+        "mean": 61.97361590308233,
+        "p50": 61.058124,
+        "p95": 67.326563,
+        "p99": 81.559691,
+        "max": 149.114655
+      },
+      "login": {
+        "n": 3601,
+        "mean": 61.97361590308233,
+        "p50": 61.058124,
+        "p95": 67.326563,
+        "p99": 81.559691,
+        "max": 149.114655
+      }
+    },
+    "measured_start_utc": "2026-10-19T13:41:09.540830+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 119,
+        "mean": 0.008403361344537815,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 1
+      },
+      "awaiting": {
+        "n": 119,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0
+      },
+      "total": {
+        "n": 119,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 119,
+        "mean": 3.8487394957983194,
+        "p50": 4.0,
+        "p95": 4.0,
+        "p99": 4.819999999999993,
+        "max": 5
+      },
+      "bcrypt_runnable": {
+        "n": 119,
+        "mean": 1.815126050420168,
+        "p50": 2.0,
+        "p95": 2.0,
+        "p99": 2.0,
+        "max": 3
+      }
+    },
+    "app_cpu_cores_jmx": 1.835651615973226,
+    "http_cpu_cores_jmx": 1.824537411514453,
+    "jmx_sample_interval_seconds": {
+      "n": 118,
+      "mean": 1.0102171694915256,
+      "p50": 1.0089044999999999,
+      "p95": 1.0183309999999999,
+      "p99": 1.0299299199999998,
+      "max": 1.032466
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.47161572052401746,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 172.50473684210525,
+        "p50": 172.03,
+        "p95": 179.37699999999998,
+        "p99": 180.4354,
+        "max": 180.7
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 2.2594736842105267,
+        "p50": 1.5,
+        "p95": 8.136,
+        "p99": 8.3232,
+        "max": 8.37
+      },
+      "byh-k6-v2-login-30-r1": {
+        "n": 19,
+        "mean": 3.1742105263157887,
+        "p50": 2.89,
+        "p95": 4.238999999999994,
+        "p99": 6.247800000000001,
+        "max": 6.75
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 209161119,
+      "user_usec": 208237729,
+      "system_usec": 923389,
+      "nr_periods": 1134,
+      "nr_throttled": 91,
+      "throttled_usec": 1764370,
+      "observed_seconds": 113.396963,
+      "throttled_period_percent": 8.024691358024691
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 581.9736842105264,
+        "p50": 584.3,
+        "p95": 585.11,
+        "p99": 585.182,
+        "max": 585.2
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 1808.2762105263157,
+        "p50": 1809.408,
+        "p95": 1810.432,
+        "p99": 1810.432,
+        "max": 1810.432
+      },
+      "byh-k6-v2-login-30-r1": {
+        "n": 19,
+        "mean": 112.84736842105262,
+        "p50": 116.3,
+        "p95": 116.61,
+        "p99": 116.682,
+        "max": 116.7
+      }
+    },
+    "vm_and_host_cpu": {
+      "vm_busy_cores": {
+        "n": 19,
+        "mean": 2.1691553118691766,
+        "p50": 2.1579392915589874,
+        "p95": 2.2259185499119543,
+        "p99": 2.2266819398715785,
+        "max": 2.2268727873614846
+      },
+      "vm_steal_cores": {
+        "n": 19,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "host_cpu_percent": {
+        "n": 20,
+        "mean": 26.95,
+        "p50": 24.0,
+        "p95": 47.2,
+        "p99": 50.239999999999995,
+        "max": 51.0
+      },
+      "host_top_process_max_percent": {
+        "vmmemWSL": 212.0,
+        "chrome#33": 113.0,
+        "mt64agnt": 91.0,
+        "MsMpEng": 83.0,
+        "Mixdog#3": 75.0,
+        "chrome": 74.0,
+        "chrome#3": 74.0,
+        "KOSinj": 71.0
+      }
+    },
+    "oracle": {
+      "samples": 19,
+      "seconds": 113.392,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate UGA memory from OS": [
+          270,
+          1439
+        ],
+        "Disk file operations I/O": [
+          18,
+          113
+        ],
+        "Free private memory to OS": [
+          18,
+          336
+        ],
+        "SQL*Net message to client": [
+          3629,
+          6025
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 757676,
+        "DB CPU": 749935
+      },
+      "byh_load_active_session_samples": 0,
+      "byh_load_active_events": {}
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 4601,
+        "elapsed_ms": 0.0521051945229298,
+        "gets": 3.661160617257118,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      }
+    ]
+  },
+  {
+    "run": "v2-login-30-r2",
+    "target_tps": 30,
+    "mix": "login",
+    "vus_per_scenario": 256,
+    "actual_tps": 29.991666666666667,
+    "valid_response_tps": 29.991666666666667,
+    "completed_in_window": 3599,
+    "completed_after_window": 1,
+    "completed_per_scheduled_second_including_grace": 30.0,
+    "completed": {
+      "login": 3600
+    },
+    "started": {
+      "login": 3600
+    },
+    "started_without_completed_sample": 0,
+    "error_percent": 0.0,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "login": 0
+    },
+    "stop_reasons": [],
+    "latency": {
+      "all": {
+        "n": 3600,
+        "mean": 65.60771288083319,
+        "p50": 61.8568975,
+        "p95": 89.71589154999997,
+        "p99": 128.88383866999993,
+        "max": 173.894686
+      },
+      "login": {
+        "n": 3600,
+        "mean": 65.60771288083319,
+        "p50": 61.8568975,
+        "p95": 89.71589154999997,
+        "p99": 128.88383866999993,
+        "max": 173.894686
+      }
+    },
+    "measured_start_utc": "2026-10-19T13:44:09.093985+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 119,
+        "mean": 0.01680672268907563,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.8199999999999932,
+        "max": 1
+      },
+      "awaiting": {
+        "n": 119,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0
+      },
+      "total": {
+        "n": 119,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 119,
+        "mean": 3.966386554621849,
+        "p50": 4.0,
+        "p95": 5.0,
+        "p99": 5.819999999999993,
+        "max": 7
+      },
+      "bcrypt_runnable": {
+        "n": 119,
+        "mean": 1.9411764705882353,
+        "p50": 2.0,
+        "p95": 3.0,
+        "p99": 3.0,
+        "max": 4
+      }
+    },
+    "app_cpu_cores_jmx": 1.8620489661503103,
+    "http_cpu_cores_jmx": 1.852414473019538,
+    "jmx_sample_interval_seconds": {
+      "n": 118,
+      "mean": 1.0117795423728817,
+      "p50": 1.0099485,
+      "p95": 1.02102375,
+      "p99": 1.03771572,
+      "max": 1.052872
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.4894067796610169,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 177.49105263157892,
+        "p50": 177.26,
+        "p95": 182.17299999999997,
+        "p99": 183.5626,
+        "max": 183.91
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 2.6447368421052633,
+        "p50": 1.86,
+        "p95": 7.942999999999996,
+        "p99": 9.4046,
+        "max": 9.77
+      },
+      "byh-k6-v2-login-30-r2": {
+        "n": 19,
+        "mean": 3.1357894736842105,
+        "p50": 3.33,
+        "p95": 3.8839999999999986,
+        "p99": 4.3448,
+        "max": 4.46
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 213332350,
+      "user_usec": 212365398,
+      "system_usec": 966952,
+      "nr_periods": 1143,
+      "nr_throttled": 211,
+      "throttled_usec": 5024146,
+      "observed_seconds": 114.239504,
+      "throttled_period_percent": 18.460192475940506
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 19,
+        "mean": 595.236842105263,
+        "p50": 597.8,
+        "p95": 597.9,
+        "p99": 597.9,
+        "max": 597.9
+      },
+      "byh-perf-perfdb-1": {
+        "n": 19,
+        "mean": 1799.0602105263158,
+        "p50": 1815.552,
+        "p95": 1816.8832,
+        "p99": 1826.46784,
+        "max": 1828.864
+      },
+      "byh-k6-v2-login-30-r2": {
+        "n": 19,
+        "mean": 104.0842105263158,
+        "p50": 112.2,
+        "p95": 116.41000000000001,
+        "p99": 116.482,
+        "max": 116.5
+      }
+    },
+    "vm_and_host_cpu": {
+      "vm_busy_cores": {
+        "n": 18,
+        "mean": 2.14846068697163,
+        "p50": 2.1490343874441753,
+        "p95": 2.2140730512299287,
+        "p99": 2.233319596018869,
+        "max": 2.238131232216104
+      },
+      "vm_steal_cores": {
+        "n": 18,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "host_cpu_percent": {
+        "n": 19,
+        "mean": 30.42105263157895,
+        "p50": 28.0,
+        "p95": 54.59999999999999,
+        "p99": 58.92,
+        "max": 60.0
+      },
+      "host_top_process_max_percent": {
+        "vmmemWSL": 227.0,
+        "librewolf#2": 188.0,
+        "librewolf#13": 104.0,
+        "librewolf": 99.0,
+        "chrome#30": 97.0,
+        "Chat On Steroids": 94.0,
+        "SearchIndexer": 84.0,
+        "WmiPrvSE#1": 81.0
+      }
+    },
+    "oracle": {
+      "samples": 19,
+      "seconds": 114.345,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate CGA memory from OS": [
+          1,
+          7
+        ],
+        "Allocate PGA memory from OS": [
+          1,
+          14
+        ],
+        "Allocate UGA memory from OS": [
+          273,
+          2156
+        ],
+        "Disk file operations I/O": [
+          18,
+          117
+        ],
+        "Free private memory to OS": [
+          18,
+          356
+        ],
+        "SQL*Net message to client": [
+          3658,
+          6978
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 896719,
+        "DB CPU": 888459
+      },
+      "byh_load_active_session_samples": 0,
+      "byh_load_active_events": {}
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 4600,
+        "elapsed_ms": 0.06167760869565218,
+        "gets": 3.661086956521739,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      }
+    ]
+  },
+  {
+    "run": "v2-login-35-r1",
+    "target_tps": 35,
+    "mix": "login",
+    "vus_per_scenario": 256,
+    "actual_tps": 33.55,
+    "valid_response_tps": 5.3,
+    "completed_in_window": 4026,
+    "completed_after_window": 174,
+    "completed_per_scheduled_second_including_grace": 35.0,
+    "completed": {
+      "login": 4200
+    },
+    "started": {
+      "login": 4201
+    },
+    "started_without_completed_sample": 1,
+    "error_percent": 84.85714285714285,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "login": 3564
+    },
+    "stop_reasons": [
+      "mixed_p95_gt_500ms",
+      "errors_ge_1percent"
+    ],
+    "latency": {
+      "all": {
+        "n": 4200,
+        "mean": 4631.607170284291,
+        "p50": 5000.0112685,
+        "p95": 5000.8468858,
+        "p99": 5001.1272423400005,
+        "max": 5012.975061
+      },
+      "login": {
+        "n": 4200,
+        "mean": 4631.607170284291,
+        "p50": 5000.0112685,
+        "p95": 5000.8468858,
+        "p99": 5001.1272423400005,
+        "max": 5012.975061
+      }
+    },
+    "measured_start_utc": "2026-10-19T13:47:11.186840+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 33,
+        "mean": 4.0606060606060606,
+        "p50": 4.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "awaiting": {
+        "n": 33,
+        "mean": 1.7878787878787878,
+        "p50": 0.0,
+        "p95": 8.199999999999996,
+        "p99": 12.04,
+        "max": 13
+      },
+      "total": {
+        "n": 33,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 33,
+        "mean": 152.4848484848485,
+        "p50": 199.0,
+        "p95": 202.0,
+        "p99": 202.0,
+        "max": 202
+      },
+      "bcrypt_runnable": {
+        "n": 33,
+        "mean": 142.93939393939394,
+        "p50": 182.0,
+        "p95": 192.4,
+        "p99": 193.68,
+        "max": 194
+      }
+    },
+    "app_cpu_cores_jmx": 1.9944387848652767,
+    "http_cpu_cores_jmx": 1.9570272568390814,
+    "jmx_sample_interval_seconds": {
+      "n": 32,
+      "mean": 3.7128239062500006,
+      "p50": 3.6758575,
+      "p95": 5.8841759499999995,
+      "p99": 6.19119803,
+      "max": 6.215901
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.9374006359300477,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 11,
+        "mean": 206.15272727272725,
+        "p50": 205.5,
+        "p95": 209.36,
+        "p99": 209.864,
+        "max": 209.99
+      },
+      "byh-perf-perfdb-1": {
+        "n": 11,
+        "mean": 2.0581818181818186,
+        "p50": 1.9,
+        "p95": 2.625,
+        "p99": 2.661,
+        "max": 2.67
+      },
+      "byh-k6-v2-login-35-r1": {
+        "n": 11,
+        "mean": 4.417272727272728,
+        "p50": 3.91,
+        "p95": 6.115,
+        "p99": 6.879000000000001,
+        "max": 7.07
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 233314915,
+      "user_usec": 230208493,
+      "system_usec": 3106421,
+      "nr_periods": 1167,
+      "nr_throttled": 1167,
+      "throttled_usec": 221736747,
+      "observed_seconds": 114.04199,
+      "throttled_period_percent": 100.0
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 11,
+        "mean": 672.4545454545456,
+        "p50": 676.1,
+        "p95": 685.7,
+        "p99": 686.5799999999999,
+        "max": 686.8
+      },
+      "byh-perf-perfdb-1": {
+        "n": 11,
+        "mean": 1772.6370909090908,
+        "p50": 1773.568,
+        "p95": 1773.568,
+        "p99": 1773.568,
+        "max": 1773.568
+      },
+      "byh-k6-v2-login-35-r1": {
+        "n": 11,
+        "mean": 115.09090909090907,
+        "p50": 118.4,
+        "p95": 120.6,
+        "p99": 120.6,
+        "max": 120.6
+      }
+    },
+    "vm_and_host_cpu": {
+      "vm_busy_cores": {
+        "n": 9,
+        "mean": 2.0713776146015963,
+        "p50": 2.060215279656621,
+        "p95": 2.4256375981709515,
+        "p99": 2.519300205830385,
+        "max": 2.5427158577452436
+      },
+      "vm_steal_cores": {
+        "n": 9,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "host_cpu_percent": {
+        "n": 10,
+        "mean": 48.9,
+        "p50": 51.0,
+        "p95": 71.69999999999999,
+        "p99": 76.74000000000001,
+        "max": 78.0
+      },
+      "host_top_process_max_percent": {
+        "vmmemWSL": 240.0,
+        "chrome#3": 97.0,
+        "mt64agnt": 97.0,
+        "librewolf#12": 92.0,
+        "Mixdog#3": 83.0,
+        "librewolf#2": 83.0,
+        "librewolf#11": 82.0,
+        "librewolf": 78.0
+      }
+    },
+    "oracle": {
+      "samples": 11,
+      "seconds": 114.028,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate UGA memory from OS": [
+          150,
+          1033
+        ],
+        "Disk file operations I/O": [
+          10,
+          73
+        ],
+        "Free private memory to OS": [
+          10,
+          190
+        ],
+        "SQL*Net message to client": [
+          4032,
+          11287
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 809259,
+        "DB CPU": 928745
+      },
+      "byh_load_active_session_samples": 0,
+      "byh_load_active_events": {}
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 5305,
+        "elapsed_ms": 0.06688652214891612,
+        "gets": 3.6614514608859565,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      }
+    ]
+  },
+  {
+    "run": "v2-login-35-r2",
+    "target_tps": 35,
+    "mix": "login",
+    "vus_per_scenario": 256,
+    "actual_tps": 33.55,
+    "valid_response_tps": 6.433333333333334,
+    "completed_in_window": 4026,
+    "completed_after_window": 174,
+    "completed_per_scheduled_second_including_grace": 35.0,
+    "completed": {
+      "login": 4200
+    },
+    "started": {
+      "login": 4201
+    },
+    "started_without_completed_sample": 1,
+    "error_percent": 81.61904761904762,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "login": 3428
+    },
+    "stop_reasons": [
+      "mixed_p95_gt_500ms",
+      "errors_ge_1percent"
+    ],
+    "latency": {
+      "all": {
+        "n": 4200,
+        "mean": 4564.199037124062,
+        "p50": 5000.056841,
+        "p95": 5000.89135815,
+        "p99": 5001.1259790799995,
+        "max": 5014.792602
+      },
+      "login": {
+        "n": 4200,
+        "mean": 4564.199037124062,
+        "p50": 5000.056841,
+        "p95": 5000.89135815,
+        "p99": 5001.1259790799995,
+        "max": 5014.792602
+      }
+    },
+    "measured_start_utc": "2026-10-19T13:50:20.616126+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 36,
+        "mean": 4.5,
+        "p50": 5.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "awaiting": {
+        "n": 36,
+        "mean": 2.8333333333333335,
+        "p50": 1.0,
+        "p95": 11.75,
+        "p99": 14.0,
+        "max": 14
+      },
+      "total": {
+        "n": 36,
+        "mean": 9.972222222222221,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 36,
+        "mean": 155.11111111111111,
+        "p50": 196.0,
+        "p95": 202.0,
+        "p99": 202.0,
+        "max": 202
+      },
+      "bcrypt_runnable": {
+        "n": 36,
+        "mean": 144.69444444444446,
+        "p50": 179.5,
+        "p95": 193.0,
+        "p99": 193.65,
+        "max": 194
+      }
+    },
+    "app_cpu_cores_jmx": 1.99404379364213,
+    "http_cpu_cores_jmx": 1.9739002131817016,
+    "jmx_sample_interval_seconds": {
+      "n": 35,
+      "mean": 3.3767706571428566,
+      "p50": 3.416778,
+      "p95": 5.088685699999999,
+      "p99": 5.409557659999999,
+      "max": 5.46627
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.9328438395415473,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 10,
+        "mean": 208.54999999999995,
+        "p50": 208.86,
+        "p95": 212.561,
+        "p99": 214.15220000000002,
+        "max": 214.55
+      },
+      "byh-perf-perfdb-1": {
+        "n": 10,
+        "mean": 3.1670000000000003,
+        "p50": 2.17,
+        "p95": 7.440499999999993,
+        "p99": 9.9281,
+        "max": 10.55
+      },
+      "byh-k6-v2-login-35-r2": {
+        "n": 10,
+        "mean": 3.624,
+        "p50": 3.645,
+        "p95": 4.374499999999999,
+        "p99": 4.5869,
+        "max": 4.64
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 218431826,
+      "user_usec": 215347857,
+      "system_usec": 3083969,
+      "nr_periods": 1093,
+      "nr_throttled": 1093,
+      "throttled_usec": 207993435,
+      "observed_seconds": 108.195996,
+      "throttled_period_percent": 100.0
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 10,
+        "mean": 688.58,
+        "p50": 688.25,
+        "p95": 691.9300000000001,
+        "p99": 692.1460000000001,
+        "max": 692.2
+      },
+      "byh-perf-perfdb-1": {
+        "n": 10,
+        "mean": 1770.3936,
+        "p50": 1769.472,
+        "p95": 1774.1312,
+        "p99": 1774.4998400000002,
+        "max": 1774.592
+      },
+      "byh-k6-v2-login-35-r2": {
+        "n": 10,
+        "mean": 114.91999999999999,
+        "p50": 120.30000000000001,
+        "p95": 120.55499999999999,
+        "p99": 120.591,
+        "max": 120.6
+      }
+    },
+    "vm_and_host_cpu": {
+      "vm_busy_cores": {
+        "n": 9,
+        "mean": 2.101059436886407,
+        "p50": 1.9866931817170033,
+        "p95": 2.6396875418195433,
+        "p99": 2.755595393522223,
+        "max": 2.784572356447893
+      },
+      "vm_steal_cores": {
+        "n": 9,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "host_cpu_percent": {
+        "n": 9,
+        "mean": 35.55555555555556,
+        "p50": 34.0,
+        "p95": 44.8,
+        "p99": 47.36,
+        "max": 48.0
+      },
+      "host_top_process_max_percent": {
+        "vmmemWSL": 209.0,
+        "librewolf#11": 153.0,
+        "System": 150.0,
+        "librewolf": 101.0,
+        "mt64agnt": 83.0,
+        "chrome#3": 76.0,
+        "Mixdog#3": 75.0,
+        "MsMpEng": 58.0
+      }
+    },
+    "oracle": {
+      "samples": 10,
+      "seconds": 108.162,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate PGA memory from OS": [
+          2,
+          24
+        ],
+        "Allocate UGA memory from OS": [
+          138,
+          790
+        ],
+        "Disk file operations I/O": [
+          9,
+          68
+        ],
+        "Free private memory to OS": [
+          9,
+          155
+        ],
+        "SQL*Net message to client": [
+          3889,
+          10641
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 881416,
+        "DB CPU": 869881
+      },
+      "byh_load_active_session_samples": 0,
+      "byh_load_active_events": {}
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 5348,
+        "elapsed_ms": 0.06848952879581152,
+        "gets": 3.663238593866866,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      }
+    ]
+  }
+]

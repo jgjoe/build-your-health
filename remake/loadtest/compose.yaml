@@ -10,7 +10,10 @@ services:
       DB_USERNAME: byh_load
       DB_PASSWORD: ${LOAD_DB_PASSWORD:-byhload123}
       SPRING_DATASOURCE_HIKARI_REGISTER_MBEANS: 'true'
+      # Spring Boot default is 10; V2 cause isolation varies it via POOL_SIZE.
+      SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE: ${POOL_SIZE:-10}
       JAVA_TOOL_OPTIONS: >-
+        ${JFR_OPTS:-}
         -Xms512m -Xmx1024m
         -Dcom.sun.management.jmxremote
         -Dcom.sun.management.jmxremote.port=9010

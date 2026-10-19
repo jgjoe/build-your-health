@@ -1,0 +1,34 @@
+{
+  "run": "v2-jfr-270-r1",
+  "measured_start_utc": "2026-10-19T14:50:10.547104+00:00",
+  "samples_in_window": 1577,
+  "samples_in_recording": 2595,
+  "stack_depth": 16,
+  "share_by_category": {
+    "bcrypt": 0.953709575142676,
+    "other": 0.025364616360177554,
+    "jdbc_and_pool": 0.014584654407102092,
+    "mybatis": 0.0063411540900443885
+  },
+  "share_by_thread": {
+    "http": 0.9968294229549778,
+    "other": 0.0031705770450221942
+  },
+  "top_frames": {
+    "org.springframework.security.crypto.bcrypt.BCrypt.key": 0.9334178820545339,
+    "org.springframework.security.crypto.bcrypt.BCrypt.streamtowords": 0.010145846544071021,
+    "org.springframework.security.crypto.bcrypt.BCrypt.streamtoword": 0.008243500317057704,
+    "org.springframework.security.crypto.bcrypt.BCrypt.crypt_raw": 0.0019023462270133164,
+    "java.lang.StringBuilder.<init>": 0.0019023462270133164,
+    "org.apache.tomcat.util.net.NioEndpoint$Poller.run": 0.0012682308180088776,
+    "java.lang.ThreadLocal.remove": 0.0012682308180088776,
+    "org.apache.coyote.Request.recycle": 0.0012682308180088776,
+    "oracle.jdbc.driver.T4CVarcharAccessor.processIndicator": 0.0006341154090044388,
+    "jdk.internal.util.Preconditions.checkIndex": 0.0006341154090044388,
+    "java.io.ObjectOutputStream$HandleTable.assign": 0.0006341154090044388,
+    "java.util.Objects.requireNonNull": 0.0006341154090044388,
+    "org.springframework.web.method.annotation.ModelFactory.updateModel": 0.0006341154090044388,
+    "org.apache.catalina.connector.CoyoteAdapter.doConnectorAuthenticationAuthorization": 0.0006341154090044388,
+    "java.util.ArrayDeque.iterator": 0.0006341154090044388
+  }
+}

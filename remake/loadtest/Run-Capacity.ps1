@@ -1,6 +1,7 @@
 #requires -Version 7.0
 [CmdletBinding()]
-param([ValidateRange(20,20480)][int]$Tps=20, [ValidateRange(1,2)][int]$Repeat=1, [string]$Label='capacity-before', [int]$Seconds=120)
+param([ValidateRange(20,20480)][int]$Tps=20, [ValidateRange(1,2)][int]$Repeat=1, [string]$Label='capacity-before', [int]$Seconds=120,
+    [ValidateSet('mixed','login','nologin')][string]$Mix='mixed')
 $ErrorActionPreference='Stop'
 $PSNativeCommandUseErrorActionPreference=$true
 if ($Label -notmatch '^[a-z0-9-]+$') { throw 'Invalid result label' }
@@ -15,13 +16,16 @@ $rows=Invoke-SqlFile 'snapshot.sql'
 if (($rows -join '') -notmatch 'ROWS\|22021\|2001\|600000\|1499546') { throw 'Initial fixed seed counts do not match; inspect prior run cleanup' }
 $rows | Set-Content (Join-Path $out 'db-before.txt')
 $appId='byh-loadtest-app-1'
+# App settings under test (pool size, JFR); credentials excluded.
+docker --context desktop-linux inspect $appId --format '{{.State.StartedAt}}{{range .Config.Env}}{{println}}{{.}}{{end}}' |
+    Where-Object { $_ -notmatch 'PASSWORD' } | Set-Content (Join-Path $out 'app-config.txt')
 $k6Image='grafana/k6@sha256:e66db15b860113878fa74670e31f5e274830b7b6e42c8bff28b2f2d86a257603'
 $jdkImage='eclipse-temurin@sha256:5d6042fb8cdc14d614e4e421f52e3211fc5aeadddce44cbf9de8ed37c791f824'
 # Run observer in a separate container, no published JMX port.
 docker --context desktop-linux create --name "byh-jmx-$Label-$Tps-r$Repeat" --network byh-perf_default $jdkImage java /CapacityProbe.java ($Seconds+65) | Set-Content (Join-Path $out 'observer-id.txt')
 docker --context desktop-linux cp (Join-Path $PSScriptRoot 'CapacityProbe.java') "byh-jmx-$Label-$Tps-r${Repeat}:/CapacityProbe.java"
 docker --context desktop-linux start "byh-jmx-$Label-$Tps-r$Repeat" | Out-Null
-docker --context desktop-linux create --user 0 --name "byh-k6-$Label-$Tps-r$Repeat" --network byh-perf_default -e "TPS=$Tps" -e "SECONDS=$Seconds" $k6Image run --out json=/out/raw.json.gz /capacity.js | Set-Content (Join-Path $out 'k6-id.txt')
+docker --context desktop-linux create --user 0 --name "byh-k6-$Label-$Tps-r$Repeat" --network byh-perf_default -e "TPS=$Tps" -e "SECONDS=$Seconds" -e "MIX=$Mix" $k6Image run --out json=/out/raw.json.gz /capacity.js | Set-Content (Join-Path $out 'k6-id.txt')
 docker --context desktop-linux cp (Join-Path $PSScriptRoot 'capacity.js') "byh-k6-$Label-$Tps-r${Repeat}:/capacity.js"
 docker --context desktop-linux cp $out "byh-k6-$Label-$Tps-r${Repeat}:/out"
 $k6Args=@('--context','desktop-linux','start','-a',"byh-k6-$Label-$Tps-r$Repeat")

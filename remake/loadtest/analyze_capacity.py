@@ -63,10 +63,11 @@ def analyze(path):
         assert sum(started_count.values()) in (summary['tps'] * summary['seconds'], summary['tps'] * summary['seconds'] + 1)
     assert all(counts[kind] <= started_count[kind] for kind in counts)
     if drops == 0 and total == sum(started_count.values()):
-        expected = Counter()
+        expected, mix = Counter(), summary.get('mix', 'mixed')
         for i in range(total):
-            slot = i % 20
-            expected['products' if slot < 14 else 'history' if slot < 17 else 'login' if slot < 19 else 'create'] += 1
+            slot = i % (18 if mix == 'nologin' else 20)
+            expected['login' if mix == 'login' else 'products' if slot < 14 else 'history' if slot < 17
+                     else 'login' if slot < 19 and mix == 'mixed' else 'create'] += 1
         assert counts == expected
     start, end = min(starts), min(starts) + timedelta(seconds=summary['seconds'])
     in_window = sum(start <= moment <= end for moment in completions)
@@ -185,7 +186,7 @@ def analyze(path):
         reasons.append('errors_ge_1percent')
     if drops:
         reasons.append('dropped_iterations')
-    return {'run': path.name, 'target_tps': summary['tps'], 'vus_per_scenario': summary['vus'],
+    return {'run': path.name, 'target_tps': summary['tps'], 'mix': summary.get('mix', 'mixed'), 'vus_per_scenario': summary['vus'],
             'actual_tps': in_window / summary['seconds'],
             'valid_response_tps': valid_in_window / summary['seconds'],
             'completed_in_window': in_window, 'completed_after_window': total - in_window,

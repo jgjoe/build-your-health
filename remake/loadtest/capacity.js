@@ -7,13 +7,17 @@ const base = __ENV.BASE_URL || 'http://app:8081';
 const tps = Number(__ENV.TPS || 20);
 const seconds = Number(__ENV.SECONDS || 120);
 const vus = Number(__ENV.VUS || 256);
+// mixed = default 20-slot mix; login = login only; nologin = the mixed cycle without its two login slots (18 slots).
+const mix = __ENV.MIX || 'mixed';
 if (!Number.isInteger(tps) || tps < 20 || tps > 20480 || !Number.isInteger(vus) || vus < 40 || seconds < 120) throw new Error('Invalid load parameters');
+if (!['mixed', 'login', 'nologin'].includes(mix)) throw new Error('Invalid MIX');
+const cycle = mix === 'nologin' ? 18 : 20;
 const latency = new Trend('measured_latency', true);
 const requests = new Counter('measured_requests');
 const started = new Counter('measured_started');
 const errors = new Rate('measured_errors');
 const created = new Counter('created_orders');
-const kinds = ['products', 'history', 'login', 'create'];
+const kinds = mix === 'login' ? ['login'] : mix === 'nologin' ? ['products', 'history', 'create'] : ['products', 'history', 'login', 'create'];
 const thresholdMap = {
   measured_latency: ['p(95)<500'],
   measured_errors: ['rate<0.01'],
@@ -49,16 +53,16 @@ export function setup() {
 
 export default function (sessions) {
   const index = exec.scenario.iterationInTest;
-  const slot = index % 20;
-  const kind = slot < 14 ? 'products' : slot < 17 ? 'history' : slot < 19 ? 'login' : 'create';
-  // Cycle accounts independently of the 20-slot operation mix.
-  const session = sessions[(Math.floor(index / 20) * 17 + slot * 7) % sessions.length];
+  const slot = index % cycle;
+  const kind = mix === 'login' ? 'login' : slot < 14 ? 'products' : slot < 17 ? 'history' : slot < 19 && mix === 'mixed' ? 'login' : 'create';
+  // Cycle accounts independently of the operation mix.
+  const session = sessions[(Math.floor(index / cycle) * 17 + slot * 7) % sessions.length];
   const phase = exec.scenario.name;
   const params = { headers: { 'Content-Type': 'application/json' }, tags: { phase, kind }, timeout: '5s' };
   if (phase === 'measured') started.add(1, { kind });
   let res;
   if (kind === 'products') {
-    const page = 1 + Math.floor(index / 20) % 20;
+    const page = 1 + Math.floor(index / cycle) % 20;
     const search = slot % 7 === 0 ? '&field=name&keyword=perf' : '';
     res = http.get(`${base}/api/products?page=${page}&size=10${search}`, params);
   } else if (kind === 'login') {
@@ -68,7 +72,7 @@ export default function (sessions) {
     http.cookieJar().clear(base);
     params.headers.Cookie = `JSESSIONID=${session.cookie}`;
     if (kind === 'history') {
-      const page = session.tier === 'light' ? 1 : 1 + Math.floor(index / 20) % 3;
+      const page = session.tier === 'light' ? 1 : 1 + Math.floor(index / cycle) % 3;
       res = http.get(`${base}/api/orders?page=${page}&size=10`, params);
     } else {
       const date = new Date(Date.now() + 3 * 86400000).toISOString().slice(0, 10);
@@ -95,5 +99,5 @@ export default function (sessions) {
 }
 
 export function handleSummary(data) {
-  return { '/out/summary.json': JSON.stringify({ tps, seconds, vus, ...data }, null, 2) };
+  return { '/out/summary.json': JSON.stringify({ tps, seconds, vus, mix, ...data }, null, 2) };
 }

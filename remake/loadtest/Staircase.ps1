@@ -1,7 +1,8 @@
 #requires -Version 7.0
 [CmdletBinding()]
 param([ValidatePattern('^[a-z0-9-]+$')][string]$Label='capacity-before',
-    [ValidateRange(20,20480)][int[]]$Stages=@(20,40,80,160,320,640,1280,2560,5120,10240,20480))
+    [ValidateRange(20,20480)][int[]]$Stages=@(20,40,80,160,320,640,1280,2560,5120,10240,20480),
+    [ValidateSet('mixed','login','nologin')][string]$Mix='mixed')
 $ErrorActionPreference='Stop'
 $PSNativeCommandUseErrorActionPreference=$true
 # Two full observations per stage; a failed first repeat only permits its
@@ -13,7 +14,7 @@ foreach ($tps in $Stages) {
         if (Test-Path $out) {
             if (-not (Test-Path (Join-Path $out 'seed-checksums.txt'))) { throw "Incomplete result: $out" }
         } else {
-            & (Join-Path $PSScriptRoot 'Run-Capacity.ps1') -Tps $tps -Repeat $repeat -Label $Label
+            & (Join-Path $PSScriptRoot 'Run-Capacity.ps1') -Tps $tps -Repeat $repeat -Label $Label -Mix $Mix
         }
         $summary=Get-Content -Raw (Join-Path $out 'summary.json') | ConvertFrom-Json
         $metrics=$summary.metrics

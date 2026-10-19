@@ -6,9 +6,9 @@
 [![DB](https://img.shields.io/badge/Oracle-index%20tuning-F80000?logo=oracle&logoColor=white)](#인덱스-실측-주문-60만-건)
 [![Original](https://img.shields.io/badge/2024-JSP%20%2F%20Servlet%20%2B%20MySQL-007396?logo=openjdk&logoColor=white)](#원본-2024)
 
-물 섭취량과 수면 시간을 기록하고, 건강 상품을 주문하고, 게시판에서 정보를 나누는 웹 애플리케이션입니다.
-2024년에 JSP/Servlet·MySQL로 화면·서버·DB·관리자 기능까지 혼자 만들었습니다(업무 도메인 8개, JSP 54개).
-2026년 리메이크의 앱·측정 도구 코드는 AI 코딩 도구로 작성했습니다. 본인은 측정 설계, 테스트 기준 고정과 검증, 실행계획 해석, 인덱스 채택 판단을 맡았습니다.
+Spring Boot와 MyBatis, Oracle로 주문 흐름을 재구축하고 상세 조회의 DB 블록 읽기를 6,285에서 14로 줄인 인덱스를 반영한 개인 프로젝트입니다(Oracle 생성 주문 60만 건 시험). 재구축에는 AI 코딩 도구를 활용했으며 저는 측정 설계와 테스트 기준 수립, 검증, 실행계획 해석과 인덱스 선정을 맡았습니다. 선정한 인덱스 2개의 앱 스키마 반영과 자동 적용을 확인했습니다.
+
+2024년 원본은 JSP/Servlet과 MySQL로 개발했으며 물 섭취량과 수면 기록, 건강 상품 주문, 게시판 기능을 제공합니다.
 
 ---
 

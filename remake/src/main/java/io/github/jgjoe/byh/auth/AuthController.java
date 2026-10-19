@@ -22,12 +22,15 @@ public class AuthController {
     private final MemberMapper memberMapper;
     private final PasswordEncoder passwordEncoder;
     private final LoginGate loginGate;
+    private final LoginAttempts attempts;
     private final String dummyPasswordHash;
 
-    public AuthController(MemberMapper memberMapper, PasswordEncoder passwordEncoder, LoginGate loginGate) {
+    public AuthController(MemberMapper memberMapper, PasswordEncoder passwordEncoder, LoginGate loginGate,
+                          LoginAttempts attempts) {
         this.memberMapper = memberMapper;
         this.passwordEncoder = passwordEncoder;
         this.loginGate = loginGate;
+        this.attempts = attempts;
         // One valid cost-10 hash per controller lifetime, not per nonexistent-user request.
         this.dummyPasswordHash = passwordEncoder.encode("byh-dummy-password-not-an-account");
     }
@@ -37,7 +40,10 @@ public class AuthController {
         if (request == null || isBlank(request.id()) || isBlank(request.password())) {
             throw new InvalidParameterException("아이디와 비밀번호를 모두 입력해야 합니다.");
         }
-        return loginGate.run(() -> authenticate(request, httpRequest));
+        return loginGate.run(() -> {
+            attempts.checkAllowed(request.id());
+            return authenticate(request, httpRequest);
+        });
     }
 
     private LoginResponse authenticate(LoginRequest request, HttpServletRequest httpRequest) {
@@ -46,8 +52,10 @@ public class AuthController {
         boolean passwordMatches = passwordEncoder.matches(request.password(), hash);
         if (member == null || !passwordMatches) {
             // Same expensive verification and response for unknown ids and wrong passwords.
+            attempts.failed(request.id());
             throw new UnauthorizedException("아이디 또는 비밀번호가 올바르지 않습니다.");
         }
+        attempts.succeeded(request.id());
         // Issue a new session id on login so an id fixed before authentication cannot be reused.
         HttpSession session = httpRequest.getSession(true);
         httpRequest.changeSessionId();

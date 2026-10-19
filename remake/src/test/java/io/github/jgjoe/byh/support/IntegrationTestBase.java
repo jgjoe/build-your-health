@@ -16,7 +16,7 @@ import org.testcontainers.oracle.OracleContainer;
  * Black-box API test base: real HTTP through MockMvc, real Oracle through Testcontainers.
  * Every test starts from an empty database (only the migration-defined schema remains).
  */
-@SpringBootTest
+@SpringBootTest(properties = "byh.login.cleanup-delay-ms=3600000")
 @AutoConfigureMockMvc
 @Import(StatementCountConfiguration.class)
 public abstract class IntegrationTestBase {
@@ -37,6 +37,7 @@ public abstract class IntegrationTestBase {
 
     @BeforeEach
     void resetDatabase() {
+        jdbc.execute("DELETE FROM LOGIN_ATTEMPT");
         jdbc.execute("DELETE FROM ORDER_ITEMS");
         jdbc.execute("DELETE FROM ORDERS");
         jdbc.execute("DELETE FROM PRODUCT");

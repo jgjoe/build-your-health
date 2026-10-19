@@ -16,6 +16,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
@@ -28,14 +29,16 @@ class AuthControllerTest {
     private PasswordEncoder encoder;
     private HttpServletRequest http;
     private AuthController controller;
+    private LoginAttempts attempts;
 
     @BeforeEach
     void setup() {
         members = mock(MemberMapper.class);
         encoder = mock(PasswordEncoder.class);
         http = mock(HttpServletRequest.class);
+        attempts = mock(LoginAttempts.class);
         when(encoder.encode(anyString())).thenReturn("dummy-hash");
-        controller = new AuthController(members, encoder, new LoginGate(2, 0));
+        controller = new AuthController(members, encoder, new LoginGate(2, 0), attempts);
     }
 
     @Test
@@ -78,7 +81,7 @@ class AuthControllerTest {
     void invalidInputDoesNotLookupOrVerifyCredentials() {
         assertThatThrownBy(() -> controller.login(new LoginRequest(" ", "wrong"), http))
                 .isInstanceOf(InvalidParameterException.class);
-        verifyNoInteractions(members, http);
+        verifyNoInteractions(members, attempts, http);
         verify(encoder, never()).matches(anyString(), anyString());
     }
 
@@ -86,22 +89,32 @@ class AuthControllerTest {
     void globallyRejectedAttemptDoesNotLookupOrVerifyCredentials() {
         LoginGate gate = mock(LoginGate.class);
         when(gate.run(any())).thenThrow(new LoginBusyException("busy"));
-        AuthController rejected = new AuthController(members, encoder, gate);
+        AuthController rejected = new AuthController(members, encoder, gate, attempts);
         assertThatThrownBy(() -> rejected.login(new LoginRequest("nobody", "wrong"), http))
                 .isInstanceOf(LoginBusyException.class);
-        verifyNoInteractions(members, http);
+        verifyNoInteractions(members, attempts, http);
         verify(encoder, never()).matches(anyString(), anyString());
     }
 
     @Test
     void realDummyVerificationUsesACost10Hash() {
         PasswordEncoder real = spy(new PasswordConfig().passwordEncoder());
-        AuthController actual = new AuthController(members, real, new LoginGate(2, 0));
+        AuthController actual = new AuthController(members, real, new LoginGate(2, 0), attempts);
         assertThatThrownBy(() -> actual.login(new LoginRequest("nobody", "wrong"), http))
                 .isInstanceOf(UnauthorizedException.class);
         ArgumentCaptor<String> hash = ArgumentCaptor.forClass(String.class);
         verify(real).matches(eq("wrong"), hash.capture());
         assertThat(hash.getValue()).startsWith("$2a$10$");
         verifyNoInteractions(http);
+    }
+
+    @Test
+    void failedAccountStateReadDoesNotBypassProtection() {
+        doThrow(new org.springframework.dao.DataAccessResourceFailureException("unavailable"))
+                .when(attempts).checkAllowed("alice");
+        assertThatThrownBy(() -> controller.login(new LoginRequest("alice", "pw"), http))
+                .isInstanceOf(org.springframework.dao.DataAccessResourceFailureException.class);
+        verifyNoInteractions(members, http);
+        verify(encoder, never()).matches(anyString(), anyString());
     }
 }

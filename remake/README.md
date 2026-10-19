@@ -46,7 +46,7 @@ Docker(Testcontainers)가 필요합니다. Oracle Free 컨테이너를 띄워 Fl
 
 |메서드·경로|인증|설명|
 |---|---|---|
-|`POST /api/auth/login`|불필요|`{"id","password"}` → 200 `{"id","name"}`, 로그인 시 세션 ID 재발급(세션 고정 방지). 실패는 아이디/비밀번호 구분 없이 401|
+|`POST /api/auth/login`|불필요|`{"id","password"}` → 200 `{"id","name"}`, 세션 ID 재발급. 인증 실패는 ID/비밀번호 구분 없이 401, 전역 포화·계정 잠금은 429와 `Retry-After`|
 |`POST /api/auth/logout`|불필요|204, 세션 무효화|
 |`GET /api/products`|불필요|`page`, `size`, `field`(name/manufacturer), `keyword` → `{items,page,size,total}`|
 |`POST /api/orders`|필요|주문 생성(단일 트랜잭션, DB 현재가로 합계 계산, 클라이언트 가격은 무시) → 201 `{orderId,totalPrice}`|
@@ -54,3 +54,18 @@ Docker(Testcontainers)가 필요합니다. Oracle Free 컨테이너를 띄워 Fl
 |`GET /api/orders/{orderId}`|필요|본인 주문 상세, 타인 주문은 404|
 
 오류 본문은 항상 `{"code","message"}`이며 예외 클래스명·스택 트레이스·DB 오류 코드는 노출하지 않습니다. 주문 API의 인증 검사는 `LoginInterceptor` 한 곳에서 수행합니다.
+
+### 로그인 보호 (V3)
+
+BCrypt cost 10을 유지하고, 없는 ID도 dummy hash로 한 번 검증합니다.
+5분 안에 인증 실패가 5회 완료되면 60초 잠그고 성공 시 실패 상태를 지웁니다.
+잠금은 올바른 비밀번호 요청에도 적용되며, 잠금 중 요청으로 만료가 계속 연장되지는 않습니다.
+기존/없는 ID 모두 같은 정책이며 상태는 Oracle에 보존합니다.
+잠금이 만료된 뒤의 첫 실패는 새 5분 창을 시작합니다.
+
+전역 동시 로그인 제한이 먼저 적용됩니다. 전역 포화는 `Retry-After: 1`,
+계정 잠금은 남은 시간을 초 단위 올림한 양의 정수입니다. 둘 다 같은 일반 429 본문을 사용합니다.
+전역 거절은 계정 실패 횟수에 포함하지 않습니다. 잠금 전에 입장한 동시 요청은 완료할 수 있습니다.
+비밀번호 검증 중 DB 트랜잭션/커넥션을 유지하지 않습니다.
+전역 세마포어는 단일 인스턴스 용량 보호이며 분산 전역 제한은 아닙니다.
+설계·실측·한계는 `docs/load-test-v3.md`에 있습니다.

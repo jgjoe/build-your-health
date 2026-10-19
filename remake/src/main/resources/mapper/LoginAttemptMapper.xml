@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.jgjoe.byh.auth.LoginAttemptMapper">
+    <select id="findLockUntil" resultType="java.time.OffsetDateTime">
+        SELECT LOCKED_UNTIL FROM LOGIN_ATTEMPT WHERE ACCOUNT_KEY = #{key}
+    </select>
+    <select id="findForUpdate" resultType="io.github.jgjoe.byh.auth.LoginAttempt">
+        SELECT FAILURE_COUNT, WINDOW_STARTED_AT, LOCKED_UNTIL, EXPIRES_AT
+        FROM LOGIN_ATTEMPT WHERE ACCOUNT_KEY = #{key}
+        FOR UPDATE
+    </select>
+    <insert id="insert">
+        INSERT INTO LOGIN_ATTEMPT (ACCOUNT_KEY, FAILURE_COUNT, WINDOW_STARTED_AT, LOCKED_UNTIL, EXPIRES_AT)
+        VALUES (#{key}, #{state.failureCount}, #{state.windowStartedAt},
+                #{state.lockedUntil,jdbcType=TIMESTAMP_WITH_TIMEZONE}, #{state.expiresAt})
+    </insert>
+    <update id="update">
+        UPDATE LOGIN_ATTEMPT
+        SET FAILURE_COUNT = #{state.failureCount},
+            WINDOW_STARTED_AT = #{state.windowStartedAt},
+            LOCKED_UNTIL = #{state.lockedUntil,jdbcType=TIMESTAMP_WITH_TIMEZONE},
+            EXPIRES_AT = #{state.expiresAt}
+        WHERE ACCOUNT_KEY = #{key}
+    </update>
+    <delete id="delete">
+        DELETE FROM LOGIN_ATTEMPT WHERE ACCOUNT_KEY = #{key}
+    </delete>
+    <delete id="deleteExpired">
+        DELETE FROM LOGIN_ATTEMPT
+        WHERE ACCOUNT_KEY IN (
+            SELECT ACCOUNT_KEY FROM LOGIN_ATTEMPT
+            WHERE EXPIRES_AT &lt;= #{now} AND ROWNUM &lt;= 1000
+        )
+    </delete>
+</mapper>

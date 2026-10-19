@@ -1,0 +1,40 @@
+{
+  "requests": 22,
+  "counts": {
+    "200": 2,
+    "401": 16,
+    "429": 4
+  },
+  "contract_checks": "pass",
+  "lock_survived_container_restart": true,
+  "real_clock_expiry": true,
+  "success_reset": true,
+  "started_utc": "2026-10-19T20:09:20.270314+00:00",
+  "finished_utc": "2026-10-19T20:10:21.850722+00:00",
+  "rejections": [
+    {
+      "phase": "locked",
+      "kind": "known",
+      "retry_after": "60",
+      "milliseconds": "6.8092"
+    },
+    {
+      "phase": "locked",
+      "kind": "missing",
+      "retry_after": "60",
+      "milliseconds": "3.4804"
+    },
+    {
+      "phase": "after_restart",
+      "kind": "known",
+      "retry_after": "52",
+      "milliseconds": "36.8979"
+    },
+    {
+      "phase": "after_restart",
+      "kind": "missing",
+      "retry_after": "52",
+      "milliseconds": "3.8827"
+    }
+  ]
+}

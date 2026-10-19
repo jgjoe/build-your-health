@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginGate {
 
-    private static final String BUSY = "로그인 요청이 많습니다. 잠시 후 다시 시도해 주세요.";
+    static final String BUSY = "로그인 요청이 많습니다. 잠시 후 다시 시도해 주세요.";
 
     private final Semaphore permits;
     private final long maxWaitMs;

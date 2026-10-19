@@ -47,7 +47,7 @@ public class ApiExceptionHandler {
     @ExceptionHandler(LoginBusyException.class)
     public ResponseEntity<ApiError> handleLoginBusy(LoginBusyException exception) {
         return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS)
-                .header(HttpHeaders.RETRY_AFTER, "1")
+                .header(HttpHeaders.RETRY_AFTER, Long.toString(exception.retryAfterSeconds()))
                 .body(new ApiError("TOO_MANY_REQUESTS", exception.getMessage()));
     }
 

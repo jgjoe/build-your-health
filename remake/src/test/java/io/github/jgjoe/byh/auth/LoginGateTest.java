@@ -18,7 +18,7 @@ class LoginGateTest {
 
     @Test
     void rejectsBeyondLimitWithoutRunningTheLoginAndAdmitsAgainAfterRelease() throws Exception {
-        LoginGate gate = new LoginGate(2);
+        LoginGate gate = new LoginGate(2, 0);
         CountDownLatch running = new CountDownLatch(2);
         CountDownLatch finish = new CountDownLatch(1);
         AtomicInteger concurrent = new AtomicInteger();
@@ -54,8 +54,80 @@ class LoginGateTest {
     }
 
     @Test
+    void waitsUpToTheLimitThenRejects() {
+        LoginGate gate = new LoginGate(1, 50);
+        CountDownLatch inside = new CountDownLatch(1);
+        CountDownLatch finish = new CountDownLatch(1);
+        ExecutorService pool = Executors.newSingleThreadExecutor();
+        try {
+            pool.submit(() -> gate.run(() -> {
+                inside.countDown();
+                await(finish);
+                return "ok";
+            }));
+            await(inside);
+            AtomicInteger rejectedCalls = new AtomicInteger();
+            long started = System.nanoTime();
+            assertThatThrownBy(() -> gate.run(rejectedCalls::incrementAndGet)).isInstanceOf(LoginBusyException.class);
+            long waitedMs = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - started);
+            assertThat(waitedMs).as("waited for a permit before rejecting").isBetween(45L, 1000L);
+            assertThat(rejectedCalls).hasValue(0);
+        } finally {
+            finish.countDown();
+            pool.shutdownNow();
+        }
+    }
+
+    @Test
+    void admitsALoginWhoseWaitEndsWithARelease() throws Exception {
+        LoginGate gate = new LoginGate(1, 5000);
+        CountDownLatch inside = new CountDownLatch(1);
+        CountDownLatch finish = new CountDownLatch(1);
+        ExecutorService pool = Executors.newFixedThreadPool(2);
+        try {
+            Future<String> holder = pool.submit(() -> gate.run(() -> {
+                inside.countDown();
+                await(finish);
+                return "first";
+            }));
+            await(inside);
+            Future<String> waiter = pool.submit(() -> gate.run(() -> "second"));
+            Thread.sleep(100);
+            assertThat(waiter).as("still waiting while the permit is held").isNotDone();
+            finish.countDown();
+            assertThat(holder.get(5, TimeUnit.SECONDS)).isEqualTo("first");
+            assertThat(waiter.get(5, TimeUnit.SECONDS)).isEqualTo("second");
+        } finally {
+            pool.shutdownNow();
+        }
+        assertThat(gate.availablePermits()).isEqualTo(1);
+    }
+
+    @Test
+    void interruptedWaitIsRejectedAndKeepsTheInterruptFlag() {
+        LoginGate gate = new LoginGate(1, 5000);
+        CountDownLatch inside = new CountDownLatch(1);
+        CountDownLatch finish = new CountDownLatch(1);
+        ExecutorService pool = Executors.newSingleThreadExecutor();
+        try {
+            pool.submit(() -> gate.run(() -> {
+                inside.countDown();
+                await(finish);
+                return "ok";
+            }));
+            await(inside);
+            Thread.currentThread().interrupt();
+            assertThatThrownBy(() -> gate.run(() -> "never")).isInstanceOf(LoginBusyException.class);
+            assertThat(Thread.interrupted()).as("interrupt flag restored (and cleared here)").isTrue();
+        } finally {
+            finish.countDown();
+            pool.shutdownNow();
+        }
+    }
+
+    @Test
     void releasesThePermitWhenTheLoginThrows() {
-        LoginGate gate = new LoginGate(1);
+        LoginGate gate = new LoginGate(1, 0);
         assertThatThrownBy(() -> gate.run(() -> {
             throw new IllegalStateException("database down");
         })).isInstanceOf(IllegalStateException.class);
@@ -67,8 +139,9 @@ class LoginGateTest {
     }
 
     @Test
-    void rejectsNonPositiveLimit() {
-        assertThatThrownBy(() -> new LoginGate(0)).isInstanceOf(IllegalArgumentException.class);
+    void rejectsInvalidSettings() {
+        assertThatThrownBy(() -> new LoginGate(0, 50)).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> new LoginGate(2, -1)).isInstanceOf(IllegalArgumentException.class);
     }
 
     private static void await(CountDownLatch latch) {

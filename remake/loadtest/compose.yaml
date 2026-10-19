@@ -14,8 +14,10 @@ services:
       SPRING_DATASOURCE_HIKARI_REGISTER_MBEANS: 'true'
       # Spring Boot default is 10; V2 cause isolation varies it via POOL_SIZE.
       SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE: ${POOL_SIZE:-10}
-      # Stage 3 login limit and warmup (ignored by images without them); app defaults otherwise.
+      # Stage 3 login limit (ignored by images without it); app defaults otherwise.
+      # Warmup iterations only affect the first stage 3 image (byh-loadtest-app:stage3), kept to reproduce it.
       BYH_LOGIN_MAX_CONCURRENT: ${LOGIN_MAX_CONCURRENT:-2}
+      BYH_LOGIN_MAX_WAIT_MS: ${LOGIN_MAX_WAIT_MS:-50}
       BYH_LOGIN_WARMUP_ITERATIONS: ${LOGIN_WARMUP_ITERATIONS:-20}
       JAVA_TOOL_OPTIONS: >-
         ${JFR_OPTS:-}

@@ -19,6 +19,16 @@ def stats(values):
             "p99": percentile(values, .99), "max": max(values)}
 
 
+def startup_lines(path):
+    """Spring Boot start time and the password warmup log line, when present in the app log."""
+    text = (path / 'app.txt').read_text(encoding='utf-8-sig', errors='replace')
+    started = re.search(r'Started \w+ in ([\d.]+) seconds', text)
+    warmup = re.search(r'Password warmup: (\d+) checks in (\d+) ms', text)
+    return {'started_seconds': float(started[1]) if started else None,
+            'warmup_checks': int(warmup[1]) if warmup else None,
+            'warmup_ms': int(warmup[2]) if warmup else None}
+
+
 def analyze(path):
     summary = json.loads((path / 'summary.json').read_text())
     samples, starts, counts = defaultdict(list), [], Counter()
@@ -27,6 +37,9 @@ def analyze(path):
     errors_by_kind = Counter()
     valid_completions = []
     started_count = Counter()
+    rejected = 0
+    # Every HTTP request incl. setup and warmup, for startup behaviour: (time, phase, status, ms).
+    http_points = []
     with gzip.open(path / 'raw.json.gz', 'rt') as source:
         for line in source:
             point = json.loads(line)
@@ -37,6 +50,15 @@ def analyze(path):
             if metric == 'measured_latency':
                 samples['all'].append(data['value'])
                 samples[kind].append(data['value'])
+                outcome = data['tags'].get('outcome', 'ok')
+                if kind != 'login':
+                    samples['nonlogin'].append(data['value'])
+                else:
+                    samples[f'login_{outcome}'].append(data['value'])
+            elif metric == 'login_rejected':
+                rejected += int(data['value'])
+            elif metric == 'http_req_duration':
+                http_points.append((timestamp(data['time']), data['tags'].get('phase'), data['tags'].get('status'), data['value']))
             elif metric == 'measured_started':
                 starts.append(timestamp(data['time']))
                 started_count[kind] += int(data['value'])
@@ -70,6 +92,25 @@ def analyze(path):
                      else 'login' if slot < 19 and mix == 'mixed' else 'create'] += 1
         assert counts == expected
     start, end = min(starts), min(starts) + timedelta(seconds=summary['seconds'])
+    assert rejected == len(samples.get('login_rejected', []))
+    assert rejected == summary['metrics'].get('login_rejected', {}).get('values', {}).get('count', 0)
+    login_started = started_count.get('login', 0)
+    # Runs before stage 3 carry no outcome tag, so successes come from counts, not tagged samples.
+    login = {'started': login_started, 'ok': counts.get('login', 0) - errors_by_kind.get('login', 0) - rejected,
+             'rejected': rejected,
+             'unexpected_error': errors_by_kind.get('login', 0),
+             'not_completed': login_started - counts.get('login', 0)}
+    login['success_rate'] = login['ok'] / login_started if login_started else None
+    nonlogin_errors = sum(v for k, v in errors_by_kind.items() if k != 'login')
+    # 10 s buckets from the first request (setup logins included) to the end of the run.
+    origin, buckets = min(p[0] for p in http_points), defaultdict(list)
+    for moment, phase, status, value in http_points:
+        buckets[int((moment - origin).total_seconds() // 10)].append((phase, status, value))
+    timeline = [{'second': 10 * b, 'phases': sorted({p for p, _, _ in rows if p}), 'requests': len(rows),
+                 'p95': percentile([v for _, _, v in rows], .95),
+                 'status_429': sum(s == '429' for _, s, _ in rows),
+                 'status_other_non_2xx': sum(not (s or '').startswith('2') and s != '429' for _, s, _ in rows)}
+                for b, rows in sorted(buckets.items())]
     in_window = sum(start <= moment <= end for moment in completions)
     valid_in_window = sum(start <= moment <= end for moment in valid_completions)
     with (path / 'hikari.csv').open(encoding='utf-8-sig') as source:
@@ -147,7 +188,8 @@ def analyze(path):
         elif current and cells[0] == 'SESSION':
             current['sessions'].append(cells[1:])
     oracle_rows = [row for row in oracle_rows if start <= row['utc'] <= end]
-    assert len(oracle_rows) >= 10
+    # Diagnostic only; runs aborted early by a k6 threshold leave few samples. The count is reported below.
+    assert len(oracle_rows) >= 2
     first, last = oracle_rows[0], oracle_rows[-1]
     waits = {event: [v[i] - first['waits'].get(event, [0, 0])[i] for i in range(2)] for event, v in last['waits'].items()}
     assert all(v >= 0 for delta in waits.values() for v in delta)
@@ -195,6 +237,9 @@ def analyze(path):
             'started_without_completed_sample': sum(started_count.values()) - total,
             'error_percent': error_percent, 'dropped': drops, 'dropped_by_phase': dict(dropped_phase),
             'errors_by_kind': dict(errors_by_kind),
+            'login': login, 'nonlogin_errors': nonlogin_errors,
+            'nonlogin_error_percent': 100 * nonlogin_errors / max(1, total - counts.get('login', 0)),
+            'timeline_10s': timeline, 'app_startup': startup_lines(path),
             'stop_reasons': reasons, 'latency': latency, 'measured_start_utc': start.isoformat(),
             'pool_and_threads': pool, 'app_cpu_cores_jmx': cpu_cores, 'http_cpu_cores_jmx': http_cpu_cores,
             'jmx_sample_interval_seconds': stats(gaps),
@@ -221,4 +266,6 @@ if __name__ == '__main__':
         lat = result['latency']['all']
         print(f"{result['run']} | {result['actual_tps']:.2f} | {lat['p50']:.2f}/{lat['p95']:.2f}/{lat['p99']:.2f} | "
               f"err={result['error_percent']:.3f}% drops={result['dropped']} | "
+              f"login ok={result['login']['success_rate']} rej={result['login']['rejected']} | "
+              f"nonlogin p95={result['latency'].get('nonlogin', {}).get('p95', 0):.1f} | "
               f"CPU={result['app_cpu_cores_jmx']:.2f} cores | stop={result['stop_reasons']}")

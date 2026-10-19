@@ -22,6 +22,194 @@
     "errors_by_kind": {
       "login": 0
     },
+    "login": {
+      "started": 2400,
+      "ok": 2400,
+      "rejected": 0,
+      "unexpected_error": 0,
+      "not_completed": 0,
+      "success_rate": 1.0
+    },
+    "nonlogin_errors": 0,
+    "nonlogin_error_percent": 0.0,
+    "timeline_10s": [
+      {
+        "second": 0,
+        "phases": [
+          "setup",
+          "warmup"
+        ],
+        "requests": 156,
+        "p95": 91.34064875,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 10,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 200,
+        "p95": 70.07090550000001,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 20,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 200,
+        "p95": 70.12573914999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 30,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 145,
+        "p95": 68.92962,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 40,
+        "phases": [
+          "measured"
+        ],
+        "requests": 56,
+        "p95": 69.489784,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 50,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 68.8967445,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 60,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 66.0122997,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 70,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 66.77822644999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 80,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 66.33996020000001,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 90,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 67.0555899,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 100,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 67.0961515,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 110,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 67.63371415,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 120,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 66.1079632,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 130,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 64.56791124999998,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 140,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 65.20930399999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 150,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 64.13943135,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 160,
+        "phases": [
+          "measured"
+        ],
+        "requests": 144,
+        "p95": 66.759068,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      }
+    ],
+    "app_startup": {
+      "started_seconds": 3.442,
+      "warmup_checks": null,
+      "warmup_ms": null
+    },
     "stop_reasons": [],
     "latency": {
       "all": {
@@ -33,6 +221,14 @@
         "max": 84.792307
       },
       "login": {
+        "n": 2400,
+        "mean": 61.82974582999992,
+        "p50": 61.2925325,
+        "p95": 66.88384075,
+        "p99": 70.77476939999994,
+        "max": 84.792307
+      },
+      "login_ok": {
         "n": 2400,
         "mean": 61.82974582999992,
         "p50": 61.2925325,
@@ -269,6 +465,194 @@
     "errors_by_kind": {
       "login": 0
     },
+    "login": {
+      "started": 2401,
+      "ok": 2401,
+      "rejected": 0,
+      "unexpected_error": 0,
+      "not_completed": 0,
+      "success_rate": 1.0
+    },
+    "nonlogin_errors": 0,
+    "nonlogin_error_percent": 0.0,
+    "timeline_10s": [
+      {
+        "second": 0,
+        "phases": [
+          "setup",
+          "warmup"
+        ],
+        "requests": 175,
+        "p95": 67.97503299999998,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 10,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 200,
+        "p95": 73.3774899,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 20,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 200,
+        "p95": 68.81804795000001,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 30,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 126,
+        "p95": 67.38339524999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 40,
+        "phases": [
+          "measured"
+        ],
+        "requests": 75,
+        "p95": 68.2119051,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 50,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 66.04318875,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 60,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 63.8026201,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 70,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 64.4080954,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 80,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 63.96723605,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 90,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 64.4810663,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 100,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 65.42551074999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 110,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 65.4703616,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 120,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 71.59868925,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 130,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 64.86916344999997,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 140,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 63.33262325,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 150,
+        "phases": [
+          "measured"
+        ],
+        "requests": 200,
+        "p95": 65.0535879,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 160,
+        "phases": [
+          "measured"
+        ],
+        "requests": 126,
+        "p95": 63.6043355,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      }
+    ],
+    "app_startup": {
+      "started_seconds": 3.442,
+      "warmup_checks": null,
+      "warmup_ms": null
+    },
     "stop_reasons": [],
     "latency": {
       "all": {
@@ -280,6 +664,14 @@
         "max": 83.70624
       },
       "login": {
+        "n": 2401,
+        "mean": 61.01354372136624,
+        "p50": 60.438186,
+        "p95": 65.41336,
+        "p99": 71.246887,
+        "max": 83.70624
+      },
+      "login_ok": {
         "n": 2401,
         "mean": 61.01354372136624,
         "p50": 60.438186,
@@ -520,6 +912,194 @@
     "errors_by_kind": {
       "login": 0
     },
+    "login": {
+      "started": 3001,
+      "ok": 3001,
+      "rejected": 0,
+      "unexpected_error": 0,
+      "not_completed": 0,
+      "success_rate": 1.0
+    },
+    "nonlogin_errors": 0,
+    "nonlogin_error_percent": 0.0,
+    "timeline_10s": [
+      {
+        "second": 0,
+        "phases": [
+          "setup",
+          "warmup"
+        ],
+        "requests": 199,
+        "p95": 65.73415,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 10,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 250,
+        "p95": 66.79937790000001,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 20,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 250,
+        "p95": 64.96699185,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 30,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 151,
+        "p95": 63.5162205,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 40,
+        "phases": [
+          "measured"
+        ],
+        "requests": 99,
+        "p95": 62.8790137,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 50,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.48930155000001,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 60,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 65.13605854999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 70,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 63.2814429,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 80,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 68.01310515,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 90,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.43967194999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 100,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 63.30506755,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 110,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.81204189999998,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 120,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 63.82611465,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 130,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 66.76965045,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 140,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.65419035,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 150,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.1354191,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 160,
+        "phases": [
+          "measured"
+        ],
+        "requests": 152,
+        "p95": 63.6397564,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      }
+    ],
+    "app_startup": {
+      "started_seconds": 3.442,
+      "warmup_checks": null,
+      "warmup_ms": null
+    },
     "stop_reasons": [],
     "latency": {
       "all": {
@@ -531,6 +1111,14 @@
         "max": 89.562625
       },
       "login": {
+        "n": 3001,
+        "mean": 60.7939051682774,
+        "p50": 60.280721,
+        "p95": 64.682275,
+        "p99": 70.090373,
+        "max": 89.562625
+      },
+      "login_ok": {
         "n": 3001,
         "mean": 60.7939051682774,
         "p50": 60.280721,
@@ -763,6 +1351,194 @@
     "errors_by_kind": {
       "login": 0
     },
+    "login": {
+      "started": 3001,
+      "ok": 3001,
+      "rejected": 0,
+      "unexpected_error": 0,
+      "not_completed": 0,
+      "success_rate": 1.0
+    },
+    "nonlogin_errors": 0,
+    "nonlogin_error_percent": 0.0,
+    "timeline_10s": [
+      {
+        "second": 0,
+        "phases": [
+          "setup",
+          "warmup"
+        ],
+        "requests": 198,
+        "p95": 64.4668831,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 10,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 250,
+        "p95": 66.88337585,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 20,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 250,
+        "p95": 65.2863696,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 30,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 153,
+        "p95": 77.50423900000001,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 40,
+        "phases": [
+          "measured"
+        ],
+        "requests": 99,
+        "p95": 63.6339162,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 50,
+        "phases": [
+          "measured"
+        ],
+        "requests": 249,
+        "p95": 64.493077,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 60,
+        "phases": [
+          "measured"
+        ],
+        "requests": 251,
+        "p95": 64.496308,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 70,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 63.765372,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 80,
+        "phases": [
+          "measured"
+        ],
+        "requests": 249,
+        "p95": 63.290084,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 90,
+        "phases": [
+          "measured"
+        ],
+        "requests": 251,
+        "p95": 64.483919,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 100,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.98118199999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 110,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 65.46323845,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 120,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.3151161,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 130,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.1228817,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 140,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.68540865,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 150,
+        "phases": [
+          "measured"
+        ],
+        "requests": 250,
+        "p95": 64.83375995,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 160,
+        "phases": [
+          "measured"
+        ],
+        "requests": 152,
+        "p95": 62.4395821,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      }
+    ],
+    "app_startup": {
+      "started_seconds": 3.442,
+      "warmup_checks": null,
+      "warmup_ms": null
+    },
     "stop_reasons": [],
     "latency": {
       "all": {
@@ -774,6 +1550,14 @@
         "max": 88.933386
       },
       "login": {
+        "n": 3001,
+        "mean": 60.48912535621461,
+        "p50": 59.980633,
+        "p95": 64.494531,
+        "p99": 67.771732,
+        "max": 88.933386
+      },
+      "login_ok": {
         "n": 3001,
         "mean": 60.48912535621461,
         "p50": 59.980633,
@@ -1014,6 +1798,194 @@
     "errors_by_kind": {
       "login": 0
     },
+    "login": {
+      "started": 3601,
+      "ok": 3601,
+      "rejected": 0,
+      "unexpected_error": 0,
+      "not_completed": 0,
+      "success_rate": 1.0
+    },
+    "nonlogin_errors": 0,
+    "nonlogin_error_percent": 0.0,
+    "timeline_10s": [
+      {
+        "second": 0,
+        "phases": [
+          "setup",
+          "warmup"
+        ],
+        "requests": 216,
+        "p95": 70.9295755,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 10,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 300,
+        "p95": 65.64345315,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 20,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 300,
+        "p95": 196.18568050000016,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 30,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 184,
+        "p95": 76.93441345,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 40,
+        "phases": [
+          "measured"
+        ],
+        "requests": 116,
+        "p95": 69.23015175,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 50,
+        "phases": [
+          "measured"
+        ],
+        "requests": 299,
+        "p95": 75.17095729999996,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 60,
+        "phases": [
+          "measured"
+        ],
+        "requests": 301,
+        "p95": 82.987784,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 70,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 64.90196885,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 80,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 72.8972043,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 90,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 67.49945425,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 100,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 67.6862637,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 110,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 64.13958605,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 120,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 65.69262385,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 130,
+        "phases": [
+          "measured"
+        ],
+        "requests": 301,
+        "p95": 64.225492,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 140,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 65.4168205,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 150,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 67.36319035,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 160,
+        "phases": [
+          "measured"
+        ],
+        "requests": 184,
+        "p95": 70.14216844999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      }
+    ],
+    "app_startup": {
+      "started_seconds": 3.442,
+      "warmup_checks": null,
+      "warmup_ms": null
+    },
     "stop_reasons": [],
     "latency": {
       "all": {
@@ -1025,6 +1997,14 @@
         "max": 149.114655
       },
       "login": {
+        "n": 3601,
+        "mean": 61.97361590308233,
+        "p50": 61.058124,
+        "p95": 67.326563,
+        "p99": 81.559691,
+        "max": 149.114655
+      },
+      "login_ok": {
         "n": 3601,
         "mean": 61.97361590308233,
         "p50": 61.058124,
@@ -1253,6 +2233,194 @@
     "errors_by_kind": {
       "login": 0
     },
+    "login": {
+      "started": 3600,
+      "ok": 3600,
+      "rejected": 0,
+      "unexpected_error": 0,
+      "not_completed": 0,
+      "success_rate": 1.0
+    },
+    "nonlogin_errors": 0,
+    "nonlogin_error_percent": 0.0,
+    "timeline_10s": [
+      {
+        "second": 0,
+        "phases": [
+          "setup",
+          "warmup"
+        ],
+        "requests": 216,
+        "p95": 66.32665,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 10,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 301,
+        "p95": 65.662138,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 20,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 299,
+        "p95": 65.5993972,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 30,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 184,
+        "p95": 66.89201025,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 40,
+        "phases": [
+          "measured"
+        ],
+        "requests": 117,
+        "p95": 85.88738479999994,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 50,
+        "phases": [
+          "measured"
+        ],
+        "requests": 299,
+        "p95": 83.84441599999991,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 60,
+        "phases": [
+          "measured"
+        ],
+        "requests": 301,
+        "p95": 65.945034,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 70,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 69.6227167,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 80,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 65.2929185,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 90,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 88.31732625000002,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 100,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 67.6444019,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 110,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 66.99112070000001,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 120,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 102.0500682,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 130,
+        "phases": [
+          "measured"
+        ],
+        "requests": 300,
+        "p95": 65.47286125,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 140,
+        "phases": [
+          "measured"
+        ],
+        "requests": 299,
+        "p95": 95.17687009999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 150,
+        "phases": [
+          "measured"
+        ],
+        "requests": 301,
+        "p95": 71.353867,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 160,
+        "phases": [
+          "measured"
+        ],
+        "requests": 183,
+        "p95": 160.27173009999998,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      }
+    ],
+    "app_startup": {
+      "started_seconds": 3.442,
+      "warmup_checks": null,
+      "warmup_ms": null
+    },
     "stop_reasons": [],
     "latency": {
       "all": {
@@ -1264,6 +2432,14 @@
         "max": 173.894686
       },
       "login": {
+        "n": 3600,
+        "mean": 65.60771288083319,
+        "p50": 61.8568975,
+        "p95": 89.71589154999997,
+        "p99": 128.88383866999993,
+        "max": 173.894686
+      },
+      "login_ok": {
         "n": 3600,
         "mean": 65.60771288083319,
         "p50": 61.8568975,
@@ -1500,6 +2676,205 @@
     "errors_by_kind": {
       "login": 3564
     },
+    "login": {
+      "started": 4201,
+      "ok": 636,
+      "rejected": 0,
+      "unexpected_error": 3564,
+      "not_completed": 1,
+      "success_rate": 0.15139252558914545
+    },
+    "nonlogin_errors": 0,
+    "nonlogin_error_percent": 0.0,
+    "timeline_10s": [
+      {
+        "second": 0,
+        "phases": [
+          "setup",
+          "warmup"
+        ],
+        "requests": 210,
+        "p95": 684.7536127999996,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 10,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 282,
+        "p95": 2962.17724095,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 20,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 284,
+        "p95": 5000.292407100001,
+        "status_429": 0,
+        "status_other_non_2xx": 18
+      },
+      {
+        "second": 30,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 366,
+        "p95": 5001.049558000001,
+        "status_429": 0,
+        "status_other_non_2xx": 192
+      },
+      {
+        "second": 40,
+        "phases": [
+          "measured",
+          "warmup"
+        ],
+        "requests": 117,
+        "p95": 4082.446291799999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 50,
+        "phases": [
+          "measured"
+        ],
+        "requests": 257,
+        "p95": 3384.501594,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 60,
+        "phases": [
+          "measured"
+        ],
+        "requests": 298,
+        "p95": 5000.99016065,
+        "status_429": 0,
+        "status_other_non_2xx": 92
+      },
+      {
+        "second": 70,
+        "phases": [
+          "measured"
+        ],
+        "requests": 352,
+        "p95": 5000.851068200001,
+        "status_429": 0,
+        "status_other_non_2xx": 300
+      },
+      {
+        "second": 80,
+        "phases": [
+          "measured"
+        ],
+        "requests": 343,
+        "p95": 5000.8299242,
+        "status_429": 0,
+        "status_other_non_2xx": 337
+      },
+      {
+        "second": 90,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.84003195,
+        "status_429": 0,
+        "status_other_non_2xx": 349
+      },
+      {
+        "second": 100,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.77499855,
+        "status_429": 0,
+        "status_other_non_2xx": 344
+      },
+      {
+        "second": 110,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.8429102499995,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 120,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.8946312,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 130,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.77426885,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 140,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.867658499999,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 150,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.8398102,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 160,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.8833291500005,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 170,
+        "phases": [
+          "measured"
+        ],
+        "requests": 42,
+        "p95": 5000.9240203,
+        "status_429": 0,
+        "status_other_non_2xx": 42
+      }
+    ],
+    "app_startup": {
+      "started_seconds": 3.442,
+      "warmup_checks": null,
+      "warmup_ms": null
+    },
     "stop_reasons": [
       "mixed_p95_gt_500ms",
       "errors_ge_1percent"
@@ -1514,6 +2889,14 @@
         "max": 5012.975061
       },
       "login": {
+        "n": 4200,
+        "mean": 4631.607170284291,
+        "p50": 5000.0112685,
+        "p95": 5000.8468858,
+        "p99": 5001.1272423400005,
+        "max": 5012.975061
+      },
+      "login_ok": {
         "n": 4200,
         "mean": 4631.607170284291,
         "p50": 5000.0112685,
@@ -1742,6 +3125,205 @@
     "errors_by_kind": {
       "login": 3428
     },
+    "login": {
+      "started": 4201,
+      "ok": 772,
+      "rejected": 0,
+      "unexpected_error": 3428,
+      "not_completed": 1,
+      "success_rate": 0.18376577005474887
+    },
+    "nonlogin_errors": 0,
+    "nonlogin_error_percent": 0.0,
+    "timeline_10s": [
+      {
+        "second": 0,
+        "phases": [
+          "setup",
+          "warmup"
+        ],
+        "requests": 207,
+        "p95": 785.8810900999999,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 10,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 271,
+        "p95": 3640.93402,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 20,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 290,
+        "p95": 5000.8150801,
+        "status_429": 0,
+        "status_other_non_2xx": 70
+      },
+      {
+        "second": 30,
+        "phases": [
+          "warmup"
+        ],
+        "requests": 363,
+        "p95": 5000.9820648,
+        "status_429": 0,
+        "status_other_non_2xx": 292
+      },
+      {
+        "second": 40,
+        "phases": [
+          "measured",
+          "warmup"
+        ],
+        "requests": 127,
+        "p95": 4548.051090999999,
+        "status_429": 0,
+        "status_other_non_2xx": 1
+      },
+      {
+        "second": 50,
+        "phases": [
+          "measured"
+        ],
+        "requests": 277,
+        "p95": 3377.0790276,
+        "status_429": 0,
+        "status_other_non_2xx": 0
+      },
+      {
+        "second": 60,
+        "phases": [
+          "measured"
+        ],
+        "requests": 288,
+        "p95": 5000.40943455,
+        "status_429": 0,
+        "status_other_non_2xx": 41
+      },
+      {
+        "second": 70,
+        "phases": [
+          "measured"
+        ],
+        "requests": 343,
+        "p95": 5001.0613662999995,
+        "status_429": 0,
+        "status_other_non_2xx": 259
+      },
+      {
+        "second": 80,
+        "phases": [
+          "measured"
+        ],
+        "requests": 348,
+        "p95": 5000.92647115,
+        "status_429": 0,
+        "status_other_non_2xx": 303
+      },
+      {
+        "second": 90,
+        "phases": [
+          "measured"
+        ],
+        "requests": 347,
+        "p95": 5000.7188547,
+        "status_429": 0,
+        "status_other_non_2xx": 336
+      },
+      {
+        "second": 100,
+        "phases": [
+          "measured"
+        ],
+        "requests": 349,
+        "p95": 5000.9111852,
+        "status_429": 0,
+        "status_other_non_2xx": 349
+      },
+      {
+        "second": 110,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.9085686,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 120,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.79590295,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 130,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.9396881,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 140,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.8728024,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 150,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.8232965,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 160,
+        "phases": [
+          "measured"
+        ],
+        "requests": 350,
+        "p95": 5000.9187116,
+        "status_429": 0,
+        "status_other_non_2xx": 350
+      },
+      {
+        "second": 170,
+        "phases": [
+          "measured"
+        ],
+        "requests": 40,
+        "p95": 5001.04266045,
+        "status_429": 0,
+        "status_other_non_2xx": 40
+      }
+    ],
+    "app_startup": {
+      "started_seconds": 3.442,
+      "warmup_checks": null,
+      "warmup_ms": null
+    },
     "stop_reasons": [
       "mixed_p95_gt_500ms",
       "errors_ge_1percent"
@@ -1756,6 +3338,14 @@
         "max": 5014.792602
       },
       "login": {
+        "n": 4200,
+        "mean": 4564.199037124062,
+        "p50": 5000.056841,
+        "p95": 5000.89135815,
+        "p99": 5001.1259790799995,
+        "max": 5014.792602
+      },
+      "login_ok": {
         "n": 4200,
         "mean": 4564.199037124062,
         "p50": 5000.056841,

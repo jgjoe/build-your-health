@@ -1,0 +1,1944 @@
+UTC|2026-10-19T15:38:42.269Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1879|19874
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5426|63520
+SYSWAIT|Allocate UGA memory from OS|1121920|10315752
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2036|101345
+SYSWAIT|Free private memory to OS|661057|17805211
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6248874|18308657
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|353|72016
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|164|570811
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102254|194812877
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|196|51752
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1443|7976
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2195406007
+DBTIME|DB CPU|2114847466
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:38:48.587Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1879|19874
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5427|63532
+SYSWAIT|Allocate UGA memory from OS|1122592|10321067
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2037|101351
+SYSWAIT|Free private memory to OS|661388|17812075
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6251638|18315922
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|353|72016
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|164|570811
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102299|194892502
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|196|51752
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1444|7980
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2196298628
+DBTIME|DB CPU|2115717131
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|ACTIVE|WAITED SHORT TIME|Idle|SQL*Net message from client|61ktzmkxwbc0q
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:38:54.859Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1879|19874
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5429|63562
+SYSWAIT|Allocate UGA memory from OS|1124185|10332902
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2038|101358
+SYSWAIT|Free private memory to OS|662209|17829013
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6257505|18330310
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|353|72016
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|164|570811
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102402|195115862
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|196|51752
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1447|7997
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2198127842
+DBTIME|DB CPU|2117522542
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:01.151Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1879|19874
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5432|63644
+SYSWAIT|Allocate UGA memory from OS|1125781|10344033
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2039|101364
+SYSWAIT|Free private memory to OS|663013|17844832
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6263433|18345483
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|353|72016
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|164|570811
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102503|195344919
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|196|51752
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1448|8001
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2199938576
+DBTIME|DB CPU|2119322885
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|ACTIVE|WAITED SHORT TIME|Idle|SQL*Net message from client|61ktzmkxwbc0q
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:07.413Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1879|19874
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5432|63644
+SYSWAIT|Allocate UGA memory from OS|1127360|10355043
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2040|101372
+SYSWAIT|Free private memory to OS|663777|17860198
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6269398|18360367
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102604|195532293
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1449|8005
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2201728521
+DBTIME|DB CPU|2121110342
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|ACTIVE|WAITED SHORT TIME|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:13.716Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1879|19874
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5435|63692
+SYSWAIT|Allocate UGA memory from OS|1128927|10365687
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2041|101378
+SYSWAIT|Free private memory to OS|664543|17876844
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6275469|18375202
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102705|195716939
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1450|8009
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2203508473
+DBTIME|DB CPU|2122882043
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:19.970Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1879|19874
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5436|63707
+SYSWAIT|Allocate UGA memory from OS|1129437|10369011
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2042|101385
+SYSWAIT|Free private memory to OS|664797|17881318
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6277410|18379942
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102738|195790554
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1451|8013
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2204086267
+DBTIME|DB CPU|2123450141
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:26.259Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1879|19874
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5437|63732
+SYSWAIT|Allocate UGA memory from OS|1129589|10370217
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2043|101390
+SYSWAIT|Free private memory to OS|664864|17882951
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6277966|18381557
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102746|195811538
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1451|8013
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2204304625
+DBTIME|DB CPU|2123670915
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:32.694Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1880|19890
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5440|63776
+SYSWAIT|Allocate UGA memory from OS|1131150|10382582
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2044|101396
+SYSWAIT|Free private memory to OS|665666|17900902
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6284201|18401095
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102849|196062699
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1452|8023
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2206394874
+DBTIME|DB CPU|2125690449
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:39.111Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1880|19890
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5443|63836
+SYSWAIT|Allocate UGA memory from OS|1132607|10396010
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2045|101401
+SYSWAIT|Free private memory to OS|666443|17920984
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6290407|18421065
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|102953|196237506
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1454|8035
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2208547332
+DBTIME|DB CPU|2127877217
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|61ktzmkxwbc0q
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:45.549Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1881|19907
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5446|63889
+SYSWAIT|Allocate UGA memory from OS|1133874|10408308
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2046|101407
+SYSWAIT|Free private memory to OS|667181|17940480
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6296642|18439105
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103057|196370144
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1456|8050
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2210534402
+DBTIME|DB CPU|2129902494
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|ACTIVE|WAITED SHORT TIME|Other|Free private memory to OS|
+UTC|2026-10-19T15:39:51.928Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1881|19907
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5449|63937
+SYSWAIT|Allocate UGA memory from OS|1134764|10416810
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2047|101413
+SYSWAIT|Free private memory to OS|667665|17952775
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6302803|18456230
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103160|196498243
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1457|8054
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2212411999
+DBTIME|DB CPU|2131800206
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|61ktzmkxwbc0q
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:39:58.302Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5452|63979
+SYSWAIT|Allocate UGA memory from OS|1135411|10423640
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2048|101421
+SYSWAIT|Free private memory to OS|668098|17965348
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6308996|18474103
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103263|196632197
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1458|8057
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2214339449
+DBTIME|DB CPU|2133745197
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:40:04.608Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5454|64009
+SYSWAIT|Allocate UGA memory from OS|1135950|10429264
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2049|101427
+SYSWAIT|Free private memory to OS|668466|17977025
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6315151|18490965
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103365|196747298
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1459|8061
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2216185614
+DBTIME|DB CPU|2135586556
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:40:10.952Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5456|64041
+SYSWAIT|Allocate UGA memory from OS|1136337|10432976
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2050|101435
+SYSWAIT|Free private memory to OS|668719|17984188
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6321345|18507773
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103467|196864332
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1461|8068
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2217933227
+DBTIME|DB CPU|2137353296
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:40:17.230Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5456|64041
+SYSWAIT|Allocate UGA memory from OS|1136860|10437545
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2051|101442
+SYSWAIT|Free private memory to OS|669111|17994298
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6327484|18522273
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103568|196964936
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1462|8071
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2219629551
+DBTIME|DB CPU|2139053500
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:40:23.504Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5457|64052
+SYSWAIT|Allocate UGA memory from OS|1137328|10441726
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2052|101449
+SYSWAIT|Free private memory to OS|669474|18003652
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6333614|18537431
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103669|197077307
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1463|8075
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2221347166
+DBTIME|DB CPU|2140771014
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:40:29.772Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5459|64079
+SYSWAIT|Allocate UGA memory from OS|1137833|10446915
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2053|101455
+SYSWAIT|Free private memory to OS|669859|18014562
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6339732|18553204
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103771|197201105
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1465|8081
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2223200009
+DBTIME|DB CPU|2142607335
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:40:36.124Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5460|64091
+SYSWAIT|Allocate UGA memory from OS|1138270|10451473
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2054|101461
+SYSWAIT|Free private memory to OS|670200|18024124
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6345937|18570094
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103872|197317282
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1466|8084
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2225011600
+DBTIME|DB CPU|2144413787
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITED SHORT TIME|Idle|SQL*Net message from client|3tbr80mcz9gad
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:40:42.438Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5461|64104
+SYSWAIT|Allocate UGA memory from OS|1138709|10455893
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2055|101467
+SYSWAIT|Free private memory to OS|670549|18033839
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6352104|18586135
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|103974|197441461
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1467|8087
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2226798454
+DBTIME|DB CPU|2146202205
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:40:48.763Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5462|64112
+SYSWAIT|Allocate UGA memory from OS|1139250|10461023
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2056|101475
+SYSWAIT|Free private memory to OS|670944|18045489
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6358272|18602140
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|104075|197562232
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1468|8089
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2228603200
+DBTIME|DB CPU|2148001416
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|ACTIVE|WAITED SHORT TIME|Idle|SQL*Net message from client|61ktzmkxwbc0q
+UTC|2026-10-19T15:40:55.128Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5464|64139
+SYSWAIT|Allocate UGA memory from OS|1139738|10466140
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2057|101480
+SYSWAIT|Free private memory to OS|671329|18058069
+SYSWAIT|KSV master wait|19|520
+SYSWAIT|SQL*Net message to client|6364489|18619263
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|104178|197672830
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|294|349408
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1470|8097
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2230465994
+DBTIME|DB CPU|2149858395
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:41:01.450Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5465|64152
+SYSWAIT|Allocate UGA memory from OS|1140168|10471224
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2058|101486
+SYSWAIT|Free private memory to OS|671672|18068800
+SYSWAIT|KSV master wait|20|556
+SYSWAIT|SQL*Net message to client|6370650|18636591
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|104280|197799242
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|295|355035
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1471|8100
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2232386220
+DBTIME|DB CPU|2151762981
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|ACTIVE|WAITED KNOWN TIME|Idle|SQL*Net message from client|8ux1sycjdv90y
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:41:07.751Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5467|64176
+SYSWAIT|Allocate UGA memory from OS|1140524|10475198
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2059|101492
+SYSWAIT|Free private memory to OS|671937|18076658
+SYSWAIT|KSV master wait|20|556
+SYSWAIT|SQL*Net message to client|6376806|18653540
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|104381|197914549
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|295|355035
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1472|8104
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2234150388
+DBTIME|DB CPU|2153556286
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:41:14.068Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5469|64208
+SYSWAIT|Allocate UGA memory from OS|1140961|10479617
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2060|101498
+SYSWAIT|Free private memory to OS|672268|18086836
+SYSWAIT|KSV master wait|20|556
+SYSWAIT|SQL*Net message to client|6382966|18670020
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|355|72207
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|167|571055
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|104483|198021564
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|199|52449
+SYSWAIT|resmgr:cpu quantum|295|355035
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1473|8109
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2235932930
+DBTIME|DB CPU|2155336014
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|
+UTC|2026-10-19T15:41:20.374Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5470|64233
+SYSWAIT|Allocate UGA memory from OS|1141442|10484681
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2061|101506
+SYSWAIT|Free private memory to OS|672660|18098501
+SYSWAIT|KSV master wait|20|556
+SYSWAIT|SQL*Net message to client|6389127|18686338
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|356|72271
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|169|571250
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|104585|198129977
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|201|53016
+SYSWAIT|resmgr:cpu quantum|295|355035
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1475|8116
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2237725774
+DBTIME|DB CPU|2157140510
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|ACTIVE|WAITED SHORT TIME|Other|Free private memory to OS|
+UTC|2026-10-19T15:41:26.686Z
+SYSWAIT|AWR Flush|8|56
+SYSWAIT|Allocate CGA memory from OS|1883|19932
+SYSWAIT|Allocate DGA memory from OS|256|2739
+SYSWAIT|Allocate PGA memory from OS|5472|64260
+SYSWAIT|Allocate UGA memory from OS|1141805|10488222
+SYSWAIT|DLM cross inst call completion|2|2057
+SYSWAIT|Data file init write|12|9545
+SYSWAIT|Disk file operations I/O|2062|101515
+SYSWAIT|Free private memory to OS|672935|18105903
+SYSWAIT|KSV master wait|20|556
+SYSWAIT|SQL*Net message to client|6394332|18700429
+SYSWAIT|asynch descriptor resize|246|3834
+SYSWAIT|buffer busy waits|356|72271
+SYSWAIT|control file parallel write|14|36965
+SYSWAIT|control file sequential read|526|3513
+SYSWAIT|cursor: mutex S|4|4769
+SYSWAIT|cursor: mutex X|48|155
+SYSWAIT|cursor: pin S|49|77690
+SYSWAIT|cursor: pin S wait on X|6|73020
+SYSWAIT|datafile move cleanup during resize|1|24
+SYSWAIT|db file parallel read|1|847
+SYSWAIT|db file scattered read|1460|627428
+SYSWAIT|db file sequential read|6488|1996118
+SYSWAIT|db file single write|5|6233
+SYSWAIT|direct path read|289|1014345
+SYSWAIT|direct path read temp|98|23405
+SYSWAIT|direct path sync|1|109134
+SYSWAIT|direct path write|414|1155998
+SYSWAIT|direct path write temp|98|404753
+SYSWAIT|enq: CR - block range reuse ckpt|169|571250
+SYSWAIT|enq: TX - contention|3|45778
+SYSWAIT|enq: TX - index contention|1|53
+SYSWAIT|latch free|21|25104
+SYSWAIT|latch: FOB s.o list parent latch|1|71
+SYSWAIT|latch: In memory undo latch|103|27314
+SYSWAIT|latch: cache buffers chains|89|18171
+SYSWAIT|latch: cache buffers lru chain|1|16
+SYSWAIT|latch: enqueue hash chains|6|883
+SYSWAIT|latch: kjci process context latch|1|521
+SYSWAIT|latch: object queue header operation|1|57
+SYSWAIT|latch: redo allocation|2|53
+SYSWAIT|latch: session allocation|1|25
+SYSWAIT|latch: shared pool|1052|438826
+SYSWAIT|latch: undo global data|1|828
+SYSWAIT|library cache load lock|4|130
+SYSWAIT|library cache: mutex X|30|35884
+SYSWAIT|log file switch (checkpoint incomplete)|20|2822095
+SYSWAIT|log file switch completion|91|1707511
+SYSWAIT|log file sync|104671|198223476
+SYSWAIT|rdbms ipc reply|20|2187
+SYSWAIT|read by other session|3|936
+SYSWAIT|reliable message|201|53016
+SYSWAIT|resmgr:cpu quantum|295|355035
+SYSWAIT|resmgr:internal state change|2|228755
+SYSWAIT|resmgr:plan change|1|557
+SYSWAIT|row cache lock|7|38304
+SYSWAIT|row cache mutex|11|2282
+SYSWAIT|sequence cache replenishment|1476|8124
+SYSWAIT|undo segment extension|22|273095
+DBTIME|DB time|2239261572
+DBTIME|DB CPU|2158669799
+SESSION|19|31003|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|46|63399|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|52|39276|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|56|31611|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|57|56689|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|60|34577|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|177|60509|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|204|29652|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|216|56959|INACTIVE|WAITING|Idle|SQL*Net message from client|
+SESSION|217|29444|INACTIVE|WAITING|Idle|SQL*Net message from client|

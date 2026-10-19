@@ -17,7 +17,7 @@ if (($rows -join '') -notmatch 'ROWS\|22021\|2001\|600000\|1499546') { throw 'In
 $rows | Set-Content (Join-Path $out 'db-before.txt')
 $appId='byh-loadtest-app-1'
 # App settings under test (pool size, JFR); credentials excluded.
-docker --context desktop-linux inspect $appId --format '{{.State.StartedAt}}{{range .Config.Env}}{{println}}{{.}}{{end}}' |
+docker --context desktop-linux inspect $appId --format '{{.State.StartedAt}} {{.Config.Image}} {{.Image}}{{range .Config.Env}}{{println}}{{.}}{{end}}' |
     Where-Object { $_ -notmatch 'PASSWORD' } | Set-Content (Join-Path $out 'app-config.txt')
 $k6Image='grafana/k6@sha256:e66db15b860113878fa74670e31f5e274830b7b6e42c8bff28b2f2d86a257603'
 $jdkImage='eclipse-temurin@sha256:5d6042fb8cdc14d614e4e421f52e3211fc5aeadddce44cbf9de8ed37c791f824'

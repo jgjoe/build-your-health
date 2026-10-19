@@ -3,6 +3,8 @@ services:
   app:
     build:
       context: ..
+    # Stage 3 compares a before and an after image under the same settings.
+    image: ${APP_IMAGE:-byh-loadtest-app:latest}
     cpus: 2
     mem_limit: 2g
     environment:
@@ -12,6 +14,9 @@ services:
       SPRING_DATASOURCE_HIKARI_REGISTER_MBEANS: 'true'
       # Spring Boot default is 10; V2 cause isolation varies it via POOL_SIZE.
       SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE: ${POOL_SIZE:-10}
+      # Stage 3 login limit and warmup (ignored by images without them); app defaults otherwise.
+      BYH_LOGIN_MAX_CONCURRENT: ${LOGIN_MAX_CONCURRENT:-2}
+      BYH_LOGIN_WARMUP_ITERATIONS: ${LOGIN_WARMUP_ITERATIONS:-20}
       JAVA_TOOL_OPTIONS: >-
         ${JFR_OPTS:-}
         -Xms512m -Xmx1024m

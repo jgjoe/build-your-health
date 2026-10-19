@@ -17,6 +17,7 @@ const requests = new Counter('measured_requests');
 const started = new Counter('measured_started');
 const errors = new Rate('measured_errors');
 const created = new Counter('created_orders');
+const loginRejected = new Counter('login_rejected');
 const kinds = mix === 'login' ? ['login'] : mix === 'nologin' ? ['products', 'history', 'create'] : ['products', 'history', 'login', 'create'];
 const thresholdMap = {
   measured_latency: ['p(95)<500'],
@@ -83,17 +84,23 @@ export default function (sessions) {
     }
   }
   let valid = res.status === (kind === 'create' ? 201 : 200);
+  // A login shed by the app's concurrent-login limit (stage 3) is neither a success nor an unexpected error.
+  let rejected = false;
   try {
     const body = res.json();
     if (kind === 'create') valid = valid && body.orderId > 600000 && body.totalPrice > 0;
-    else if (kind === 'login') valid = valid && body.id === session.id;
-    else valid = valid && Array.isArray(body.items) && body.items.length > 0 && body.total > 0;
+    else if (kind === 'login') {
+      valid = valid && body.id === session.id;
+      rejected = res.status === 429 && body.code === 'TOO_MANY_REQUESTS' && res.headers['Retry-After'] === '1';
+    } else valid = valid && Array.isArray(body.items) && body.items.length > 0 && body.total > 0;
   } catch (_) { valid = false; }
-  check(res, { 'status and response contract': () => valid }, { phase, kind });
+  const outcome = valid ? 'ok' : rejected ? 'rejected' : 'error';
+  check(res, { 'status and response contract': () => valid || rejected }, { phase, kind });
   if (phase === 'measured') {
-    latency.add(res.timings.duration, { kind });
-    requests.add(1, { kind });
-    errors.add(!valid, { kind });
+    latency.add(res.timings.duration, { kind, outcome });
+    requests.add(1, { kind, outcome });
+    errors.add(outcome === 'error', { kind });
+    if (rejected) loginRejected.add(1);
     if (kind === 'create' && valid) created.add(1);
   }
 }

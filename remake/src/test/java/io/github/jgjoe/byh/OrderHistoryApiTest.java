@@ -67,6 +67,66 @@ class OrderHistoryApiTest extends IntegrationTestBase {
     }
 
     @Test
+    void paginationKeepsTiedOrdersAndCompleteLinesAtEveryBoundary() throws Exception {
+        insertMember("alice", "pw1234", "앨리스");
+        insertMember("bob", "pw1234", "밥");
+        insertMember("empty", "pw1234", "없음");
+        insertProduct("PA", "상품A", 2000, 1000, "제조사A");
+        insertProduct("PB", "상품B", 3000, 2500, "제조사B");
+        List<Long> expected = new ArrayList<>();
+        for (int i = 0; i < 12; i++) {
+            long id = insertOrder("alice", "2026-02-01 10:00:00", "2026-03-01", 6000, "받는사람");
+            insertOrderItem(id, "PA", 1, 1000);
+            insertOrderItem(id, "PB", 2, 2500);
+            expected.add(0, id);
+        }
+        long foreign = insertOrder("bob", "2026-02-02 10:00:00", "2026-03-01", 1000, "다른회원");
+        insertOrderItem(foreign, "PA", 1, 1000);
+        MockHttpSession session = login("alice", "pw1234");
+        for (int size : new int[] {1, 2, 10, 11, 100}) {
+            for (int page = 1; page <= (12 + size - 1) / size + 1; page++) {
+                MvcResult result = mockMvc.perform(get("/api/orders").param("page", Integer.toString(page))
+                        .param("size", Integer.toString(size)).session(session)).andReturn();
+                assertThat(result.getResponse().getStatus()).isEqualTo(200);
+                ReadContext json = Responses.json(result);
+                assertThat(Responses.longValue(json, "$.total")).isEqualTo(12);
+                List<Map<String, Object>> items = Responses.objects(json, "$.items");
+                int start = Math.min((page - 1) * size, 12);
+                assertThat(orderIds(items)).containsExactlyElementsOf(expected.subList(start, Math.min(start + size, 12)));
+                for (Map<String, Object> item : items) {
+                    assertOrderMatchesDatabase(item);
+                }
+            }
+        }
+        MvcResult hugePage = mockMvc.perform(get("/api/orders").param("page", "2147483647")
+                .param("size", "100").session(session)).andReturn();
+        assertThat(hugePage.getResponse().getStatus()).isEqualTo(200);
+        assertThat(Responses.objects(Responses.json(hugePage), "$.items")).isEmpty();
+        assertThat(Responses.longValue(Responses.json(hugePage), "$.total")).isEqualTo(12);
+
+        MvcResult empty = mockMvc.perform(get("/api/orders").session(login("empty", "pw1234"))).andReturn();
+        assertThat(empty.getResponse().getStatus()).isEqualTo(200);
+        assertThat(Responses.objects(Responses.json(empty), "$.items")).isEmpty();
+        assertThat(Responses.longValue(Responses.json(empty), "$.total")).isZero();
+    }
+
+    @Test
+    void paginationRejectsInvalidPageAndSize() throws Exception {
+        insertMember("alice", "pw1234", "앨리스");
+        MockHttpSession session = login("alice", "pw1234");
+        for (String page : new String[] {"0", "-1", "abc"}) {
+            MvcResult result = mockMvc.perform(get("/api/orders").param("page", page).session(session)).andReturn();
+            assertThat(result.getResponse().getStatus()).isEqualTo(400);
+            assertThat(Responses.code(result)).isEqualTo("INVALID_PARAMETER");
+        }
+        for (String size : new String[] {"0", "-1", "101", "abc"}) {
+            MvcResult result = mockMvc.perform(get("/api/orders").param("size", size).session(session)).andReturn();
+            assertThat(result.getResponse().getStatus()).isEqualTo(400);
+            assertThat(Responses.code(result)).isEqualTo("INVALID_PARAMETER");
+        }
+    }
+
+    @Test
     void tc208_orderHistoryQueryCountDoesNotGrowWithOrders() throws Exception {
         insertMember("alice", "pw1234", "앨리스");
         insertMember("bob", "pw1234", "밥");

@@ -1,0 +1,816 @@
+{
+  "image_ids": [
+    "sha256:ae7fe7ce9d945017ea074474d3d29dc1bf54aacfaee7fb225aa5ac92fb56dbc5"
+  ],
+  "independent_jvm_sessions": 4,
+  "settings": {
+    "50": {
+      "P1": true,
+      "P2": true,
+      "P3": true,
+      "eligible": true,
+      "runs": {
+        "v3-wait50-cold-270-r1": {
+          "run": "v3-wait50-cold-270-r1",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true,
+            "login_success_ge_99percent": true
+          },
+          "login": {
+            "started": 3240,
+            "ok": 3222,
+            "rejected": 18,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9944444444444445
+          },
+          "nonlogin_p95_ms": {
+            "products": 4.73598,
+            "history": 3.828571450000001,
+            "create": 9.0057237
+          },
+          "rejection_p95_ms": 91.09880505,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 8100,
+              "status_429": 185,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 32401,
+              "status_429": 18,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.733,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.8183357290942475
+        },
+        "v3-wait50-cold-270-r2": {
+          "run": "v3-wait50-cold-270-r2",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true,
+            "login_success_ge_99percent": true
+          },
+          "login": {
+            "started": 3240,
+            "ok": 3225,
+            "rejected": 15,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9953703703703703
+          },
+          "nonlogin_p95_ms": {
+            "products": 4.418896,
+            "history": 2.942292350000001,
+            "create": 8.151726049999997
+          },
+          "rejection_p95_ms": 59.329825899999996,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 8101,
+              "status_429": 203,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 32401,
+              "status_429": 15,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.673,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.8120113269473723
+        },
+        "v3-wait50-warm-270-r1": {
+          "run": "v3-wait50-warm-270-r1",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true,
+            "login_success_ge_99percent": true
+          },
+          "login": {
+            "started": 3240,
+            "ok": 3233,
+            "rejected": 7,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9978395061728395
+          },
+          "nonlogin_p95_ms": {
+            "products": 3.2344875999999974,
+            "history": 2.34518325,
+            "create": 8.580242499999999
+          },
+          "rejection_p95_ms": 57.9619164,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 8101,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 32400,
+              "status_429": 7,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.733,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.7793003243002736
+        },
+        "v3-wait50-warm-270-r2": {
+          "run": "v3-wait50-warm-270-r2",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true,
+            "login_success_ge_99percent": true
+          },
+          "login": {
+            "started": 3240,
+            "ok": 3236,
+            "rejected": 4,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9987654320987654
+          },
+          "nonlogin_p95_ms": {
+            "products": 2.538866,
+            "history": 2.22407585,
+            "create": 6.11702915
+          },
+          "rejection_p95_ms": 54.78630215,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 8101,
+              "status_429": 1,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 32401,
+              "status_429": 4,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.673,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.7729736968486003
+        },
+        "v3-wait50-warm-320-r1": {
+          "run": "v3-wait50-warm-320-r1",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true
+          },
+          "login": {
+            "started": 3840,
+            "ok": 3603,
+            "rejected": 237,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.93828125
+          },
+          "nonlogin_p95_ms": {
+            "products": 8.045001099999995,
+            "history": 7.906994350000006,
+            "create": 8.505357299999996
+          },
+          "rejection_p95_ms": 57.9874888,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 9601,
+              "status_429": 51,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 38400,
+              "status_429": 237,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.733,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.9857089364782208
+        },
+        "v3-wait50-warm-320-r2": {
+          "run": "v3-wait50-warm-320-r2",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true
+          },
+          "login": {
+            "started": 3840,
+            "ok": 3631,
+            "rejected": 209,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9455729166666667
+          },
+          "nonlogin_p95_ms": {
+            "products": 8.383154,
+            "history": 9.124693100000004,
+            "create": 10.000287
+          },
+          "rejection_p95_ms": 59.73635839999999,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 9601,
+              "status_429": 47,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 38401,
+              "status_429": 209,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.673,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.9866422525142444
+        },
+        "v3-wait50-warm-400-r1": {
+          "run": "v3-wait50-warm-400-r1",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true
+          },
+          "login": {
+            "started": 4800,
+            "ok": 3552,
+            "rejected": 1248,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.74
+          },
+          "nonlogin_p95_ms": {
+            "products": 6.606321,
+            "history": 12.241330599999992,
+            "create": 7.624569199999997
+          },
+          "rejection_p95_ms": 54.4952627,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 12001,
+              "status_429": 314,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 48001,
+              "status_429": 1248,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.733,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.984657115983748
+        },
+        "v3-wait50-warm-400-r2": {
+          "run": "v3-wait50-warm-400-r2",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true
+          },
+          "login": {
+            "started": 4800,
+            "ok": 3541,
+            "rejected": 1259,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.7377083333333333
+          },
+          "nonlogin_p95_ms": {
+            "products": 6.296999,
+            "history": 13.799992399999999,
+            "create": 9.141269399999988
+          },
+          "rejection_p95_ms": 57.35133079999999,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 12001,
+              "status_429": 311,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 48001,
+              "status_429": 1259,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.673,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.9861580734578486
+        }
+      }
+    },
+    "75": {
+      "P1": true,
+      "P2": true,
+      "P3": true,
+      "eligible": true,
+      "runs": {
+        "v3-wait75-cold-270-r1": {
+          "run": "v3-wait75-cold-270-r1",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true,
+            "login_success_ge_99percent": true
+          },
+          "login": {
+            "started": 3240,
+            "ok": 3224,
+            "rejected": 16,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9950617283950617
+          },
+          "nonlogin_p95_ms": {
+            "products": 5.051246,
+            "history": 4.061239850000001,
+            "create": 10.436905399999997
+          },
+          "rejection_p95_ms": 90.93868375,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 8101,
+              "status_429": 193,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 32401,
+              "status_429": 16,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.919,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.8288323469606063
+        },
+        "v3-wait75-cold-270-r2": {
+          "run": "v3-wait75-cold-270-r2",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true,
+            "login_success_ge_99percent": true
+          },
+          "login": {
+            "started": 3240,
+            "ok": 3225,
+            "rejected": 15,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9953703703703703
+          },
+          "nonlogin_p95_ms": {
+            "products": 4.957921599999998,
+            "history": 4.793303350000001,
+            "create": 9.788075349999996
+          },
+          "rejection_p95_ms": 93.39635079999995,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 8100,
+              "status_429": 215,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 32400,
+              "status_429": 15,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.688,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.8365438102246674
+        },
+        "v3-wait75-warm-270-r1": {
+          "run": "v3-wait75-warm-270-r1",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true,
+            "login_success_ge_99percent": true
+          },
+          "login": {
+            "started": 3240,
+            "ok": 3240,
+            "rejected": 0,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 1.0
+          },
+          "nonlogin_p95_ms": {
+            "products": 2.789871,
+            "history": 2.3120819000000004,
+            "create": 6.758756099999998
+          },
+          "rejection_p95_ms": null,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 8101,
+              "status_429": 1,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 32401,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.919,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.7819607517923584
+        },
+        "v3-wait75-warm-270-r2": {
+          "run": "v3-wait75-warm-270-r2",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true,
+            "login_success_ge_99percent": true
+          },
+          "login": {
+            "started": 3240,
+            "ok": 3237,
+            "rejected": 3,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9990740740740741
+          },
+          "nonlogin_p95_ms": {
+            "products": 4.070501,
+            "history": 2.6250357500000003,
+            "create": 8.346478949999998
+          },
+          "rejection_p95_ms": 76.0021224,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 8101,
+              "status_429": 16,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 32401,
+              "status_429": 3,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.688,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.793148630731315
+        },
+        "v3-wait75-warm-320-r1": {
+          "run": "v3-wait75-warm-320-r1",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true
+          },
+          "login": {
+            "started": 3840,
+            "ok": 3620,
+            "rejected": 220,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.9427083333333334
+          },
+          "nonlogin_p95_ms": {
+            "products": 9.07788,
+            "history": 10.03049405,
+            "create": 12.407901249999998
+          },
+          "rejection_p95_ms": 81.02951854999999,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 9601,
+              "status_429": 56,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 38401,
+              "status_429": 220,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.919,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.9858287652855755
+        },
+        "v3-wait75-warm-320-r2": {
+          "run": "v3-wait75-warm-320-r2",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true
+          },
+          "login": {
+            "started": 3840,
+            "ok": 3636,
+            "rejected": 204,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.946875
+          },
+          "nonlogin_p95_ms": {
+            "products": 8.367678,
+            "history": 8.71955175,
+            "create": 9.157144649999998
+          },
+          "rejection_p95_ms": 82.35698575,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 9600,
+              "status_429": 43,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 38401,
+              "status_429": 204,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.688,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.9847348990457319
+        },
+        "v3-wait75-warm-400-r1": {
+          "run": "v3-wait75-warm-400-r1",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true
+          },
+          "login": {
+            "started": 4800,
+            "ok": 3547,
+            "rejected": 1253,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.7389583333333334
+          },
+          "nonlogin_p95_ms": {
+            "products": 10.282620049999998,
+            "history": 8.229306299999996,
+            "create": 7.818049099999999
+          },
+          "rejection_p95_ms": 78.93075099999999,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 12001,
+              "status_429": 319,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 48000,
+              "status_429": 1253,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.919,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.9764672209725498
+        },
+        "v3-wait75-warm-400-r2": {
+          "run": "v3-wait75-warm-400-r2",
+          "pass": true,
+          "checks": {
+            "nonlogin_p95_lt_500ms": true,
+            "nonlogin_errors_zero": true,
+            "all_phase_drops_zero": true,
+            "login_unexpected_errors_zero": true,
+            "login_incomplete_zero": true,
+            "rejection_p95_lt_100ms": true
+          },
+          "login": {
+            "started": 4800,
+            "ok": 3581,
+            "rejected": 1219,
+            "unexpected_error": 0,
+            "not_completed": 0,
+            "success_rate": 0.7460416666666667
+          },
+          "nonlogin_p95_ms": {
+            "products": 7.2212,
+            "history": 7.216275249999937,
+            "create": 13.221343649999998
+          },
+          "rejection_p95_ms": 81.4830726,
+          "http_by_phase": {
+            "setup": {
+              "requests": 100,
+              "status_429": 0,
+              "unexpected_non_2xx": 0
+            },
+            "warmup": {
+              "requests": 12001,
+              "status_429": 319,
+              "unexpected_non_2xx": 0
+            },
+            "measured": {
+              "requests": 48001,
+              "status_429": 1219,
+              "unexpected_non_2xx": 0
+            }
+          },
+          "app_startup": {
+            "started_seconds": 3.688,
+            "warmup_checks": null,
+            "warmup_ms": null
+          },
+          "app_cpu_cores": 1.9852367994213538
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import java.io.UncheckedIOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;
@@ -25,9 +26,19 @@ public final class MapperSql {
     private static final String MAPPER_RESOURCE = "mapper/OrderMapper.xml";
 
     private final Configuration configuration;
+    private final V3OrderVariant variant;
 
     private MapperSql(Configuration configuration) {
+        this(configuration, V3OrderVariant.CURRENT);
+    }
+
+    private MapperSql(Configuration configuration, V3OrderVariant variant) {
         this.configuration = configuration;
+        this.variant = variant;
+    }
+
+    MapperSql withVariant(V3OrderVariant variant) {
+        return new MapperSql(configuration, variant);
     }
 
     /** Parses the application's OrderMapper.xml into a standalone MyBatis configuration. */
@@ -46,14 +57,14 @@ public final class MapperSql {
 
     /** The SQL MyBatis would send for this query and these parameter values. */
     public String sql(MeasuredQuery query, Map<String, Object> params) {
-        return statement(query).getBoundSql(params).getSql();
+        return boundSql(query, params).getSql();
     }
 
     /** Prepares the SQL with the tag comment in front and binds params via DefaultParameterHandler. */
     public PreparedStatement prepare(Connection connection, MeasuredQuery query, Map<String, Object> params,
                                      String tag) throws SQLException {
         MappedStatement statement = statement(query);
-        BoundSql boundSql = statement.getBoundSql(params);
+        BoundSql boundSql = boundSql(query, params);
         PreparedStatement prepared = connection.prepareStatement("/* " + tag + " */" + boundSql.getSql());
         try {
             new DefaultParameterHandler(statement, params, boundSql).setParameters(prepared);
@@ -66,6 +77,19 @@ public final class MapperSql {
             throw e;
         }
         return prepared;
+    }
+
+    private BoundSql boundSql(MeasuredQuery query, Map<String, Object> params) {
+        if (query != MeasuredQuery.Q1 || variant == V3OrderVariant.CURRENT) {
+            return statement(query).getBoundSql(params);
+        }
+        // Render the still-supported generic pagination branch, then bind the actual offset (0).
+        // This preserves reproducible V2 comparisons after the app gains a first-page fast path.
+        Map<String, Object> renderParams = new HashMap<>(params);
+        renderParams.put("offset", 1L);
+        BoundSql generic = statement(query).getBoundSql(renderParams);
+        BoundSql transformed = variant.apply(configuration, generic);
+        return new BoundSql(configuration, transformed.getSql(), transformed.getParameterMappings(), params);
     }
 
     private MappedStatement statement(MeasuredQuery query) {

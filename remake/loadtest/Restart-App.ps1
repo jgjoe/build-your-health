@@ -2,7 +2,7 @@
 # Recreate the measured app container from the existing image with a given Hikari pool size,
 # optionally recording JFR (profile settings, dumped on JVM exit), then wait until it serves.
 [CmdletBinding()]
-param([ValidateRange(1,200)][int]$PoolSize=10, [switch]$Jfr,
+param([ValidateRange(1,200)][int]$PoolSize=10, [switch]$Jfr, [switch]$V3Jfr,
     [ValidatePattern('^byh-loadtest-app:[a-z0-9.-]+$')][string]$Image='byh-loadtest-app:latest',
     [ValidateRange(1,64)][int]$LoginMaxConcurrent=2, [ValidateRange(0,1000)][int]$WarmupIterations=20,
     [ValidateRange(0,5000)][int]$LoginMaxWaitMs=50)
@@ -13,7 +13,11 @@ $env:APP_IMAGE=$Image
 $env:LOGIN_MAX_CONCURRENT="$LoginMaxConcurrent"
 $env:LOGIN_WARMUP_ITERATIONS="$WarmupIterations"
 $env:LOGIN_MAX_WAIT_MS="$LoginMaxWaitMs"
-$env:JFR_OPTS=if ($Jfr) { '-XX:StartFlightRecording=filename=/tmp/byh.jfr,settings=profile,dumponexit=true' } else { '' }
+$env:JFR_OPTS=if ($V3Jfr) {
+    '-XX:StartFlightRecording=filename=/tmp/byh.jfr,settings=/opt/byh/v3-profile.jfc,dumponexit=true'
+} elseif ($Jfr) {
+    '-XX:StartFlightRecording=filename=/tmp/byh.jfr,settings=profile,dumponexit=true'
+} else { '' }
 docker --context desktop-linux compose -f (Join-Path $PSScriptRoot 'compose.yaml') up -d --no-build --force-recreate app
 $deadline=[DateTime]::UtcNow.AddSeconds(180)
 while ($true) {
@@ -24,4 +28,4 @@ while ($true) {
     }
     Start-Sleep -Seconds 2
 }
-Write-Output "APP_READY IMAGE=$Image POOL_SIZE=$PoolSize LOGIN_MAX=$LoginMaxConcurrent MAX_WAIT_MS=$LoginMaxWaitMs WARMUP=$WarmupIterations JFR=$($Jfr.IsPresent)"
+Write-Output "APP_READY IMAGE=$Image POOL_SIZE=$PoolSize LOGIN_MAX=$LoginMaxConcurrent MAX_WAIT_MS=$LoginMaxWaitMs WARMUP=$WarmupIterations JFR=$($Jfr.IsPresent -or $V3Jfr.IsPresent)"

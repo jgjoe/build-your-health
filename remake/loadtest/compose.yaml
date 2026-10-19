@@ -7,6 +7,8 @@ services:
     image: ${APP_IMAGE:-byh-loadtest-app:latest}
     cpus: 2
     mem_limit: 2g
+    volumes:
+      - './v3-profile.jfc:/opt/byh/v3-profile.jfc:ro'
     environment:
       DB_URL: jdbc:oracle:thin:@byh-perf-perfdb-1:1521/FREEPDB1
       DB_USERNAME: byh_load

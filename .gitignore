@@ -8,6 +8,7 @@ bin/
 build/
 *.class
 *.war
+__pycache__/
 
 # 로컬 설정·자격증명
 *.properties.local
@@ -22,3 +23,9 @@ remake/loadtest/results/v2-*/app.jfr
 remake/loadtest/results/v2-*/jfr-samples.json.gz
 remake/loadtest/results/s3-*/raw.json.gz
 remake/loadtest/results/s3b-*/raw.json.gz
+# V3 raw observations are local; publish only reviewed summaries and SHA256 manifests.
+remake/loadtest/results/v3-*/**/raw*
+remake/loadtest/results/v3-*/**/*.jfr
+remake/loadtest/results/v3-*/**/*samples.json.gz
+remake/loadtest/results/v3-*/checkpoint.json
+remake/perf/results/v3-*/**/raw*

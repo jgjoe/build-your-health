@@ -44,6 +44,15 @@ public final class PerfMain {
             case "load" -> load(args);
             case "checksum" -> checksum();
             case "measure" -> measure(args);
+            case "v3-orders" -> {
+                if (args.length != 2) {
+                    throw new IllegalArgumentException("v3-orders requires a fresh run id");
+                }
+                try (Connection connection = DriverManager.getConnection(requiredEnvironment(URL_ENV),
+                        requiredEnvironment(USERNAME_ENV), requiredEnvironment(PASSWORD_ENV))) {
+                    V3OrderProbe.run(connection, args[1]);
+                }
+            }
             default -> {
                 System.err.println("Unknown command: " + args[0]);
                 usage();
@@ -188,6 +197,7 @@ public final class PerfMain {
 
     private static void usage() {
         System.err.println("Usage: PerfMain <load [--seed N] | checksum"
-                + " | measure [--run-id ID] [--warmup N] [--runs N] [--out DIR]>");
+                + " | measure [--run-id ID] [--warmup N] [--runs N] [--out DIR]"
+                + " | v3-orders RUN_ID>");
     }
 }

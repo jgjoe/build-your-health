@@ -1,0 +1,15 @@
+2026-10-19T19:55:40.643252996Z byh-loadtest-app:v3-after-timing sha256:cb156d17d6ae21860e50e1ebcbdd96d6285621599190a42fa39cfc72ddf033a1
+SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE=10
+BYH_LOGIN_MAX_CONCURRENT=2
+SPRING_DATASOURCE_HIKARI_REGISTER_MBEANS=true
+DB_URL=jdbc:oracle:thin:@byh-perf-perfdb-1:1521/FREEPDB1
+BYH_LOGIN_MAX_WAIT_MS=50
+JAVA_TOOL_OPTIONS= -Xms512m -Xmx1024m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9010 -Dcom.sun.management.jmxremote.rmi.port=9010 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=app
+BYH_LOGIN_WARMUP_ITERATIONS=0
+DB_USERNAME=byh_load
+PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+JAVA_HOME=/opt/java/openjdk
+LANG=en_US.UTF-8
+LANGUAGE=en_US:en
+LC_ALL=en_US.UTF-8
+JAVA_VERSION=jdk-17.0.20.1+1

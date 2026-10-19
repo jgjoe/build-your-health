@@ -22,11 +22,17 @@ public class AuthController {
     private final MemberMapper memberMapper;
     private final PasswordEncoder passwordEncoder;
     private final LoginGate loginGate;
+    private final LoginAttempts attempts;
+    private final String dummyPasswordHash;
 
-    public AuthController(MemberMapper memberMapper, PasswordEncoder passwordEncoder, LoginGate loginGate) {
+    public AuthController(MemberMapper memberMapper, PasswordEncoder passwordEncoder, LoginGate loginGate,
+                          LoginAttempts attempts) {
         this.memberMapper = memberMapper;
         this.passwordEncoder = passwordEncoder;
         this.loginGate = loginGate;
+        this.attempts = attempts;
+        // One valid cost-10 hash per controller lifetime, not per nonexistent-user request.
+        this.dummyPasswordHash = passwordEncoder.encode("byh-dummy-password-not-an-account");
     }
 
     @PostMapping("/login")
@@ -34,19 +40,62 @@ public class AuthController {
         if (request == null || isBlank(request.id()) || isBlank(request.password())) {
             throw new InvalidParameterException("아이디와 비밀번호를 모두 입력해야 합니다.");
         }
-        return loginGate.run(() -> authenticate(request, httpRequest));
+        return loginGate.run(() -> {
+            LoginWorkEvent event = new LoginWorkEvent();
+            boolean recording = event.isEnabled();
+            long started = recording ? System.nanoTime() : 0;
+            if (recording) {
+                event.begin();
+            }
+            try {
+                attempts.checkAllowed(request.id());
+                if (recording) {
+                    event.accountReadNanos = System.nanoTime() - started;
+                }
+                return authenticate(request, httpRequest, event, recording);
+            } catch (io.github.jgjoe.byh.common.LoginBusyException exception) {
+                event.outcome = "account_rejected";
+                throw exception;
+            } finally {
+                if (recording) {
+                    event.commit();
+                }
+            }
+        });
     }
 
-    private LoginResponse authenticate(LoginRequest request, HttpServletRequest httpRequest) {
+    private LoginResponse authenticate(LoginRequest request, HttpServletRequest httpRequest,
+                                       LoginWorkEvent event, boolean recording) {
+        long started = recording ? System.nanoTime() : 0;
         Member member = memberMapper.findById(request.id());
-        if (member == null || !passwordEncoder.matches(request.password(), member.getPasswordHash())) {
-            // Unknown id and wrong password answer identically (RQ-F-004).
+        if (recording) {
+            event.lookupNanos = System.nanoTime() - started;
+        }
+        String hash = member == null ? dummyPasswordHash : member.getPasswordHash();
+        started = recording ? System.nanoTime() : 0;
+        boolean passwordMatches = passwordEncoder.matches(request.password(), hash);
+        if (recording) {
+            event.bcryptNanos = System.nanoTime() - started;
+        }
+        started = recording ? System.nanoTime() : 0;
+        if (member == null || !passwordMatches) {
+            // Same expensive verification and response for unknown ids and wrong passwords.
+            attempts.failed(request.id());
+            if (recording) {
+                event.accountWriteNanos = System.nanoTime() - started;
+            }
+            event.outcome = "invalid";
             throw new UnauthorizedException("아이디 또는 비밀번호가 올바르지 않습니다.");
+        }
+        attempts.succeeded(request.id());
+        if (recording) {
+            event.accountWriteNanos = System.nanoTime() - started;
         }
         // Issue a new session id on login so an id fixed before authentication cannot be reused.
         HttpSession session = httpRequest.getSession(true);
         httpRequest.changeSessionId();
         LoginMember.login(session, member.getId());
+        event.outcome = "ok";
         return new LoginResponse(member.getId(), member.getName());
     }
 

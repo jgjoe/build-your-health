@@ -48,6 +48,18 @@
         WHERE USER_ID = #{userId}
     </select>
 
+    <sql id="orderedMemberOrders">
+        SELECT ORDER_ID,
+               ORDER_DATE,
+               DELIVERY_DATE,
+               TOTAL_PRICE,
+               RECIPIENT_NAME,
+               SHIPPING_ADDRESS
+        FROM ORDERS
+        WHERE USER_ID = #{userId}
+        ORDER BY ORDER_DATE DESC, ORDER_ID DESC
+    </sql>
+
     <!--
       One statement for the whole page: the member's newest orders are picked in an inline
       view and the lines are joined afterwards, so the statement count does not grow with
@@ -66,16 +78,20 @@
                oi.PRICE,
                p.PRODUCT_NAME
         FROM (
-            SELECT ORDER_ID,
-                   ORDER_DATE,
-                   DELIVERY_DATE,
-                   TOTAL_PRICE,
-                   RECIPIENT_NAME,
-                   SHIPPING_ADDRESS
-            FROM ORDERS
-            WHERE USER_ID = #{userId}
-            ORDER BY ORDER_DATE DESC, ORDER_ID DESC
-            OFFSET #{offset} ROWS FETCH NEXT #{size} ROWS ONLY
+            <choose>
+                <when test="offset == 0">
+                    <!-- Explicit top-N enables COUNT STOPKEY for high-cardinality members too. -->
+                    SELECT *
+                    FROM (
+                        <include refid="orderedMemberOrders"/>
+                    )
+                    WHERE ROWNUM &lt;= #{size}
+                </when>
+                <otherwise>
+                    <include refid="orderedMemberOrders"/>
+                    OFFSET #{offset} ROWS FETCH NEXT #{size} ROWS ONLY
+                </otherwise>
+            </choose>
         ) o
         LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID
         LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID

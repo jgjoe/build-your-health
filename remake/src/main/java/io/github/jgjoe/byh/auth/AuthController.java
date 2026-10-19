@@ -21,10 +21,12 @@ public class AuthController {
 
     private final MemberMapper memberMapper;
     private final PasswordEncoder passwordEncoder;
+    private final LoginGate loginGate;
 
-    public AuthController(MemberMapper memberMapper, PasswordEncoder passwordEncoder) {
+    public AuthController(MemberMapper memberMapper, PasswordEncoder passwordEncoder, LoginGate loginGate) {
         this.memberMapper = memberMapper;
         this.passwordEncoder = passwordEncoder;
+        this.loginGate = loginGate;
     }
 
     @PostMapping("/login")
@@ -32,6 +34,10 @@ public class AuthController {
         if (request == null || isBlank(request.id()) || isBlank(request.password())) {
             throw new InvalidParameterException("아이디와 비밀번호를 모두 입력해야 합니다.");
         }
+        return loginGate.run(() -> authenticate(request, httpRequest));
+    }
+
+    private LoginResponse authenticate(LoginRequest request, HttpServletRequest httpRequest) {
         Member member = memberMapper.findById(request.id());
         if (member == null || !passwordEncoder.matches(request.password(), member.getPasswordHash())) {
             // Unknown id and wrong password answer identically (RQ-F-004).

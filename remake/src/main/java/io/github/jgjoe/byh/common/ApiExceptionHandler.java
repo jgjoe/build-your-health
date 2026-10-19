@@ -3,6 +3,7 @@ package io.github.jgjoe.byh.common;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,6 +42,13 @@ public class ApiExceptionHandler {
     @ExceptionHandler(UnauthorizedException.class)
     public ResponseEntity<ApiError> handleUnauthorized(UnauthorizedException exception) {
         return error(HttpStatus.UNAUTHORIZED, "UNAUTHORIZED", exception.getMessage());
+    }
+
+    @ExceptionHandler(LoginBusyException.class)
+    public ResponseEntity<ApiError> handleLoginBusy(LoginBusyException exception) {
+        return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS)
+                .header(HttpHeaders.RETRY_AFTER, "1")
+                .body(new ApiError("TOO_MANY_REQUESTS", exception.getMessage()));
     }
 
     @ExceptionHandler(NotFoundException.class)

@@ -1,0 +1,692 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /capacity.js
+        output: json (/out/raw.json.gz)
+
+     scenarios: (100.00%) 2 scenarios, 256 max VUs, 2m45s max duration (incl. graceful stop):
+              * warmup: 320.00 iterations/s for 30s (maxVUs: 256, gracefulStop: 5s)
+              * measured: 320.00 iterations/s for 2m0s (maxVUs: 256, startTime: 40s, gracefulStop: 5s)
+
+
+Run        [ 100% ] setup()
+warmup     [   0% ]
+measured   [   0% ]
+
+Run        [ 100% ] setup()
+warmup     [   0% ]
+measured   [   0% ]
+
+Run        [ 100% ] setup()
+warmup     [   0% ]
+measured   [   0% ]
+
+Run        [ 100% ] setup()
+warmup     [   0% ]
+measured   [   0% ]
+
+Run        [ 100% ] setup()
+warmup     [   0% ]
+measured   [   0% ]
+
+Run        [ 100% ] setup()
+warmup     [   0% ]
+measured   [   0% ]
+
+running (0m06.9s), 019/256 VUs, 173 complete and 0 interrupted iterations
+warmup     [   2% ] 019/256 VUs  00.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      39.4s     
+
+running (0m07.9s), 023/256 VUs, 489 complete and 0 interrupted iterations
+warmup     [   5% ] 023/256 VUs  01.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      38.4s     
+
+running (0m08.9s), 030/256 VUs, 800 complete and 0 interrupted iterations
+warmup     [   9% ] 030/256 VUs  02.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      37.4s     
+
+running (0m09.9s), 039/256 VUs, 1112 complete and 0 interrupted iterations
+warmup     [  12% ] 039/256 VUs  03.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      36.4s     
+
+running (0m10.9s), 043/256 VUs, 1429 complete and 0 interrupted iterations
+warmup     [  15% ] 043/256 VUs  04.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      35.4s     
+
+running (0m11.9s), 045/256 VUs, 1747 complete and 0 interrupted iterations
+warmup     [  19% ] 045/256 VUs  05.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      34.4s     
+
+running (0m12.9s), 089/256 VUs, 2023 complete and 0 interrupted iterations
+warmup     [  22% ] 089/256 VUs  06.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      33.4s     
+
+running (0m13.9s), 110/256 VUs, 2322 complete and 0 interrupted iterations
+warmup     [  25% ] 110/256 VUs  07.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      32.4s     
+
+running (0m14.9s), 117/256 VUs, 2634 complete and 0 interrupted iterations
+warmup     [  29% ] 117/256 VUs  08.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      31.4s     
+
+running (0m15.9s), 126/256 VUs, 2946 complete and 0 interrupted iterations
+warmup     [  32% ] 126/256 VUs  09.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      30.4s     
+
+running (0m16.9s), 205/256 VUs, 3188 complete and 0 interrupted iterations
+warmup     [  35% ] 205/256 VUs  10.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      29.4s     
+
+running (0m17.9s), 229/256 VUs, 3470 complete and 0 interrupted iterations
+warmup     [  39% ] 229/256 VUs  11.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      28.4s     
+
+running (0m18.9s), 256/256 VUs, 3729 complete and 0 interrupted iterations
+warmup     [  42% ] 256/256 VUs  12.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      27.4s     
+
+running (0m19.9s), 211/256 VUs, 4054 complete and 0 interrupted iterations
+warmup     [  45% ] 211/256 VUs  13.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      26.4s     
+
+running (0m20.9s), 237/256 VUs, 4348 complete and 0 interrupted iterations
+warmup     [  49% ] 237/256 VUs  14.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      25.4s     
+
+running (0m21.9s), 231/256 VUs, 4673 complete and 0 interrupted iterations
+warmup     [  52% ] 231/256 VUs  15.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      24.4s     
+
+running (0m22.9s), 187/256 VUs, 4929 complete and 0 interrupted iterations
+warmup     [  55% ] 187/256 VUs  16.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      23.4s     
+
+running (0m23.9s), 197/256 VUs, 5239 complete and 0 interrupted iterations
+warmup     [  59% ] 197/256 VUs  17.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      22.4s     
+
+running (0m24.9s), 256/256 VUs, 5457 complete and 0 interrupted iterations
+warmup     [  62% ] 256/256 VUs  18.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      21.4s     
+
+running (0m25.9s), 128/256 VUs, 5838 complete and 0 interrupted iterations
+warmup     [  65% ] 128/256 VUs  19.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      20.4s     
+
+running (0m26.9s), 170/256 VUs, 6117 complete and 0 interrupted iterations
+warmup     [  69% ] 170/256 VUs  20.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      19.4s     
+
+running (0m27.9s), 236/256 VUs, 6372 complete and 0 interrupted iterations
+warmup     [  72% ] 236/256 VUs  21.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      18.4s     
+
+running (0m28.9s), 196/256 VUs, 6673 complete and 0 interrupted iterations
+warmup     [  75% ] 196/256 VUs  22.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      17.4s     
+
+running (0m29.9s), 214/256 VUs, 6911 complete and 0 interrupted iterations
+warmup     [  79% ] 214/256 VUs  23.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      16.4s     
+
+running (0m30.9s), 136/256 VUs, 7310 complete and 0 interrupted iterations
+warmup     [  82% ] 136/256 VUs  24.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      15.4s     
+
+running (0m31.9s), 150/256 VUs, 7616 complete and 0 interrupted iterations
+warmup     [  85% ] 150/256 VUs  25.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      14.4s     
+
+running (0m32.9s), 202/256 VUs, 7792 complete and 0 interrupted iterations
+warmup     [  89% ] 202/256 VUs  26.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      13.4s     
+
+running (0m33.9s), 256/256 VUs, 8027 complete and 0 interrupted iterations
+warmup     [  92% ] 256/256 VUs  27.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      12.4s     
+
+running (0m34.9s), 126/256 VUs, 8364 complete and 0 interrupted iterations
+warmup     [  95% ] 126/256 VUs  28.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      11.4s     
+
+running (0m35.9s), 137/256 VUs, 8670 complete and 0 interrupted iterations
+warmup     [  99% ] 137/256 VUs  29.6s/30s  320.00 iters/s
+measured • [   0% ] waiting      10.4s     
+
+running (0m36.9s), 101/256 VUs, 8835 complete and 0 interrupted iterations
+warmup   ↓ [ 100% ] 174/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      09.4s
+
+running (0m37.9s), 071/256 VUs, 8865 complete and 0 interrupted iterations
+warmup   ↓ [ 100% ] 174/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      08.4s
+
+running (0m38.9s), 000/256 VUs, 8936 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      07.4s
+
+running (0m39.9s), 000/256 VUs, 8936 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      06.4s
+
+running (0m40.9s), 000/256 VUs, 8936 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      05.4s
+
+running (0m41.9s), 000/256 VUs, 8936 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      04.4s
+
+running (0m42.9s), 000/256 VUs, 8936 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      03.4s
+
+running (0m43.9s), 000/256 VUs, 8936 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      02.4s
+
+running (0m44.9s), 000/256 VUs, 8936 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      01.4s
+
+running (0m45.9s), 000/256 VUs, 8936 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s  320.00 iters/s
+measured • [   0% ] waiting      00.4s
+
+running (0m46.9s), 010/256 VUs, 9117 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   0% ] 010/256 VUs  0m00.6s/2m0s  320.00 iters/s
+
+running (0m47.9s), 027/256 VUs, 9421 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   1% ] 027/256 VUs  0m01.6s/2m0s  320.00 iters/s
+
+running (0m48.9s), 028/256 VUs, 9739 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   2% ] 028/256 VUs  0m02.6s/2m0s  320.00 iters/s
+
+running (0m49.9s), 040/256 VUs, 10048 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   3% ] 040/256 VUs  0m03.6s/2m0s  320.00 iters/s
+
+running (0m50.9s), 046/256 VUs, 10361 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   4% ] 046/256 VUs  0m04.6s/2m0s  320.00 iters/s
+
+running (0m51.9s), 052/256 VUs, 10676 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   5% ] 052/256 VUs  0m05.6s/2m0s  320.00 iters/s
+
+running (0m52.9s), 065/256 VUs, 10982 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   5% ] 065/256 VUs  0m06.6s/2m0s  320.00 iters/s
+
+running (0m53.9s), 072/256 VUs, 11295 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   6% ] 072/256 VUs  0m07.6s/2m0s  320.00 iters/s
+
+running (0m54.9s), 092/256 VUs, 11596 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   7% ] 092/256 VUs  0m08.6s/2m0s  320.00 iters/s
+
+running (0m55.9s), 117/256 VUs, 11890 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   8% ] 117/256 VUs  0m09.6s/2m0s  320.00 iters/s
+
+running (0m56.9s), 109/256 VUs, 12219 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [   9% ] 109/256 VUs  0m10.6s/2m0s  320.00 iters/s
+
+running (0m57.9s), 151/256 VUs, 12496 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  10% ] 151/256 VUs  0m11.6s/2m0s  320.00 iters/s
+
+running (0m58.9s), 150/256 VUs, 12818 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  10% ] 150/256 VUs  0m12.6s/2m0s  320.00 iters/s
+
+running (0m59.9s), 220/256 VUs, 13068 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  11% ] 220/256 VUs  0m13.6s/2m0s  320.00 iters/s
+
+running (1m00.9s), 189/256 VUs, 13415 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  12% ] 189/256 VUs  0m14.6s/2m0s  320.00 iters/s
+
+running (1m01.9s), 175/256 VUs, 13749 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  13% ] 175/256 VUs  0m15.6s/2m0s  320.00 iters/s
+
+running (1m02.9s), 176/256 VUs, 14068 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  14% ] 176/256 VUs  0m16.6s/2m0s  320.00 iters/s
+
+running (1m03.9s), 225/256 VUs, 14216 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  15% ] 225/256 VUs  0m17.6s/2m0s  320.00 iters/s
+
+running (1m04.9s), 227/256 VUs, 14532 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  15% ] 227/256 VUs  0m18.6s/2m0s  320.00 iters/s
+
+running (1m05.9s), 165/256 VUs, 14909 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  16% ] 165/256 VUs  0m19.6s/2m0s  320.00 iters/s
+
+running (1m06.9s), 163/256 VUs, 15228 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  17% ] 163/256 VUs  0m20.6s/2m0s  320.00 iters/s
+
+running (1m07.9s), 170/256 VUs, 15542 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  18% ] 170/256 VUs  0m21.6s/2m0s  320.00 iters/s
+
+running (1m08.9s), 182/256 VUs, 15849 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  19% ] 182/256 VUs  0m22.6s/2m0s  320.00 iters/s
+
+running (1m09.9s), 185/256 VUs, 16166 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  20% ] 185/256 VUs  0m23.6s/2m0s  320.00 iters/s
+
+running (1m10.9s), 255/256 VUs, 16347 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  20% ] 255/256 VUs  0m24.6s/2m0s  320.00 iters/s
+
+running (1m11.9s), 240/256 VUs, 16681 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  21% ] 240/256 VUs  0m25.6s/2m0s  320.00 iters/s
+
+running (1m12.9s), 237/256 VUs, 16870 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  22% ] 237/256 VUs  0m26.6s/2m0s  320.00 iters/s
+
+running (1m13.9s), 256/256 VUs, 17005 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  23% ] 256/256 VUs  0m27.6s/2m0s  320.00 iters/s
+
+running (1m14.9s), 160/256 VUs, 17358 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  24% ] 160/256 VUs  0m28.6s/2m0s  320.00 iters/s
+
+running (1m15.9s), 128/256 VUs, 17710 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  25% ] 128/256 VUs  0m29.6s/2m0s  320.00 iters/s
+
+running (1m16.9s), 193/256 VUs, 17964 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  26% ] 193/256 VUs  0m30.6s/2m0s  320.00 iters/s
+
+running (1m17.9s), 147/256 VUs, 18330 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  26% ] 147/256 VUs  0m31.6s/2m0s  320.00 iters/s
+
+running (1m18.9s), 253/256 VUs, 18545 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  27% ] 253/256 VUs  0m32.6s/2m0s  320.00 iters/s
+
+running (1m19.9s), 210/256 VUs, 18790 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  28% ] 210/256 VUs  0m33.6s/2m0s  320.00 iters/s
+
+running (1m20.9s), 175/256 VUs, 19112 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  29% ] 175/256 VUs  0m34.6s/2m0s  320.00 iters/s
+
+running (1m21.9s), 211/256 VUs, 19397 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  30% ] 211/256 VUs  0m35.6s/2m0s  320.00 iters/s
+
+running (1m22.9s), 221/256 VUs, 19575 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  30% ] 221/256 VUs  0m36.6s/2m0s  320.00 iters/s
+
+running (1m23.9s), 187/256 VUs, 19831 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  31% ] 187/256 VUs  0m37.6s/2m0s  320.00 iters/s
+
+running (1m24.9s), 132/256 VUs, 20205 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  32% ] 132/256 VUs  0m38.6s/2m0s  320.00 iters/s
+
+running (1m25.9s), 220/256 VUs, 20437 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  33% ] 220/256 VUs  0m39.6s/2m0s  320.00 iters/s
+
+running (1m26.9s), 256/256 VUs, 20666 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  34% ] 256/256 VUs  0m40.6s/2m0s  320.00 iters/s
+
+running (1m27.9s), 210/256 VUs, 20983 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  35% ] 210/256 VUs  0m41.6s/2m0s  320.00 iters/s
+
+running (1m28.9s), 162/256 VUs, 21255 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  35% ] 162/256 VUs  0m42.6s/2m0s  320.00 iters/s
+
+running (1m29.9s), 155/256 VUs, 21584 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  36% ] 155/256 VUs  0m43.6s/2m0s  320.00 iters/s
+
+running (1m30.9s), 162/256 VUs, 21895 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  37% ] 162/256 VUs  0m44.6s/2m0s  320.00 iters/s
+
+running (1m31.9s), 154/256 VUs, 22214 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  38% ] 154/256 VUs  0m45.6s/2m0s  320.00 iters/s
+
+running (1m32.9s), 250/256 VUs, 22437 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  39% ] 250/256 VUs  0m46.6s/2m0s  320.00 iters/s
+
+running (1m33.9s), 211/256 VUs, 22661 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  40% ] 211/256 VUs  0m47.6s/2m0s  320.00 iters/s
+
+running (1m34.9s), 155/256 VUs, 23036 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  40% ] 155/256 VUs  0m48.6s/2m0s  320.00 iters/s
+
+running (1m35.9s), 256/256 VUs, 23243 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  41% ] 256/256 VUs  0m49.6s/2m0s  320.00 iters/s
+
+running (1m36.9s), 256/256 VUs, 23541 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  42% ] 256/256 VUs  0m50.6s/2m0s  320.00 iters/s
+
+running (1m37.9s), 155/256 VUs, 23859 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  43% ] 155/256 VUs  0m51.6s/2m0s  320.00 iters/s
+
+running (1m38.9s), 240/256 VUs, 24094 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  44% ] 240/256 VUs  0m52.6s/2m0s  320.00 iters/s
+
+running (1m39.9s), 157/256 VUs, 24500 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  45% ] 157/256 VUs  0m53.6s/2m0s  320.00 iters/s
+
+running (1m40.9s), 248/256 VUs, 24726 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  45% ] 248/256 VUs  0m54.6s/2m0s  320.00 iters/s
+
+running (1m41.9s), 178/256 VUs, 25031 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  46% ] 178/256 VUs  0m55.6s/2m0s  320.00 iters/s
+
+running (1m42.9s), 242/256 VUs, 25285 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  47% ] 242/256 VUs  0m56.6s/2m0s  320.00 iters/s
+
+running (1m43.9s), 184/256 VUs, 25644 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  48% ] 184/256 VUs  0m57.6s/2m0s  320.00 iters/s
+
+running (1m44.9s), 256/256 VUs, 25759 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  49% ] 256/256 VUs  0m58.6s/2m0s  320.00 iters/s
+
+running (1m45.9s), 194/256 VUs, 26140 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  50% ] 194/256 VUs  0m59.6s/2m0s  320.00 iters/s
+
+running (1m46.9s), 256/256 VUs, 26359 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  50% ] 256/256 VUs  1m00.6s/2m0s  320.00 iters/s
+
+running (1m47.9s), 190/256 VUs, 26685 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  51% ] 190/256 VUs  1m01.6s/2m0s  320.00 iters/s
+
+running (1m48.9s), 237/256 VUs, 26885 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  52% ] 237/256 VUs  1m02.6s/2m0s  320.00 iters/s
+
+running (1m49.9s), 155/256 VUs, 27288 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  53% ] 155/256 VUs  1m03.6s/2m0s  320.00 iters/s
+
+running (1m50.9s), 239/256 VUs, 27523 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  54% ] 239/256 VUs  1m04.6s/2m0s  320.00 iters/s
+
+running (1m51.9s), 154/256 VUs, 27816 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  55% ] 154/256 VUs  1m05.6s/2m0s  320.00 iters/s
+
+running (1m52.9s), 256/256 VUs, 27902 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  55% ] 256/256 VUs  1m06.6s/2m0s  320.00 iters/s
+
+running (1m53.9s), 154/256 VUs, 28322 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  56% ] 154/256 VUs  1m07.6s/2m0s  320.00 iters/s
+
+running (1m54.9s), 148/256 VUs, 28647 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  57% ] 148/256 VUs  1m08.6s/2m0s  320.00 iters/s
+
+running (1m55.9s), 184/256 VUs, 28931 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  58% ] 184/256 VUs  1m09.6s/2m0s  320.00 iters/s
+
+running (1m56.9s), 164/256 VUs, 29271 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  59% ] 164/256 VUs  1m10.6s/2m0s  320.00 iters/s
+
+running (1m57.9s), 255/256 VUs, 29501 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  60% ] 255/256 VUs  1m11.6s/2m0s  320.00 iters/s
+
+running (1m58.9s), 161/256 VUs, 29889 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  60% ] 161/256 VUs  1m12.6s/2m0s  320.00 iters/s
+
+running (1m59.9s), 226/256 VUs, 30143 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  61% ] 226/256 VUs  1m13.6s/2m0s  320.00 iters/s
+
+running (2m00.9s), 168/256 VUs, 30522 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  62% ] 168/256 VUs  1m14.6s/2m0s  320.00 iters/s
+
+running (2m01.9s), 256/256 VUs, 30689 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  63% ] 256/256 VUs  1m15.6s/2m0s  320.00 iters/s
+
+running (2m02.9s), 212/256 VUs, 30977 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  64% ] 212/256 VUs  1m16.6s/2m0s  320.00 iters/s
+
+running (2m03.9s), 213/256 VUs, 31289 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  65% ] 213/256 VUs  1m17.6s/2m0s  320.00 iters/s
+
+running (2m04.9s), 256/256 VUs, 31475 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  65% ] 256/256 VUs  1m18.6s/2m0s  320.00 iters/s
+
+running (2m05.9s), 181/256 VUs, 31758 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  66% ] 181/256 VUs  1m19.6s/2m0s  320.00 iters/s
+
+running (2m06.9s), 140/256 VUs, 32118 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  67% ] 140/256 VUs  1m20.6s/2m0s  320.00 iters/s
+
+running (2m07.9s), 246/256 VUs, 32308 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  68% ] 246/256 VUs  1m21.6s/2m0s  320.00 iters/s
+
+running (2m08.9s), 216/256 VUs, 32659 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  69% ] 216/256 VUs  1m22.6s/2m0s  320.00 iters/s
+
+running (2m09.9s), 256/256 VUs, 32859 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  70% ] 256/256 VUs  1m23.6s/2m0s  320.00 iters/s
+
+running (2m10.9s), 166/256 VUs, 33205 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  70% ] 166/256 VUs  1m24.6s/2m0s  320.00 iters/s
+
+running (2m11.9s), 156/256 VUs, 33537 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  71% ] 156/256 VUs  1m25.6s/2m0s  320.00 iters/s
+
+running (2m12.9s), 174/256 VUs, 33837 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  72% ] 174/256 VUs  1m26.6s/2m0s  320.00 iters/s
+
+running (2m13.9s), 244/256 VUs, 34088 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  73% ] 244/256 VUs  1m27.6s/2m0s  320.00 iters/s
+
+running (2m14.9s), 168/256 VUs, 34386 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  74% ] 168/256 VUs  1m28.6s/2m0s  320.00 iters/s
+
+running (2m15.9s), 157/256 VUs, 34714 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  75% ] 157/256 VUs  1m29.6s/2m0s  320.00 iters/s
+
+running (2m16.9s), 256/256 VUs, 34883 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  75% ] 256/256 VUs  1m30.6s/2m0s  320.00 iters/s
+
+running (2m17.9s), 167/256 VUs, 35267 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  76% ] 167/256 VUs  1m31.6s/2m0s  320.00 iters/s
+
+running (2m18.9s), 160/256 VUs, 35594 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  77% ] 160/256 VUs  1m32.6s/2m0s  320.00 iters/s
+
+running (2m19.9s), 218/256 VUs, 35857 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  78% ] 218/256 VUs  1m33.6s/2m0s  320.00 iters/s
+
+running (2m20.9s), 164/256 VUs, 36198 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  79% ] 164/256 VUs  1m34.6s/2m0s  320.00 iters/s
+
+running (2m21.9s), 200/256 VUs, 36483 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  80% ] 200/256 VUs  1m35.6s/2m0s  320.00 iters/s
+
+running (2m22.9s), 202/256 VUs, 36741 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  80% ] 202/256 VUs  1m36.6s/2m0s  320.00 iters/s
+
+running (2m23.9s), 256/256 VUs, 36878 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  81% ] 256/256 VUs  1m37.6s/2m0s  320.00 iters/s
+
+running (2m24.9s), 123/256 VUs, 37152 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  82% ] 123/256 VUs  1m38.6s/2m0s  320.00 iters/s
+
+running (2m25.9s), 116/256 VUs, 37478 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  83% ] 116/256 VUs  1m39.6s/2m0s  320.00 iters/s
+
+running (2m26.9s), 136/256 VUs, 37779 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  84% ] 136/256 VUs  1m40.6s/2m0s  320.00 iters/s
+
+running (2m27.9s), 140/256 VUs, 38094 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  85% ] 140/256 VUs  1m41.6s/2m0s  320.00 iters/s
+
+running (2m28.9s), 217/256 VUs, 38338 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  85% ] 217/256 VUs  1m42.6s/2m0s  320.00 iters/s
+
+running (2m29.9s), 202/256 VUs, 38652 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  86% ] 202/256 VUs  1m43.6s/2m0s  320.00 iters/s
+
+running (2m30.9s), 142/256 VUs, 39033 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  87% ] 142/256 VUs  1m44.6s/2m0s  320.00 iters/s
+
+running (2m31.9s), 224/256 VUs, 39226 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  88% ] 224/256 VUs  1m45.6s/2m0s  320.00 iters/s
+
+running (2m32.9s), 160/256 VUs, 39609 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  89% ] 160/256 VUs  1m46.6s/2m0s  320.00 iters/s
+
+running (2m33.9s), 201/256 VUs, 39889 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  90% ] 201/256 VUs  1m47.6s/2m0s  320.00 iters/s
+
+running (2m34.9s), 139/256 VUs, 40168 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  90% ] 139/256 VUs  1m48.6s/2m0s  320.00 iters/s
+
+running (2m35.9s), 166/256 VUs, 40462 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  91% ] 166/256 VUs  1m49.6s/2m0s  320.00 iters/s
+
+running (2m36.9s), 162/256 VUs, 40785 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  92% ] 162/256 VUs  1m50.6s/2m0s  320.00 iters/s
+
+running (2m37.9s), 247/256 VUs, 41020 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  93% ] 247/256 VUs  1m51.6s/2m0s  320.00 iters/s
+
+running (2m38.9s), 188/256 VUs, 41339 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  94% ] 188/256 VUs  1m52.6s/2m0s  320.00 iters/s
+
+running (2m39.9s), 164/256 VUs, 41683 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  95% ] 164/256 VUs  1m53.6s/2m0s  320.00 iters/s
+
+running (2m40.9s), 178/256 VUs, 41990 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  95% ] 178/256 VUs  1m54.6s/2m0s  320.00 iters/s
+
+running (2m41.9s), 234/256 VUs, 42225 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  96% ] 235/256 VUs  1m55.6s/2m0s  320.00 iters/s
+
+running (2m42.9s), 256/256 VUs, 42440 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  97% ] 256/256 VUs  1m56.6s/2m0s  320.00 iters/s
+
+running (2m43.9s), 245/256 VUs, 42673 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  98% ] 245/256 VUs  1m57.6s/2m0s  320.00 iters/s
+
+running (2m44.9s), 145/256 VUs, 43058 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [  99% ] 145/256 VUs  1m58.6s/2m0s  320.00 iters/s
+
+running (2m45.9s), 217/256 VUs, 43289 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s           320.00 iters/s
+measured   [ 100% ] 217/256 VUs  1m59.6s/2m0s  320.00 iters/s
+
+running (2m46.9s), 103/256 VUs, 43529 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s   320.00 iters/s
+measured ↓ [ 100% ] 256/256 VUs  2m0s  320.00 iters/s
+
+running (2m47.9s), 057/256 VUs, 43575 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s   320.00 iters/s
+measured ↓ [ 100% ] 256/256 VUs  2m0s  320.00 iters/s
+
+running (2m48.5s), 000/256 VUs, 43632 complete and 0 interrupted iterations
+warmup   ✓ [ 100% ] 000/256 VUs  30s   320.00 iters/s
+measured ✓ [ 100% ] 000/256 VUs  2m0s  320.00 iters/s

@@ -34,18 +34,44 @@ public class LoginGate {
     }
 
     public <T> T run(Supplier<T> login) {
+        LoginAdmissionEvent event = new LoginAdmissionEvent();
+        boolean recording = event.isEnabled();
+        long started = recording ? System.nanoTime() : 0;
+        if (recording) {
+            event.waitBudgetMillis = maxWaitMs;
+            event.begin();
+        }
         try {
             if (!permits.tryAcquire(maxWaitMs, TimeUnit.MILLISECONDS)) {
+                if (recording) {
+                    event.waitNanos = System.nanoTime() - started;
+                    event.decision = "rejected";
+                    event.commit();
+                }
                 throw new LoginBusyException(BUSY);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+            if (recording) {
+                event.waitNanos = System.nanoTime() - started;
+                event.decision = "interrupted";
+                event.commit();
+            }
             throw new LoginBusyException(BUSY);
+        }
+        long admitted = recording ? System.nanoTime() : 0;
+        if (recording) {
+            event.waitNanos = admitted - started;
+            event.decision = "admitted";
         }
         try {
             return login.get();
         } finally {
             permits.release();
+            if (recording) {
+                event.serviceNanos = System.nanoTime() - admitted;
+                event.commit();
+            }
         }
     }
 

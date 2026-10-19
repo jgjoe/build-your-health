@@ -40,6 +40,7 @@ def analyze(path):
     rejected = 0
     # Every HTTP request incl. setup and warmup, for startup behaviour: (time, phase, status, ms).
     http_points = []
+    http_by_phase = defaultdict(Counter)
     with gzip.open(path / 'raw.json.gz', 'rt') as source:
         for line in source:
             point = json.loads(line)
@@ -59,6 +60,7 @@ def analyze(path):
                 rejected += int(data['value'])
             elif metric == 'http_req_duration':
                 http_points.append((timestamp(data['time']), data['tags'].get('phase'), data['tags'].get('status'), data['value']))
+                http_by_phase[data['tags'].get('phase', 'unknown')][data['tags'].get('status', 'unknown')] += 1
             elif metric == 'measured_started':
                 starts.append(timestamp(data['time']))
                 started_count[kind] += int(data['value'])
@@ -239,7 +241,12 @@ def analyze(path):
             'errors_by_kind': dict(errors_by_kind),
             'login': login, 'nonlogin_errors': nonlogin_errors,
             'nonlogin_error_percent': 100 * nonlogin_errors / max(1, total - counts.get('login', 0)),
-            'timeline_10s': timeline, 'app_startup': startup_lines(path),
+            'timeline_10s': timeline,
+            'http_by_phase': {phase: {'requests': sum(statuses.values()), 'status_429': statuses['429'],
+                                     'unexpected_non_2xx': sum(count for status, count in statuses.items()
+                                                               if not status.startswith('2') and status != '429')}
+                              for phase, statuses in http_by_phase.items()},
+            'app_startup': startup_lines(path),
             'stop_reasons': reasons, 'latency': latency, 'measured_start_utc': start.isoformat(),
             'pool_and_threads': pool, 'app_cpu_cores_jmx': cpu_cores, 'http_cpu_cores_jmx': http_cpu_cores,
             'jmx_sample_interval_seconds': stats(gaps),

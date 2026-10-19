@@ -22,11 +22,14 @@ public class AuthController {
     private final MemberMapper memberMapper;
     private final PasswordEncoder passwordEncoder;
     private final LoginGate loginGate;
+    private final String dummyPasswordHash;
 
     public AuthController(MemberMapper memberMapper, PasswordEncoder passwordEncoder, LoginGate loginGate) {
         this.memberMapper = memberMapper;
         this.passwordEncoder = passwordEncoder;
         this.loginGate = loginGate;
+        // One valid cost-10 hash per controller lifetime, not per nonexistent-user request.
+        this.dummyPasswordHash = passwordEncoder.encode("byh-dummy-password-not-an-account");
     }
 
     @PostMapping("/login")
@@ -39,8 +42,10 @@ public class AuthController {
 
     private LoginResponse authenticate(LoginRequest request, HttpServletRequest httpRequest) {
         Member member = memberMapper.findById(request.id());
-        if (member == null || !passwordEncoder.matches(request.password(), member.getPasswordHash())) {
-            // Unknown id and wrong password answer identically (RQ-F-004).
+        String hash = member == null ? dummyPasswordHash : member.getPasswordHash();
+        boolean passwordMatches = passwordEncoder.matches(request.password(), hash);
+        if (member == null || !passwordMatches) {
+            // Same expensive verification and response for unknown ids and wrong passwords.
             throw new UnauthorizedException("아이디 또는 비밀번호가 올바르지 않습니다.");
         }
         // Issue a new session id on login so an id fixed before authentication cannot be reused.

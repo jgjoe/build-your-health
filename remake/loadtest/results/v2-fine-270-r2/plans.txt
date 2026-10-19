@@ -1,0 +1,331 @@
+gc0476mjrx469|0|288282702|SQL_ID  gc0476mjrx469, child number 0
+gc0476mjrx469|0|288282702|-------------------------------------
+gc0476mjrx469|0|288282702|SELECT PRODUCT_ID,		    DISCOUNT_PRICE	   FROM PRODUCT
+gc0476mjrx469|0|288282702|	WHERE PRODUCT_ID IN	     (		     :1 ,	       :2
+gc0476mjrx469|0|288282702|)
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|Plan hash value: 288282702
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|-------------------------------------------------------------------------------------------
+gc0476mjrx469|0|288282702|| Id	| Operation		       | Name	    | Rows  | Bytes | Cost (%CPU)| Time     |
+gc0476mjrx469|0|288282702|-------------------------------------------------------------------------------------------
+gc0476mjrx469|0|288282702||   0 | SELECT STATEMENT	       |	    |	    |	    |	  3 (100)|	    |
+gc0476mjrx469|0|288282702||   1 |  INLIST ITERATOR	       |	    |	    |	    |		 |	    |
+gc0476mjrx469|0|288282702||   2 |   TABLE ACCESS BY INDEX ROWID| PRODUCT    |	  2 |	 24 |	  3   (0)| 00:00:01 |
+gc0476mjrx469|0|288282702||*  3 |    INDEX UNIQUE SCAN	       | PK_PRODUCT |	  2 |	    |	  2   (0)| 00:00:01 |
+gc0476mjrx469|0|288282702|-------------------------------------------------------------------------------------------
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|Peeked Binds (identified by position):
+gc0476mjrx469|0|288282702|--------------------------------------
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|   1 - :1 (VARCHAR2(30), CSID=873): 'X00001'
+gc0476mjrx469|0|288282702|   2 - :2 (VARCHAR2(30), CSID=873): 'X00002'
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|Predicate Information (identified by operation id):
+gc0476mjrx469|0|288282702|---------------------------------------------------
+gc0476mjrx469|0|288282702|
+gc0476mjrx469|0|288282702|   3 - access(("PRODUCT_ID"=:1 OR "PRODUCT_ID"=:2))
+gc0476mjrx469|0|288282702|
+3tbr80mcz9gad|1|3508126555|SQL_ID  3tbr80mcz9gad, child number 1
+3tbr80mcz9gad|1|3508126555|-------------------------------------
+3tbr80mcz9gad|1|3508126555|SELECT o.ORDER_ID,		     o.ORDER_DATE,
+3tbr80mcz9gad|1|3508126555|o.DELIVERY_DATE,		   o.TOTAL_PRICE,
+3tbr80mcz9gad|1|3508126555|o.RECIPIENT_NAME,		    o.SHIPPING_ADDRESS,
+3tbr80mcz9gad|1|3508126555|oi.ITEM_ID,		      oi.PRODUCT_ID,		    oi.QUANTITY,
+3tbr80mcz9gad|1|3508126555|		oi.PRICE,		 p.PRODUCT_NAME 	FROM (
+3tbr80mcz9gad|1|3508126555|	   SELECT ORDER_ID,		       ORDER_DATE,
+3tbr80mcz9gad|1|3508126555|   DELIVERY_DATE,			TOTAL_PRICE,
+3tbr80mcz9gad|1|3508126555|RECIPIENT_NAME,		      SHIPPING_ADDRESS		   FROM
+3tbr80mcz9gad|1|3508126555|ORDERS	      WHERE USER_ID = :1 ORDER BY ORDER_DATE DESC,
+3tbr80mcz9gad|1|3508126555|ORDER_ID DESC	     OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY
+3tbr80mcz9gad|1|3508126555| ) o 	LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID
+3tbr80mcz9gad|1|3508126555|  LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID	 ORDER BY
+3tbr80mcz9gad|1|3508126555|o.ORDER_DATE DESC, o.ORDER_ID DESC
+3tbr80mcz9gad|1|3508126555|
+3tbr80mcz9gad|1|3508126555|Plan hash value: 3508126555
+3tbr80mcz9gad|1|3508126555|
+3tbr80mcz9gad|1|3508126555|---------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|1|3508126555|| Id  | Operation				  | Name		 | Rows  | Bytes | Cost (%CPU)| Time	 |
+3tbr80mcz9gad|1|3508126555|---------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|1|3508126555||   0 | SELECT STATEMENT			  |			 |	 |	 |    82 (100)| 	 |
+3tbr80mcz9gad|1|3508126555||   1 |  SORT ORDER BY			  |			 |    45 |  6570 |    82   (2)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||*  2 |   HASH JOIN OUTER			  |			 |    45 |  6570 |    81   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||   3 |    NESTED LOOPS OUTER		  |			 |    45 |  5355 |    74   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||*  4 |     VIEW				  |			 |    18 |  1692 |    20   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||*  5 |	WINDOW NOSORT STOPKEY		  |			 |    18 |  1602 |    20   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||*  6 |	 FILTER 			  |			 |	 |	 |	      | 	 |
+3tbr80mcz9gad|1|3508126555||   7 |	  TABLE ACCESS BY INDEX ROWID	  | ORDERS		 |    18 |  1602 |    20   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||*  8 |	   INDEX RANGE SCAN DESCENDING	  | IX_ORDERS_USER_DATE  |    18 |	 |     3   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||   9 |     TABLE ACCESS BY INDEX ROWID BATCHED| ORDER_ITEMS 	 |     2 |    50 |     3   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||* 10 |	INDEX RANGE SCAN		  | IX_ORDER_ITEMS_ORDER |     2 |	 |     2   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555||  11 |    TABLE ACCESS FULL 		  | PRODUCT		 |  2001 | 54027 |     7   (0)| 00:00:01 |
+3tbr80mcz9gad|1|3508126555|---------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|1|3508126555|
+3tbr80mcz9gad|1|3508126555|Peeked Binds (identified by position):
+3tbr80mcz9gad|1|3508126555|--------------------------------------
+3tbr80mcz9gad|1|3508126555|
+3tbr80mcz9gad|1|3508126555|   1 - :1 (VARCHAR2(30), CSID=873): 'u002026'
+3tbr80mcz9gad|1|3508126555|
+3tbr80mcz9gad|1|3508126555|Predicate Information (identified by operation id):
+3tbr80mcz9gad|1|3508126555|---------------------------------------------------
+3tbr80mcz9gad|1|3508126555|
+3tbr80mcz9gad|1|3508126555|   2 - access("P"."PRODUCT_ID"="OI"."PRODUCT_ID")
+3tbr80mcz9gad|1|3508126555|   4 - filter(("from$_subquery$_003"."rowlimit_$$_rownumber"<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)
+3tbr80mcz9gad|1|3508126555|		 +:3 AND "from$_subquery$_003"."rowlimit_$$_rownumber">:2))
+3tbr80mcz9gad|1|3508126555|   5 - filter(ROW_NUMBER() OVER ( ORDER BY "ORDER_DATE" DESC ,"ORDER_ID" DESC
+3tbr80mcz9gad|1|3508126555|		 )<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+3tbr80mcz9gad|1|3508126555|   6 - filter(:2<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+3tbr80mcz9gad|1|3508126555|   8 - access("USER_ID"=:1)
+3tbr80mcz9gad|1|3508126555|  10 - access("OI"."ORDER_ID"="from$_subquery$_003"."ORDER_ID")
+3tbr80mcz9gad|1|3508126555|
+3tbr80mcz9gad|1|3508126555|Note
+3tbr80mcz9gad|1|3508126555|-----
+3tbr80mcz9gad|1|3508126555|   - this is an adaptive plan
+3tbr80mcz9gad|1|3508126555|
+3tbr80mcz9gad|2|2322670658|SQL_ID  3tbr80mcz9gad, child number 2
+3tbr80mcz9gad|2|2322670658|-------------------------------------
+3tbr80mcz9gad|2|2322670658|SELECT o.ORDER_ID,		     o.ORDER_DATE,
+3tbr80mcz9gad|2|2322670658|o.DELIVERY_DATE,		   o.TOTAL_PRICE,
+3tbr80mcz9gad|2|2322670658|o.RECIPIENT_NAME,		    o.SHIPPING_ADDRESS,
+3tbr80mcz9gad|2|2322670658|oi.ITEM_ID,		      oi.PRODUCT_ID,		    oi.QUANTITY,
+3tbr80mcz9gad|2|2322670658|		oi.PRICE,		 p.PRODUCT_NAME 	FROM (
+3tbr80mcz9gad|2|2322670658|	   SELECT ORDER_ID,		       ORDER_DATE,
+3tbr80mcz9gad|2|2322670658|   DELIVERY_DATE,			TOTAL_PRICE,
+3tbr80mcz9gad|2|2322670658|RECIPIENT_NAME,		      SHIPPING_ADDRESS		   FROM
+3tbr80mcz9gad|2|2322670658|ORDERS	      WHERE USER_ID = :1 ORDER BY ORDER_DATE DESC,
+3tbr80mcz9gad|2|2322670658|ORDER_ID DESC	     OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY
+3tbr80mcz9gad|2|2322670658| ) o 	LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID
+3tbr80mcz9gad|2|2322670658|  LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID	 ORDER BY
+3tbr80mcz9gad|2|2322670658|o.ORDER_DATE DESC, o.ORDER_ID DESC
+3tbr80mcz9gad|2|2322670658|
+3tbr80mcz9gad|2|2322670658|Plan hash value: 2322670658
+3tbr80mcz9gad|2|2322670658|
+3tbr80mcz9gad|2|2322670658|-----------------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|2|2322670658|| Id  | Operation				  | Name		 | Rows  | Bytes |TempSpc| Cost (%CPU)| Time	 |
+3tbr80mcz9gad|2|2322670658|-----------------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|2|2322670658||   0 | SELECT STATEMENT			  |			 |	 |	 |	 |  4953 (100)| 	 |
+3tbr80mcz9gad|2|2322670658||   1 |  SORT ORDER BY			  |			 | 24077 |  3432K|  3720K|  4953   (1)| 00:00:01 |
+3tbr80mcz9gad|2|2322670658||*  2 |   HASH JOIN RIGHT OUTER		  |			 | 24077 |  3432K|	 |  4170   (1)| 00:00:01 |
+3tbr80mcz9gad|2|2322670658||   3 |    TABLE ACCESS FULL 		  | PRODUCT		 |  2001 | 54027 |	 |     7   (0)| 00:00:01 |
+3tbr80mcz9gad|2|2322670658||   4 |    NESTED LOOPS OUTER		  |			 | 24077 |  2798K|	 |  4163   (1)| 00:00:01 |
+3tbr80mcz9gad|2|2322670658||*  5 |     VIEW				  |			 |  9645 |   885K|	 |  2427   (1)| 00:00:01 |
+3tbr80mcz9gad|2|2322670658||*  6 |	WINDOW SORT PUSHED RANK 	  |			 |  9645 |   838K|  1040K|  2427   (1)| 00:00:01 |
+3tbr80mcz9gad|2|2322670658||*  7 |	 FILTER 			  |			 |	 |	 |	 |	      | 	 |
+3tbr80mcz9gad|2|2322670658||*  8 |	  TABLE ACCESS FULL		  | ORDERS		 |  9645 |   838K|	 |  2228   (1)| 00:00:01 |
+3tbr80mcz9gad|2|2322670658||   9 |     TABLE ACCESS BY INDEX ROWID BATCHED| ORDER_ITEMS 	 |     2 |    50 |	 |  1733   (1)| 00:00:01 |
+3tbr80mcz9gad|2|2322670658||* 10 |	INDEX RANGE SCAN		  | IX_ORDER_ITEMS_ORDER |	 |	 |	 |	      | 	 |
+3tbr80mcz9gad|2|2322670658|-----------------------------------------------------------------------------------------------------------------------
+3tbr80mcz9gad|2|2322670658|
+3tbr80mcz9gad|2|2322670658|Peeked Binds (identified by position):
+3tbr80mcz9gad|2|2322670658|--------------------------------------
+3tbr80mcz9gad|2|2322670658|
+3tbr80mcz9gad|2|2322670658|   1 - :1 (VARCHAR2(30), CSID=873): 'u000001'
+3tbr80mcz9gad|2|2322670658|
+3tbr80mcz9gad|2|2322670658|Predicate Information (identified by operation id):
+3tbr80mcz9gad|2|2322670658|---------------------------------------------------
+3tbr80mcz9gad|2|2322670658|
+3tbr80mcz9gad|2|2322670658|   2 - access("P"."PRODUCT_ID"="OI"."PRODUCT_ID")
+3tbr80mcz9gad|2|2322670658|   5 - filter(("from$_subquery$_003"."rowlimit_$$_rownumber"<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3 AND
+3tbr80mcz9gad|2|2322670658|		 "from$_subquery$_003"."rowlimit_$$_rownumber">:2))
+3tbr80mcz9gad|2|2322670658|   6 - filter(ROW_NUMBER() OVER ( ORDER BY "ORDER_DATE" DESC ,"ORDER_ID" DESC
+3tbr80mcz9gad|2|2322670658|		 )<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+3tbr80mcz9gad|2|2322670658|   7 - filter(:2<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+3tbr80mcz9gad|2|2322670658|   8 - filter("USER_ID"=:1)
+3tbr80mcz9gad|2|2322670658|  10 - access("OI"."ORDER_ID"="from$_subquery$_003"."ORDER_ID")
+3tbr80mcz9gad|2|2322670658|
+3tbr80mcz9gad|2|2322670658|Note
+3tbr80mcz9gad|2|2322670658|-----
+3tbr80mcz9gad|2|2322670658|   - this is an adaptive plan
+3tbr80mcz9gad|2|2322670658|
+1n4a2va1rxptz|0|210329678|SQL_ID  1n4a2va1rxptz, child number 0
+1n4a2va1rxptz|0|210329678|-------------------------------------
+1n4a2va1rxptz|0|210329678|SELECT COUNT(*)	  FROM ORDERS	      WHERE USER_ID = :1
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|Plan hash value: 210329678
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|-----------------------------------------------------------------------------------------
+1n4a2va1rxptz|0|210329678|| Id	| Operation	    | Name		  | Rows  | Bytes | Cost (%CPU)| Time	  |
+1n4a2va1rxptz|0|210329678|-----------------------------------------------------------------------------------------
+1n4a2va1rxptz|0|210329678||   0 | SELECT STATEMENT  |			  |	  |	  |	3 (100)|	  |
+1n4a2va1rxptz|0|210329678||   1 |  SORT AGGREGATE   |			  |	1 |	8 |	       |	  |
+1n4a2va1rxptz|0|210329678||*  2 |   INDEX RANGE SCAN| IX_ORDERS_USER_DATE |    18 |   144 |	3   (0)| 00:00:01 |
+1n4a2va1rxptz|0|210329678|-----------------------------------------------------------------------------------------
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|Peeked Binds (identified by position):
+1n4a2va1rxptz|0|210329678|--------------------------------------
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|   1 - :1 (VARCHAR2(30), CSID=873): 'u002109'
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|Predicate Information (identified by operation id):
+1n4a2va1rxptz|0|210329678|---------------------------------------------------
+1n4a2va1rxptz|0|210329678|
+1n4a2va1rxptz|0|210329678|   2 - access("USER_ID"=:1)
+1n4a2va1rxptz|0|210329678|
+g0ckkjt0nxt2c|0|2793277868|SQL_ID  g0ckkjt0nxt2c, child number 0
+g0ckkjt0nxt2c|0|2793277868|-------------------------------------
+g0ckkjt0nxt2c|0|2793277868|SELECT ID,		     PASSWORD_HASH,		   NAME
+g0ckkjt0nxt2c|0|2793277868|FROM MEMBER	       WHERE ID = :1
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|Plan hash value: 2793277868
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|-----------------------------------------------------------------------------------------
+g0ckkjt0nxt2c|0|2793277868|| Id  | Operation		       | Name	   | Rows  | Bytes | Cost (%CPU)| Time	   |
+g0ckkjt0nxt2c|0|2793277868|-----------------------------------------------------------------------------------------
+g0ckkjt0nxt2c|0|2793277868||   0 | SELECT STATEMENT	       |	   |	   |	   |	 2 (100)|	   |
+g0ckkjt0nxt2c|0|2793277868||   1 |  TABLE ACCESS BY INDEX ROWID| MEMBER    |	 1 |	82 |	 2   (0)| 00:00:01 |
+g0ckkjt0nxt2c|0|2793277868||*  2 |   INDEX UNIQUE SCAN	       | PK_MEMBER |	 1 |	   |	 1   (0)| 00:00:01 |
+g0ckkjt0nxt2c|0|2793277868|-----------------------------------------------------------------------------------------
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|Peeked Binds (identified by position):
+g0ckkjt0nxt2c|0|2793277868|--------------------------------------
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|   1 - :1 (VARCHAR2(30), CSID=873): 'u000001'
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|Predicate Information (identified by operation id):
+g0ckkjt0nxt2c|0|2793277868|---------------------------------------------------
+g0ckkjt0nxt2c|0|2793277868|
+g0ckkjt0nxt2c|0|2793277868|   2 - access("ID"=:1)
+g0ckkjt0nxt2c|0|2793277868|
+dp30vgv8qdwqd|0|3077335621|SQL_ID  dp30vgv8qdwqd, child number 0
+dp30vgv8qdwqd|0|3077335621|-------------------------------------
+dp30vgv8qdwqd|0|3077335621|SELECT COUNT(*)	   FROM PRODUCT
+dp30vgv8qdwqd|0|3077335621|
+dp30vgv8qdwqd|0|3077335621|Plan hash value: 3077335621
+dp30vgv8qdwqd|0|3077335621|
+dp30vgv8qdwqd|0|3077335621|----------------------------------------------------------------------------
+dp30vgv8qdwqd|0|3077335621|| Id  | Operation		 | Name       | Rows  | Cost (%CPU)| Time     |
+dp30vgv8qdwqd|0|3077335621|----------------------------------------------------------------------------
+dp30vgv8qdwqd|0|3077335621||   0 | SELECT STATEMENT	 |	      |       |     4 (100)|	      |
+dp30vgv8qdwqd|0|3077335621||   1 |  SORT AGGREGATE	 |	      |     1 | 	   |	      |
+dp30vgv8qdwqd|0|3077335621||   2 |   INDEX FAST FULL SCAN| PK_PRODUCT |  2001 |     4	(0)| 00:00:01 |
+dp30vgv8qdwqd|0|3077335621|----------------------------------------------------------------------------
+dp30vgv8qdwqd|0|3077335621|
+b2x93083564g5|0|3597435071|SQL_ID  b2x93083564g5, child number 0
+b2x93083564g5|0|3597435071|-------------------------------------
+b2x93083564g5|0|3597435071|INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE)
+b2x93083564g5|0|3597435071|VALUES (:1 , :2 , :3 , :4 )
+b2x93083564g5|0|3597435071|
+b2x93083564g5|0|3597435071|Plan hash value: 3597435071
+b2x93083564g5|0|3597435071|
+b2x93083564g5|0|3597435071|---------------------------------------------------------
+b2x93083564g5|0|3597435071|| Id  | Operation		    | Name	   | Cost  |
+b2x93083564g5|0|3597435071|---------------------------------------------------------
+b2x93083564g5|0|3597435071||   0 | INSERT STATEMENT	    |		   |	 1 |
+b2x93083564g5|0|3597435071||   1 |  LOAD TABLE CONVENTIONAL | ORDER_ITEMS  |	   |
+b2x93083564g5|0|3597435071||   2 |   SEQUENCE		    | ISEQ$$_73615 |	   |
+b2x93083564g5|0|3597435071|---------------------------------------------------------
+b2x93083564g5|0|3597435071|
+b2x93083564g5|0|3597435071|Note
+b2x93083564g5|0|3597435071|-----
+b2x93083564g5|0|3597435071|   - cpu costing is off (consider enabling it)
+b2x93083564g5|0|3597435071|
+69srm4czkq898|0|1334561136|SQL_ID  69srm4czkq898, child number 0
+69srm4czkq898|0|1334561136|-------------------------------------
+69srm4czkq898|0|1334561136|SELECT PRODUCT_ID,		     PRODUCT_NAME,
+69srm4czkq898|0|1334561136|REGULAR_PRICE,		 DISCOUNT_PRICE,
+69srm4czkq898|0|1334561136|MANUFACTURER 	FROM PRODUCT			WHERE PRODUCT_NAME
+69srm4czkq898|0|1334561136|LIKE '%' || :1 || '%'		ORDER BY PRODUCT_ID	    OFFSET
+69srm4czkq898|0|1334561136|:2 ROWS FETCH NEXT :3 ROWS ONLY
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|Plan hash value: 1334561136
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|------------------------------------------------------------------------------------
+69srm4czkq898|0|1334561136|| Id  | Operation		    | Name    | Rows  | Bytes | Cost (%CPU)| Time     |
+69srm4czkq898|0|1334561136|------------------------------------------------------------------------------------
+69srm4czkq898|0|1334561136||   0 | SELECT STATEMENT	    |	      |       |       |     8 (100)|	      |
+69srm4czkq898|0|1334561136||*  1 |  VIEW		    |	      |   100 |  7000 |     8  (13)| 00:00:01 |
+69srm4czkq898|0|1334561136||*  2 |   WINDOW SORT PUSHED RANK|	      |   100 |  5000 |     8  (13)| 00:00:01 |
+69srm4czkq898|0|1334561136||*  3 |    FILTER		    |	      |       |       | 	   |	      |
+69srm4czkq898|0|1334561136||*  4 |     TABLE ACCESS FULL    | PRODUCT |   100 |  5000 |     7	(0)| 00:00:01 |
+69srm4czkq898|0|1334561136|------------------------------------------------------------------------------------
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|Peeked Binds (identified by position):
+69srm4czkq898|0|1334561136|--------------------------------------
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|   1 - :1 (VARCHAR2(30), CSID=873): 'perf'
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|Predicate Information (identified by operation id):
+69srm4czkq898|0|1334561136|---------------------------------------------------
+69srm4czkq898|0|1334561136|
+69srm4czkq898|0|1334561136|   1 - filter(("from$_subquery$_002"."rowlimit_$$_rownumber"<=GREATEST(FLOOR
+69srm4czkq898|0|1334561136|		 (TO_NUMBER(TO_CHAR(:2))),0)+:3 AND "from$_subquery$_002"."rowlimit_$$_rownum
+69srm4czkq898|0|1334561136|		 ber">:2))
+69srm4czkq898|0|1334561136|   2 - filter(ROW_NUMBER() OVER ( ORDER BY
+69srm4czkq898|0|1334561136|		 "PRODUCT_ID")<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+69srm4czkq898|0|1334561136|   3 - filter(:2<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+69srm4czkq898|0|1334561136|   4 - filter("PRODUCT_NAME" LIKE '%'||:1||'%')
+69srm4czkq898|0|1334561136|
+8ux1sycjdv90y|0|1279372316|SQL_ID  8ux1sycjdv90y, child number 0
+8ux1sycjdv90y|0|1279372316|-------------------------------------
+8ux1sycjdv90y|0|1279372316|SELECT COUNT(*)	   FROM PRODUCT 		   WHERE
+8ux1sycjdv90y|0|1279372316|PRODUCT_NAME LIKE '%' || :1 || '%'
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|Plan hash value: 1279372316
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|------------------------------------------------------------------------------
+8ux1sycjdv90y|0|1279372316|| Id  | Operation	      | Name	| Rows	| Bytes | Cost (%CPU)| Time	|
+8ux1sycjdv90y|0|1279372316|------------------------------------------------------------------------------
+8ux1sycjdv90y|0|1279372316||   0 | SELECT STATEMENT   | 	|	|	|     7 (100)|		|
+8ux1sycjdv90y|0|1279372316||   1 |  SORT AGGREGATE    | 	|     1 |    20 |	     |		|
+8ux1sycjdv90y|0|1279372316||*  2 |   TABLE ACCESS FULL| PRODUCT |   100 |  2000 |     7   (0)| 00:00:01 |
+8ux1sycjdv90y|0|1279372316|------------------------------------------------------------------------------
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|Peeked Binds (identified by position):
+8ux1sycjdv90y|0|1279372316|--------------------------------------
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|   1 - :1 (VARCHAR2(30), CSID=873): 'perf'
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|Predicate Information (identified by operation id):
+8ux1sycjdv90y|0|1279372316|---------------------------------------------------
+8ux1sycjdv90y|0|1279372316|
+8ux1sycjdv90y|0|1279372316|   2 - filter("PRODUCT_NAME" LIKE '%'||:1||'%')
+8ux1sycjdv90y|0|1279372316|
+g8tv8sq6urbbq|0|3370002280|SQL_ID  g8tv8sq6urbbq, child number 0
+g8tv8sq6urbbq|0|3370002280|-------------------------------------
+g8tv8sq6urbbq|0|3370002280|INSERT INTO ORDERS (USER_ID, DELIVERY_DATE, TOTAL_PRICE,
+g8tv8sq6urbbq|0|3370002280|RECIPIENT_NAME, SHIPPING_ADDRESS, SHIPPING_ZIPCODE)	       VALUES (:1
+g8tv8sq6urbbq|0|3370002280|, :2 , :3 , :4 , :5 , :6 ) RETURNING ORDER_ID INTO :7
+g8tv8sq6urbbq|0|3370002280|
+g8tv8sq6urbbq|0|3370002280|Plan hash value: 3370002280
+g8tv8sq6urbbq|0|3370002280|
+g8tv8sq6urbbq|0|3370002280|---------------------------------------------------------
+g8tv8sq6urbbq|0|3370002280|| Id  | Operation		    | Name	   | Cost  |
+g8tv8sq6urbbq|0|3370002280|---------------------------------------------------------
+g8tv8sq6urbbq|0|3370002280||   0 | INSERT STATEMENT	    |		   |	 1 |
+g8tv8sq6urbbq|0|3370002280||   1 |  LOAD TABLE CONVENTIONAL | ORDERS	   |	   |
+g8tv8sq6urbbq|0|3370002280||   2 |   SEQUENCE		    | ISEQ$$_73619 |	   |
+g8tv8sq6urbbq|0|3370002280|---------------------------------------------------------
+g8tv8sq6urbbq|0|3370002280|
+g8tv8sq6urbbq|0|3370002280|Note
+g8tv8sq6urbbq|0|3370002280|-----
+g8tv8sq6urbbq|0|3370002280|   - cpu costing is off (consider enabling it)
+g8tv8sq6urbbq|0|3370002280|
+61ktzmkxwbc0q|0|1334561136|SQL_ID  61ktzmkxwbc0q, child number 0
+61ktzmkxwbc0q|0|1334561136|-------------------------------------
+61ktzmkxwbc0q|0|1334561136|SELECT PRODUCT_ID,		     PRODUCT_NAME,
+61ktzmkxwbc0q|0|1334561136|REGULAR_PRICE,		 DISCOUNT_PRICE,
+61ktzmkxwbc0q|0|1334561136|MANUFACTURER 	FROM PRODUCT
+61ktzmkxwbc0q|0|1334561136|ORDER BY PRODUCT_ID	       OFFSET :1 ROWS FETCH NEXT :2 ROWS ONLY
+61ktzmkxwbc0q|0|1334561136|
+61ktzmkxwbc0q|0|1334561136|Plan hash value: 1334561136
+61ktzmkxwbc0q|0|1334561136|
+61ktzmkxwbc0q|0|1334561136|------------------------------------------------------------------------------------
+61ktzmkxwbc0q|0|1334561136|| Id  | Operation		    | Name    | Rows  | Bytes | Cost (%CPU)| Time     |
+61ktzmkxwbc0q|0|1334561136|------------------------------------------------------------------------------------
+61ktzmkxwbc0q|0|1334561136||   0 | SELECT STATEMENT	    |	      |       |       |     8 (100)|	      |
+61ktzmkxwbc0q|0|1334561136||*  1 |  VIEW		    |	      |  2001 |   136K|     8  (13)| 00:00:01 |
+61ktzmkxwbc0q|0|1334561136||*  2 |   WINDOW SORT PUSHED RANK|	      |  2001 |    97K|     8  (13)| 00:00:01 |
+61ktzmkxwbc0q|0|1334561136||*  3 |    FILTER		    |	      |       |       | 	   |	      |
+61ktzmkxwbc0q|0|1334561136||   4 |     TABLE ACCESS FULL    | PRODUCT |  2001 |    97K|     7	(0)| 00:00:01 |
+61ktzmkxwbc0q|0|1334561136|------------------------------------------------------------------------------------
+61ktzmkxwbc0q|0|1334561136|
+61ktzmkxwbc0q|0|1334561136|Predicate Information (identified by operation id):
+61ktzmkxwbc0q|0|1334561136|---------------------------------------------------
+61ktzmkxwbc0q|0|1334561136|
+61ktzmkxwbc0q|0|1334561136|   1 - filter(("from$_subquery$_002"."rowlimit_$$_rownumber"<=GREATEST(FLOOR
+61ktzmkxwbc0q|0|1334561136|		 (TO_NUMBER(TO_CHAR(:1))),0)+:2 AND "from$_subquery$_002"."rowlimit_$$_rownum
+61ktzmkxwbc0q|0|1334561136|		 ber">:1))
+61ktzmkxwbc0q|0|1334561136|   2 - filter(ROW_NUMBER() OVER ( ORDER BY
+61ktzmkxwbc0q|0|1334561136|		 "PRODUCT_ID")<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:1))),0)+:2)
+61ktzmkxwbc0q|0|1334561136|   3 - filter(:1<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:1))),0)+:2)
+61ktzmkxwbc0q|0|1334561136|

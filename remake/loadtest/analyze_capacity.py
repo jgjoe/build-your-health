@@ -109,6 +109,30 @@ def analyze(path):
     quota_delta = {key: quota_rows[-1][key] - quota_rows[0][key] for key in quota_rows[-1] if key != 'utc'}
     quota_delta['observed_seconds'] = (quota_rows[-1]['utc'] - quota_rows[0]['utc']).total_seconds()
     quota_delta['throttled_period_percent'] = 100 * quota_delta['nr_throttled'] / quota_delta['nr_periods'] if quota_delta['nr_periods'] else 0
+    interference = None
+    if (path / 'vm-stat.txt').exists():
+        # /proc/stat "cpu" line, USER_HZ=100: user nice system idle iowait irq softirq steal ...
+        vm_rows, moment = [], None
+        for line in (path / 'vm-stat.txt').read_text(encoding='utf-8-sig').splitlines():
+            if line.startswith('VMUTC|'):
+                moment = timestamp(line.split('|')[1])
+            elif line.startswith('cpu ') and moment and start <= moment <= end:
+                v = [int(x) for x in line.split()[1:9]]
+                vm_rows.append((moment, sum(v) - v[3] - v[4], v[7]))
+        intervals = [((b[1] - a[1]) / 100 / (b[0] - a[0]).total_seconds(), (b[2] - a[2]) / 100 / (b[0] - a[0]).total_seconds())
+                     for a, b in zip(vm_rows, vm_rows[1:])]
+        host_cpu, host_proc, moment = [], defaultdict(float), None
+        for line in (path / 'host-cpu.txt').read_text(encoding='utf-8-sig').splitlines():
+            cells = line.split('|')
+            if cells[0] == 'HOSTUTC':
+                moment = timestamp(cells[1])
+            elif moment and start <= moment <= end and cells[0] == 'HOSTCPU':
+                host_cpu.append(float(cells[1]))
+            elif moment and start <= moment <= end and cells[0] == 'HOSTPROC':
+                host_proc[cells[1]] = max(host_proc[cells[1]], float(cells[2]))
+        interference = {'vm_busy_cores': stats([i[0] for i in intervals]), 'vm_steal_cores': stats([i[1] for i in intervals]),
+                        'host_cpu_percent': stats(host_cpu),
+                        'host_top_process_max_percent': dict(sorted(host_proc.items(), key=lambda kv: -kv[1])[:8])}
     oracle_rows, current = [], None
     for line in (path / 'oracle-samples.txt').read_text(encoding='utf-8-sig').splitlines():
         cells = line.strip().split('|')
@@ -175,7 +199,7 @@ def analyze(path):
             'jmx_sample_interval_seconds': stats(gaps),
             'bcrypt_fraction_of_runnable_http_stack_samples': bcrypt_fraction,
             'docker_cpu_percent': docker, 'cpu_quota_delta': quota_delta,
-            'docker_memory_mib': memory,
+            'docker_memory_mib': memory, 'vm_and_host_cpu': interference,
             'oracle': {'samples': len(oracle_rows), 'seconds': (last['utc'] - first['utc']).total_seconds(),
                        'system_non_idle_wait_delta_count_us': waits, 'system_time_delta_us': time_delta,
                        'byh_load_active_session_samples': active_samples,

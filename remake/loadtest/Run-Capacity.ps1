@@ -38,6 +38,14 @@ try {
         $PSNativeCommandUseErrorActionPreference=$true
         'CPUUTC|' + [DateTime]::UtcNow.ToString('o') | Add-Content (Join-Path $out 'cpu-quota.txt')
         docker --context desktop-linux exec $appId cat /sys/fs/cgroup/cpu.stat | Add-Content (Join-Path $out 'cpu-quota.txt')
+        # Whole Docker VM CPU (incl. steal) and Windows host load, to tell external interference from app saturation.
+        'VMUTC|' + [DateTime]::UtcNow.ToString('o') | Add-Content (Join-Path $out 'vm-stat.txt')
+        docker --context desktop-linux exec $appId cat /proc/stat | Select-String -Pattern '^cpu ' | ForEach-Object Line | Add-Content (Join-Path $out 'vm-stat.txt')
+        $hostRows=@('HOSTUTC|' + [DateTime]::UtcNow.ToString('o'))
+        $hostRows+='HOSTCPU|' + (Get-CimInstance Win32_PerfFormattedData_PerfOS_Processor -Filter "Name='_Total'").PercentProcessorTime
+        Get-CimInstance Win32_PerfFormattedData_PerfProc_Process | Where-Object { $_.Name -notin @('_Total','Idle') } |
+            Sort-Object PercentProcessorTime -Descending | Select-Object -First 5 | ForEach-Object { $hostRows+="HOSTPROC|$($_.Name)|$($_.PercentProcessorTime)" }
+        $hostRows | Add-Content (Join-Path $out 'host-cpu.txt')
         Invoke-SqlFile 'capacity-probe.sql' | Add-Content (Join-Path $out 'oracle-samples.txt')
         Start-Sleep -Seconds 3
         $process.Refresh()

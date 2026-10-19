@@ -1,11 +1,12 @@
 #requires -Version 7.0
 [CmdletBinding()]
-param([ValidatePattern('^[a-z0-9-]+$')][string]$Label='capacity-before')
+param([ValidatePattern('^[a-z0-9-]+$')][string]$Label='capacity-before',
+    [ValidateRange(20,20480)][int[]]$Stages=@(20,40,80,160,320,640,1280,2560,5120,10240,20480))
 $ErrorActionPreference='Stop'
 $PSNativeCommandUseErrorActionPreference=$true
 # Two full observations per stage; a failed first repeat only permits its
 # confirmation repeat, never the next higher arrival rate.
-foreach ($tps in @(20,40,80,160,320,640,1280,2560,5120,10240,20480)) {
+foreach ($tps in $Stages) {
     $stop=$false
     foreach ($repeat in @(1,2)) {
         $out=Join-Path $PSScriptRoot "results/$Label-$tps-r$repeat"

@@ -1,0 +1,827 @@
+[
+  {
+    "run": "v2-repro-160-r1",
+    "target_tps": 160,
+    "vus_per_scenario": 256,
+    "actual_tps": 159.98333333333332,
+    "valid_response_tps": 159.98333333333332,
+    "completed_in_window": 19198,
+    "completed_after_window": 2,
+    "completed_per_scheduled_second_including_grace": 160.0,
+    "completed": {
+      "products": 13440,
+      "history": 2880,
+      "create": 960,
+      "login": 1920
+    },
+    "started": {
+      "products": 13440,
+      "history": 2880,
+      "login": 1920,
+      "create": 960
+    },
+    "started_without_completed_sample": 0,
+    "error_percent": 0.0,
+    "dropped": 0,
+    "dropped_by_phase": {},
+    "errors_by_kind": {
+      "products": 0,
+      "history": 0,
+      "create": 0,
+      "login": 0
+    },
+    "stop_reasons": [],
+    "latency": {
+      "all": {
+        "n": 19200,
+        "mean": 8.2730785724479,
+        "p50": 1.672182,
+        "p95": 63.2184737,
+        "p99": 68.42109067999999,
+        "max": 168.331058
+      },
+      "products": {
+        "n": 13440,
+        "mean": 1.8208301776041655,
+        "p50": 1.5994185,
+        "p95": 2.3010586499999994,
+        "p99": 7.862435220000013,
+        "max": 37.897765
+      },
+      "history": {
+        "n": 2880,
+        "mean": 2.271185297916675,
+        "p50": 1.7481815,
+        "p95": 2.506388699999999,
+        "p99": 21.931568280000334,
+        "max": 79.991595
+      },
+      "create": {
+        "n": 960,
+        "mean": 4.508908033333336,
+        "p50": 3.942671,
+        "p95": 8.00321265,
+        "p99": 14.730856789999988,
+        "max": 29.998928
+      },
+      "login": {
+        "n": 1920,
+        "mean": 64.32374251770827,
+        "p50": 63.21617,
+        "p95": 70.92752235,
+        "p99": 83.90153891999998,
+        "max": 168.331058
+      }
+    },
+    "measured_start_utc": "2026-10-19T09:38:10.585872+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 119,
+        "mean": 0.2857142857142857,
+        "p50": 0.0,
+        "p95": 1.0,
+        "p99": 1.8199999999999932,
+        "max": 2
+      },
+      "awaiting": {
+        "n": 119,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0
+      },
+      "total": {
+        "n": 119,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 119,
+        "mean": 3.1512605042016806,
+        "p50": 3.0,
+        "p95": 5.0,
+        "p99": 5.0,
+        "max": 5
+      },
+      "bcrypt_runnable": {
+        "n": 119,
+        "mean": 0.9663865546218487,
+        "p50": 1.0,
+        "p95": 2.0,
+        "p99": 2.0,
+        "max": 2
+      }
+    },
+    "app_cpu_cores_jmx": 1.1700200096785076,
+    "http_cpu_cores_jmx": 1.1008270609408308,
+    "jmx_sample_interval_seconds": {
+      "n": 118,
+      "mean": 1.0083848983050845,
+      "p50": 1.0072105,
+      "p95": 1.0130594,
+      "p99": 1.03083985,
+      "max": 1.057758
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.30666666666666664,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 23,
+        "mean": 118.71347826086959,
+        "p50": 115.71,
+        "p95": 138.096,
+        "p99": 151.39380000000003,
+        "max": 155.07
+      },
+      "byh-perf-perfdb-1": {
+        "n": 23,
+        "mean": 17.868260869565216,
+        "p50": 17.7,
+        "p95": 23.564,
+        "p99": 24.0454,
+        "max": 24.14
+      },
+      "byh-k6-v2-repro-160-r1": {
+        "n": 23,
+        "mean": 12.357391304347827,
+        "p50": 12.33,
+        "p95": 15.942999999999996,
+        "p99": 17.3702,
+        "max": 17.72
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 133400486,
+      "user_usec": 128778065,
+      "system_usec": 4622421,
+      "nr_periods": 1137,
+      "nr_throttled": 22,
+      "throttled_usec": 564328,
+      "observed_seconds": 113.74395,
+      "throttled_period_percent": 1.9349164467897977
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 23,
+        "mean": 579.9043478260869,
+        "p50": 580.6,
+        "p95": 582.1800000000001,
+        "p99": 586.646,
+        "max": 587.9
+      },
+      "byh-perf-perfdb-1": {
+        "n": 23,
+        "mean": 2459.6034782608685,
+        "p50": 2460.672,
+        "p95": 2461.696,
+        "p99": 2467.28704,
+        "max": 2468.864
+      },
+      "byh-k6-v2-repro-160-r1": {
+        "n": 23,
+        "mean": 120.90869565217393,
+        "p50": 125.8,
+        "p95": 129.89000000000001,
+        "p99": 130.05599999999998,
+        "max": 130.1
+      }
+    },
+    "vm_and_host_cpu": null,
+    "oracle": {
+      "samples": 22,
+      "seconds": 113.706,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate PGA memory from OS": [
+          14,
+          198
+        ],
+        "Allocate UGA memory from OS": [
+          15891,
+          125242
+        ],
+        "Disk file operations I/O": [
+          23,
+          277
+        ],
+        "Free private memory to OS": [
+          7840,
+          216378
+        ],
+        "SQL*Net message to client": [
+          56197,
+          130693
+        ],
+        "db file scattered read": [
+          1,
+          389
+        ],
+        "db file sequential read": [
+          6,
+          2454
+        ],
+        "log file sync": [
+          922,
+          1443647
+        ],
+        "sequence cache replenishment": [
+          24,
+          127
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 17126209,
+        "DB CPU": 17273575
+      },
+      "byh_load_active_session_samples": 5,
+      "byh_load_active_events": {
+        "ON_CPU_OR_RUNNABLE": 4,
+        "Free private memory to OS": 1
+      }
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "1n4a2va1rxptz",
+          "0"
+        ],
+        "plan": "210329678",
+        "executions": 3600,
+        "elapsed_ms": 0.05087194444444444,
+        "gets": 3.693611111111111,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT COUNT(*) FROM ORDERS WHERE USER_ID = :1"
+      },
+      {
+        "cursor": [
+          "3tbr80mcz9gad",
+          "0"
+        ],
+        "plan": "598019367",
+        "executions": 3,
+        "elapsed_ms": 8.386333333333335,
+        "gets": 59.0,
+        "io_ms": 10.693,
+        "concurrency_ms": 2.186,
+        "application_ms": 0.0,
+        "sql": "SELECT o.ORDER_ID, o.ORDER_DATE, o.DELIVERY_DATE, o.TOTAL_PRICE, o.RECIPIENT_NAME, o.SHIPPING_ADDRESS, oi.ITEM_ID, oi.PRODUCT_ID, oi.QUANTITY, oi.PRICE, p.PRODUCT_NAME FROM ( SELECT ORDER_ID, ORDER_DATE, DELIVERY_DATE, TOTAL_PRICE, RECIPIENT_NAME, SHIPPING_ADDRESS FROM ORDERS WHERE USER_ID = :1 ORDER BY ORDER_DATE DESC, ORDER_ID DESC OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY ) o LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID ORDER BY o.ORDER_DATE DESC, o.ORDER_ID DESC"
+      },
+      {
+        "cursor": [
+          "3tbr80mcz9gad",
+          "1"
+        ],
+        "plan": "3508126555",
+        "executions": 3560,
+        "elapsed_ms": 0.5479202247191012,
+        "gets": 57.94438202247191,
+        "io_ms": 252.967,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT o.ORDER_ID, o.ORDER_DATE, o.DELIVERY_DATE, o.TOTAL_PRICE, o.RECIPIENT_NAME, o.SHIPPING_ADDRESS, oi.ITEM_ID, oi.PRODUCT_ID, oi.QUANTITY, oi.PRICE, p.PRODUCT_NAME FROM ( SELECT ORDER_ID, ORDER_DATE, DELIVERY_DATE, TOTAL_PRICE, RECIPIENT_NAME, SHIPPING_ADDRESS FROM ORDERS WHERE USER_ID = :1 ORDER BY ORDER_DATE DESC, ORDER_ID DESC OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY ) o LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID ORDER BY o.ORDER_DATE DESC, o.ORDER_ID DESC"
+      },
+      {
+        "cursor": [
+          "3tbr80mcz9gad",
+          "2"
+        ],
+        "plan": "2322670658",
+        "executions": 37,
+        "elapsed_ms": 43.58245945945946,
+        "gets": 8466.135135135135,
+        "io_ms": 23.427,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT o.ORDER_ID, o.ORDER_DATE, o.DELIVERY_DATE, o.TOTAL_PRICE, o.RECIPIENT_NAME, o.SHIPPING_ADDRESS, oi.ITEM_ID, oi.PRODUCT_ID, oi.QUANTITY, oi.PRICE, p.PRODUCT_NAME FROM ( SELECT ORDER_ID, ORDER_DATE, DELIVERY_DATE, TOTAL_PRICE, RECIPIENT_NAME, SHIPPING_ADDRESS FROM ORDERS WHERE USER_ID = :1 ORDER BY ORDER_DATE DESC, ORDER_ID DESC OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY ) o LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID ORDER BY o.ORDER_DATE DESC, o.ORDER_ID DESC"
+      },
+      {
+        "cursor": [
+          "61ktzmkxwbc0q",
+          "0"
+        ],
+        "plan": "1334561136",
+        "executions": 14398,
+        "elapsed_ms": 0.5755418113626892,
+        "gets": 17.002361439088762,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT PRODUCT_ID, PRODUCT_NAME, REGULAR_PRICE, DISCOUNT_PRICE, MANUFACTURER FROM PRODUCT ORDER BY PRODUCT_ID OFFSET :1 ROWS FETCH NEXT :2 ROWS ONLY"
+      },
+      {
+        "cursor": [
+          "69srm4czkq898",
+          "0"
+        ],
+        "plan": "1334561136",
+        "executions": 2401,
+        "elapsed_ms": 0.6647638483965014,
+        "gets": 17.0,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT PRODUCT_ID, PRODUCT_NAME, REGULAR_PRICE, DISCOUNT_PRICE, MANUFACTURER FROM PRODUCT WHERE PRODUCT_NAME LIKE '%' || :1 || '%' ORDER BY PRODUCT_ID OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY"
+      },
+      {
+        "cursor": [
+          "8ux1sycjdv90y",
+          "0"
+        ],
+        "plan": "1279372316",
+        "executions": 2401,
+        "elapsed_ms": 0.17661099541857558,
+        "gets": 17.0,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT COUNT(*) FROM PRODUCT WHERE PRODUCT_NAME LIKE '%' || :1 || '%'"
+      },
+      {
+        "cursor": [
+          "b2x93083564g5",
+          "0"
+        ],
+        "plan": "3597435071",
+        "executions": 2400,
+        "elapsed_ms": 0.08106791666666666,
+        "gets": 13.20625,
+        "io_ms": 5.102,
+        "concurrency_ms": 1.206,
+        "application_ms": 0.0,
+        "sql": "INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE) VALUES (:1 , :2 , :3 , :4 )"
+      },
+      {
+        "cursor": [
+          "dp30vgv8qdwqd",
+          "0"
+        ],
+        "plan": "3077335621",
+        "executions": 14400,
+        "elapsed_ms": 0.08744826388888889,
+        "gets": 10.0,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT COUNT(*) FROM PRODUCT"
+      },
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 2500,
+        "elapsed_ms": 0.047660400000000006,
+        "gets": 3.6616,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      },
+      {
+        "cursor": [
+          "g8tv8sq6urbbq",
+          "0"
+        ],
+        "plan": "3370002280",
+        "executions": 1200,
+        "elapsed_ms": 0.21556833333333333,
+        "gets": 11.735,
+        "io_ms": 2.335,
+        "concurrency_ms": 2.425,
+        "application_ms": 0.0,
+        "sql": "INSERT INTO ORDERS (USER_ID, DELIVERY_DATE, TOTAL_PRICE, RECIPIENT_NAME, SHIPPING_ADDRESS, SHIPPING_ZIPCODE) VALUES (:1 , :2 , :3 , :4 , :5 , :6 ) RETURNING ORDER_ID INTO :7"
+      },
+      {
+        "cursor": [
+          "gc0476mjrx469",
+          "0"
+        ],
+        "plan": "288282702",
+        "executions": 1200,
+        "elapsed_ms": 0.05349916666666667,
+        "gets": 5.0,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT PRODUCT_ID, DISCOUNT_PRICE FROM PRODUCT WHERE PRODUCT_ID IN ( :1 , :2 )"
+      }
+    ]
+  },
+  {
+    "run": "v2-repro-160-r2",
+    "target_tps": 160,
+    "vus_per_scenario": 256,
+    "actual_tps": 153.96666666666667,
+    "valid_response_tps": 152.56666666666666,
+    "completed_in_window": 18476,
+    "completed_after_window": 224,
+    "completed_per_scheduled_second_including_grace": 155.83333333333334,
+    "completed": {
+      "products": 13090,
+      "history": 2805,
+      "create": 935,
+      "login": 1870
+    },
+    "started": {
+      "products": 13090,
+      "history": 2805,
+      "login": 1870,
+      "create": 935
+    },
+    "started_without_completed_sample": 0,
+    "error_percent": 1.0641711229946524,
+    "dropped": 501,
+    "dropped_by_phase": {
+      "measured": 501
+    },
+    "errors_by_kind": {
+      "products": 2,
+      "history": 1,
+      "create": 0,
+      "login": 196
+    },
+    "stop_reasons": [
+      "mixed_p95_gt_500ms",
+      "errors_ge_1percent",
+      "dropped_iterations"
+    ],
+    "latency": {
+      "all": {
+        "n": 18700,
+        "mean": 240.1383492033691,
+        "p50": 1.8460714999999999,
+        "p95": 1716.9651087999985,
+        "p99": 5000.16801346,
+        "max": 5234.417567
+      },
+      "products": {
+        "n": 13090,
+        "mean": 185.30571311229966,
+        "p50": 1.726983,
+        "p95": 1528.3049075499985,
+        "p99": 2564.3279564000045,
+        "max": 5046.847673
+      },
+      "history": {
+        "n": 2805,
+        "mean": 185.26404392406423,
+        "p50": 1.889572,
+        "p95": 1506.457487799998,
+        "p99": 2472.49899824,
+        "max": 5000.621563
+      },
+      "create": {
+        "n": 935,
+        "mean": 191.05853913796798,
+        "p50": 4.226424,
+        "p95": 1472.0759715,
+        "p99": 2488.6103597399947,
+        "max": 3352.604772
+      },
+      "login": {
+        "n": 1870,
+        "mean": 730.8181647925134,
+        "p50": 64.718282,
+        "p95": 5001.08857245,
+        "p99": 5024.34150134,
+        "max": 5234.417567
+      }
+    },
+    "measured_start_utc": "2026-10-19T09:41:12.999254+00:00",
+    "pool_and_threads": {
+      "active": {
+        "n": 102,
+        "mean": 0.5294117647058824,
+        "p50": 0.0,
+        "p95": 1.0,
+        "p99": 2.989999999999995,
+        "max": 10
+      },
+      "awaiting": {
+        "n": 102,
+        "mean": 0.35294117647058826,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 36
+      },
+      "total": {
+        "n": 102,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0,
+        "p99": 10.0,
+        "max": 10
+      },
+      "http_runnable": {
+        "n": 102,
+        "mean": 4.892156862745098,
+        "p50": 3.0,
+        "p95": 5.949999999999989,
+        "p99": 56.619999999999806,
+        "max": 104
+      },
+      "bcrypt_runnable": {
+        "n": 102,
+        "mean": 2.2549019607843137,
+        "p50": 1.0,
+        "p95": 2.0,
+        "p99": 37.72999999999986,
+        "max": 90
+      }
+    },
+    "app_cpu_cores_jmx": 1.2920362891775552,
+    "http_cpu_cores_jmx": 1.1030002410465418,
+    "jmx_sample_interval_seconds": {
+      "n": 101,
+      "mean": 1.1811120297029702,
+      "p50": 1.009321,
+      "p95": 1.025835,
+      "p99": 6.09933,
+      "max": 8.439166
+    },
+    "bcrypt_fraction_of_runnable_http_stack_samples": 0.46092184368737477,
+    "docker_cpu_percent": {
+      "byh-loadtest-app-1": {
+        "n": 20,
+        "mean": 125.43149999999999,
+        "p50": 112.905,
+        "p95": 219.536,
+        "p99": 225.25119999999998,
+        "max": 226.68
+      },
+      "byh-perf-perfdb-1": {
+        "n": 20,
+        "mean": 19.8045,
+        "p50": 17.895,
+        "p95": 29.432500000000008,
+        "p99": 37.07049999999998,
+        "max": 38.98
+      },
+      "byh-k6-v2-repro-160-r2": {
+        "n": 20,
+        "mean": 15.632000000000001,
+        "p50": 14.045,
+        "p95": 21.864000000000004,
+        "p99": 26.484799999999993,
+        "max": 27.64
+      }
+    },
+    "cpu_quota_delta": {
+      "usage_usec": 156163851,
+      "user_usec": 140380928,
+      "system_usec": 15782924,
+      "nr_periods": 1184,
+      "nr_throttled": 234,
+      "throttled_usec": 29552280,
+      "observed_seconds": 114.053969,
+      "throttled_period_percent": 19.763513513513512
+    },
+    "docker_memory_mib": {
+      "byh-loadtest-app-1": {
+        "n": 20,
+        "mean": 590.3949999999999,
+        "p50": 588.9,
+        "p95": 595.65,
+        "p99": 614.65,
+        "max": 619.4
+      },
+      "byh-perf-perfdb-1": {
+        "n": 20,
+        "mean": 2555.6992,
+        "p50": 2556.416,
+        "p95": 2565.1711999999998,
+        "p99": 2565.94944,
+        "max": 2566.144
+      },
+      "byh-k6-v2-repro-160-r2": {
+        "n": 20,
+        "mean": 126.34000000000003,
+        "p50": 127.4,
+        "p95": 128.29500000000002,
+        "p99": 134.299,
+        "max": 135.8
+      }
+    },
+    "vm_and_host_cpu": null,
+    "oracle": {
+      "samples": 19,
+      "seconds": 106.476,
+      "system_non_idle_wait_delta_count_us": {
+        "Allocate CGA memory from OS": [
+          4,
+          31
+        ],
+        "Allocate PGA memory from OS": [
+          37,
+          551
+        ],
+        "Allocate UGA memory from OS": [
+          14515,
+          149298
+        ],
+        "Disk file operations I/O": [
+          19,
+          166
+        ],
+        "Free private memory to OS": [
+          7310,
+          271578
+        ],
+        "SQL*Net message to client": [
+          51335,
+          185442
+        ],
+        "buffer busy waits": [
+          1,
+          3
+        ],
+        "db file scattered read": [
+          7,
+          4434
+        ],
+        "db file sequential read": [
+          43,
+          16210
+        ],
+        "log file sync": [
+          838,
+          7414955
+        ],
+        "sequence cache replenishment": [
+          21,
+          145
+        ]
+      },
+      "system_time_delta_us": {
+        "DB time": 26412523,
+        "DB CPU": 19626773
+      },
+      "byh_load_active_session_samples": 4,
+      "byh_load_active_events": {
+        "ON_CPU_OR_RUNNABLE": 4
+      }
+    },
+    "sql_including_setup_warmup": [
+      {
+        "cursor": [
+          "1n4a2va1rxptz",
+          "0"
+        ],
+        "plan": "210329678",
+        "executions": 3525,
+        "elapsed_ms": 0.08045531914893617,
+        "gets": 3.693049645390071,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT COUNT(*) FROM ORDERS WHERE USER_ID = :1"
+      },
+      {
+        "cursor": [
+          "3tbr80mcz9gad",
+          "1"
+        ],
+        "plan": "3508126555",
+        "executions": 3489,
+        "elapsed_ms": 0.6167116652335912,
+        "gets": 57.68730295213528,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.009,
+        "application_ms": 0.0,
+        "sql": "SELECT o.ORDER_ID, o.ORDER_DATE, o.DELIVERY_DATE, o.TOTAL_PRICE, o.RECIPIENT_NAME, o.SHIPPING_ADDRESS, oi.ITEM_ID, oi.PRODUCT_ID, oi.QUANTITY, oi.PRICE, p.PRODUCT_NAME FROM ( SELECT ORDER_ID, ORDER_DATE, DELIVERY_DATE, TOTAL_PRICE, RECIPIENT_NAME, SHIPPING_ADDRESS FROM ORDERS WHERE USER_ID = :1 ORDER BY ORDER_DATE DESC, ORDER_ID DESC OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY ) o LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID ORDER BY o.ORDER_DATE DESC, o.ORDER_ID DESC"
+      },
+      {
+        "cursor": [
+          "3tbr80mcz9gad",
+          "2"
+        ],
+        "plan": "2322670658",
+        "executions": 36,
+        "elapsed_ms": 47.69061111111111,
+        "gets": 8465.611111111111,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT o.ORDER_ID, o.ORDER_DATE, o.DELIVERY_DATE, o.TOTAL_PRICE, o.RECIPIENT_NAME, o.SHIPPING_ADDRESS, oi.ITEM_ID, oi.PRODUCT_ID, oi.QUANTITY, oi.PRICE, p.PRODUCT_NAME FROM ( SELECT ORDER_ID, ORDER_DATE, DELIVERY_DATE, TOTAL_PRICE, RECIPIENT_NAME, SHIPPING_ADDRESS FROM ORDERS WHERE USER_ID = :1 ORDER BY ORDER_DATE DESC, ORDER_ID DESC OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY ) o LEFT JOIN ORDER_ITEMS oi ON oi.ORDER_ID = o.ORDER_ID LEFT JOIN PRODUCT p ON p.PRODUCT_ID = oi.PRODUCT_ID ORDER BY o.ORDER_DATE DESC, o.ORDER_ID DESC"
+      },
+      {
+        "cursor": [
+          "61ktzmkxwbc0q",
+          "0"
+        ],
+        "plan": "1334561136",
+        "executions": 14100,
+        "elapsed_ms": 0.7458952482269503,
+        "gets": 17.0,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT PRODUCT_ID, PRODUCT_NAME, REGULAR_PRICE, DISCOUNT_PRICE, MANUFACTURER FROM PRODUCT ORDER BY PRODUCT_ID OFFSET :1 ROWS FETCH NEXT :2 ROWS ONLY"
+      },
+      {
+        "cursor": [
+          "69srm4czkq898",
+          "0"
+        ],
+        "plan": "1334561136",
+        "executions": 2350,
+        "elapsed_ms": 0.8953774468085106,
+        "gets": 17.0,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT PRODUCT_ID, PRODUCT_NAME, REGULAR_PRICE, DISCOUNT_PRICE, MANUFACTURER FROM PRODUCT WHERE PRODUCT_NAME LIKE '%' || :1 || '%' ORDER BY PRODUCT_ID OFFSET :2 ROWS FETCH NEXT :3 ROWS ONLY"
+      },
+      {
+        "cursor": [
+          "8ux1sycjdv90y",
+          "0"
+        ],
+        "plan": "1279372316",
+        "executions": 2349,
+        "elapsed_ms": 0.2520855683269477,
+        "gets": 17.00723712217965,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT COUNT(*) FROM PRODUCT WHERE PRODUCT_NAME LIKE '%' || :1 || '%'"
+      },
+      {
+        "cursor": [
+          "b2x93083564g5",
+          "0"
+        ],
+        "plan": "3597435071",
+        "executions": 2350,
+        "elapsed_ms": 0.11429191489361702,
+        "gets": 13.193617021276596,
+        "io_ms": 0.355,
+        "concurrency_ms": 0.078,
+        "application_ms": 0.0,
+        "sql": "INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, PRICE) VALUES (:1 , :2 , :3 , :4 )"
+      },
+      {
+        "cursor": [
+          "dp30vgv8qdwqd",
+          "0"
+        ],
+        "plan": "3077335621",
+        "executions": 14099,
+        "elapsed_ms": 0.11051911483083907,
+        "gets": 10.000709270161005,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT COUNT(*) FROM PRODUCT"
+      },
+      {
+        "cursor": [
+          "g0ckkjt0nxt2c",
+          "0"
+        ],
+        "plan": "2793277868",
+        "executions": 2450,
+        "elapsed_ms": 0.04805102040816327,
+        "gets": 3.659183673469388,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT ID, PASSWORD_HASH, NAME FROM MEMBER WHERE ID = :1"
+      },
+      {
+        "cursor": [
+          "g8tv8sq6urbbq",
+          "0"
+        ],
+        "plan": "3370002280",
+        "executions": 1175,
+        "elapsed_ms": 0.35568,
+        "gets": 11.890212765957447,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.118,
+        "application_ms": 0.0,
+        "sql": "INSERT INTO ORDERS (USER_ID, DELIVERY_DATE, TOTAL_PRICE, RECIPIENT_NAME, SHIPPING_ADDRESS, SHIPPING_ZIPCODE) VALUES (:1 , :2 , :3 , :4 , :5 , :6 ) RETURNING ORDER_ID INTO :7"
+      },
+      {
+        "cursor": [
+          "gc0476mjrx469",
+          "0"
+        ],
+        "plan": "288282702",
+        "executions": 1175,
+        "elapsed_ms": 0.060170212765957444,
+        "gets": 5.0,
+        "io_ms": 0.0,
+        "concurrency_ms": 0.0,
+        "application_ms": 0.0,
+        "sql": "SELECT PRODUCT_ID, DISCOUNT_PRICE FROM PRODUCT WHERE PRODUCT_ID IN ( :1 , :2 )"
+      }
+    ]
+  }
+]

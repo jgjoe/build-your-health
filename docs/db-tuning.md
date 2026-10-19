@@ -151,3 +151,32 @@ Q3은 S1(`ORDER_ITEMS(ORDER_ID)`)만으로 같은 값이 나왔다. S1은 Q1의 
 후속 후보(이번 범위 밖, 측정하지 않음): Q1 heavy에 대해 행 수 제한 방식(바인드 대신 상수, `FIRST_ROWS(n)`, 키셋 페이지네이션)을 바꿨을 때의 계획 비교. 
 
 **적용**: S2b의 두 인덱스(`IX_ORDER_ITEMS_ORDER`, `IX_ORDERS_USER_DATE`)를 앱 스키마에 Flyway `V3__order_indexes.sql`로 반영했다. 단일 컬럼 `ORDERS(USER_ID)`는 건수 조회에서 조금 덜 읽었지만(heavy 29 vs 47) 복합 인덱스 하나로 두 조회를 모두 처리할 수 있어 추가하지 않았다. 측정 도구는 기준선 재현을 위해 V2까지만 마이그레이션한다.
+
+## 5. V3 후속 — heavy 첫 페이지 해결
+
+위 R2 결과는 당시 SQL 그대로의 역사적 기록이다. 이후 V3 비교 설계·모든 후보 결과는
+`docs/load-test-v3.md` 1절에 있다. 시드·S2b 인덱스·회원·5회 예열/30회 측정·2회차를 유지했다.
+
+상수 OFFSET/FETCH는 heavy의 ORDERS 전체 스캔과 8,113 gets를 바꾸지 못했다.
+FIRST_ROWS(10)은 ORDER_ITEMS까지 전체 스캔으로 악화했다(14,363 gets).
+정렬된 주문 선택 뷰 바깥에 바인드 ROWNUM 상한을 두면 COUNT STOPKEY와
+IX_ORDERS_USER_DATE 역순 범위 스캔이 생겼다. 실제 앱 첫 페이지에 이 형태를 적용했다.
+공통 정렬 SQL을 공유하고 이후 번호 페이지는 기존 OFFSET/FETCH를 유지한다.
+
+| 실제 앱 Q1 | V2 전 (2회 동일 gets) | V3 후 (2회 동일 gets) |
+|---|---:|---:|
+| heavy | 8,113 | **55** |
+| mid | 67 | 67 |
+| light | 47 | 47 |
+
+heavy 계획 해시 2322670658 → 1212016781. 실제 ORDERS 10행만 읽고,
+조인 뒤 23라인을 온전히 반환했다. Q2 gets 47/4/3, Q3 14는 그대로다.
+최종 앱 매퍼의 측정/ALLSTATS 해시는 일치했다.
+근거: `remake/perf/results/v3-orders-{r1,r2,final-r1,final-r2}/`.
+논리 읽기 감소는 99.32%지만 이 고정 시드의 첫 페이지 SQL 범위이며 HTTP·운영 용량 수치가 아니다.
+
+상수도 실패했으므로 "OFFSET/FETCH 바인드 미피킹이 유일한 원인"이라고 쓰지 않는다.
+관측으로 확인한 것은 WINDOW SORT PUSHED RANK 형태와 명시적 ROWNUM STOPKEY 형태의
+접근 경로/비용 계산 차이다. Oracle 내부 버그 여부는 확정하지 않았다.
+API 계약(번호 페이지·total·size 1~100·동률 정렬·회원 격리)과 전체 라인은 Oracle 테스트로 확인했다.
+깊은 페이지의 OFFSET 비용과 키셋 API 전환은 이번 첫 페이지 해결에 필요하지 않아 변경하지 않았다.

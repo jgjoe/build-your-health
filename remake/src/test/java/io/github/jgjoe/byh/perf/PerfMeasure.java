@@ -111,7 +111,7 @@ public final class PerfMeasure {
         return summaries;
     }
 
-    private static CaseSummary measureCase(Connection connection, MapperSql mapper, MeasureOptions options,
+    static CaseSummary measureCase(Connection connection, MapperSql mapper, MeasureOptions options,
             Scenario scenario, MeasuredQuery query, String tier, Map<String, Object> params,
             List<String> indexes, Path plansDir, BufferedWriter raw) throws SQLException, IOException {
         String tag = "R2 " + options.runId() + " " + scenario + " " + query + " " + tier;
@@ -200,7 +200,7 @@ public final class PerfMeasure {
         }
     }
 
-    private static void writeSummary(BufferedWriter summary, CaseSummary caseSummary) throws IOException {
+    static void writeSummary(BufferedWriter summary, CaseSummary caseSummary) throws IOException {
         summary.write(caseSummary.runId() + "," + caseSummary.scenario() + "," + caseSummary.query() + ","
                 + caseSummary.tier() + "," + caseSummary.sqlId() + "," + caseSummary.planHashValue() + ","
                 + caseSummary.allstatsPlanHashValue() + "," + caseSummary.childCount() + ","
@@ -212,7 +212,7 @@ public final class PerfMeasure {
         summary.flush();
     }
 
-    private static void writeEnvironment(Connection connection, MeasureOptions options, OffsetDateTime startedAt,
+    static void writeEnvironment(Connection connection, MeasureOptions options, OffsetDateTime startedAt,
             String q3User, long q3OrderId, Path file) throws SQLException, IOException {
         StringBuilder environment = new StringBuilder();
         append(environment, "run_id", options.runId());
@@ -283,7 +283,7 @@ public final class PerfMeasure {
     }
 
     /** The mid representative's newest order, resolved once for every scenario. */
-    private static long newestOrderId(Connection connection, String userId) throws SQLException {
+    static long newestOrderId(Connection connection, String userId) throws SQLException {
         try (PreparedStatement statement = connection.prepareStatement(
                 "SELECT ORDER_ID FROM ORDERS WHERE USER_ID = ?"
                         + " ORDER BY ORDER_DATE DESC, ORDER_ID DESC FETCH FIRST 1 ROWS ONLY")) {

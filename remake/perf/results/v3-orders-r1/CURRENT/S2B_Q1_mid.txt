@@ -1,0 +1,113 @@
+--- CHILD 0 TYPICAL +PEEKED_BINDS ---
+SQL_ID  amtb4dpgcs212, child number 0
+-------------------------------------
+/* R2 v3-orders-r1-CURRENT S2B Q1 mid */SELECT o.ORDER_ID,              
+  o.ORDER_DATE,                o.DELIVERY_DATE,                
+o.TOTAL_PRICE,                o.RECIPIENT_NAME,                
+o.SHIPPING_ADDRESS,                oi.ITEM_ID,                
+oi.PRODUCT_ID,                oi.QUANTITY,                oi.PRICE,     
+           p.PRODUCT_NAME         FROM (             SELECT ORDER_ID,   
+                 ORDER_DATE,                    DELIVERY_DATE,          
+          TOTAL_PRICE,                    RECIPIENT_NAME,               
+     SHIPPING_ADDRESS             FROM ORDERS             WHERE USER_ID 
+= :1 ORDER BY ORDER_DATE DESC, ORDER_ID DESC             OFFSET :2 ROWS 
+FETCH NEXT :3 ROWS ONLY         ) o         LEFT JOIN ORDER_ITEMS oi ON 
+oi.ORDER_ID = o.ORDER_ID         LEFT JOIN PRODUCT p ON p.PRODUCT_ID = 
+oi.PRODUCT_ID         ORDER BY o.ORDER_DATE DESC, o.ORDER_ID DESC
+ 
+Plan hash value: 3508126555
+ 
+---------------------------------------------------------------------------------------------------------------
+| Id  | Operation                              | Name                 | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT                       |                      |       |       |    81 (100)|          |
+|   1 |  SORT ORDER BY                         |                      |    45 |  6570 |    81   (2)| 00:00:01 |
+|*  2 |   HASH JOIN OUTER                      |                      |    45 |  6570 |    80   (0)| 00:00:01 |
+|   3 |    NESTED LOOPS OUTER                  |                      |    45 |  5355 |    73   (0)| 00:00:01 |
+|*  4 |     VIEW                               |                      |    18 |  1692 |    19   (0)| 00:00:01 |
+|*  5 |      WINDOW NOSORT STOPKEY             |                      |    18 |  1602 |    19   (0)| 00:00:01 |
+|*  6 |       FILTER                           |                      |       |       |            |          |
+|   7 |        TABLE ACCESS BY INDEX ROWID     | ORDERS               |    18 |  1602 |    19   (0)| 00:00:01 |
+|*  8 |         INDEX RANGE SCAN DESCENDING    | IX_ORDERS_USER_DATE  |    18 |       |     3   (0)| 00:00:01 |
+|   9 |     TABLE ACCESS BY INDEX ROWID BATCHED| ORDER_ITEMS          |     2 |    50 |     3   (0)| 00:00:01 |
+|* 10 |      INDEX RANGE SCAN                  | IX_ORDER_ITEMS_ORDER |     2 |       |     2   (0)| 00:00:01 |
+|  11 |    TABLE ACCESS FULL                   | PRODUCT              |  2001 | 54027 |     7   (0)| 00:00:01 |
+---------------------------------------------------------------------------------------------------------------
+ 
+Peeked Binds (identified by position):
+--------------------------------------
+ 
+   1 - :1 (VARCHAR2(30), CSID=873): 'u000021'
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+ 
+   2 - access("P"."PRODUCT_ID"="OI"."PRODUCT_ID")
+   4 - filter(("from$_subquery$_003"."rowlimit_$$_rownumber"<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)
+              +:3 AND "from$_subquery$_003"."rowlimit_$$_rownumber">:2))
+   5 - filter(ROW_NUMBER() OVER ( ORDER BY "ORDER_DATE" DESC ,"ORDER_ID" DESC 
+              )<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+   6 - filter(:2<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+   8 - access("USER_ID"=:1)
+  10 - access("OI"."ORDER_ID"="from$_subquery$_003"."ORDER_ID")
+ 
+Note
+-----
+   - this is an adaptive plan
+ 
+--- ALLSTATS LAST ---
+SQL_ID  amtb4dpgcs212, child number 1
+-------------------------------------
+/* R2 v3-orders-r1-CURRENT S2B Q1 mid */SELECT o.ORDER_ID,              
+  o.ORDER_DATE,                o.DELIVERY_DATE,                
+o.TOTAL_PRICE,                o.RECIPIENT_NAME,                
+o.SHIPPING_ADDRESS,                oi.ITEM_ID,                
+oi.PRODUCT_ID,                oi.QUANTITY,                oi.PRICE,     
+           p.PRODUCT_NAME         FROM (             SELECT ORDER_ID,   
+                 ORDER_DATE,                    DELIVERY_DATE,          
+          TOTAL_PRICE,                    RECIPIENT_NAME,               
+     SHIPPING_ADDRESS             FROM ORDERS             WHERE USER_ID 
+= :1 ORDER BY ORDER_DATE DESC, ORDER_ID DESC             OFFSET :2 ROWS 
+FETCH NEXT :3 ROWS ONLY         ) o         LEFT JOIN ORDER_ITEMS oi ON 
+oi.ORDER_ID = o.ORDER_ID         LEFT JOIN PRODUCT p ON p.PRODUCT_ID = 
+oi.PRODUCT_ID         ORDER BY o.ORDER_DATE DESC, o.ORDER_ID DESC
+ 
+Plan hash value: 3508126555
+ 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+| Id  | Operation                              | Name                 | Starts | E-Rows | A-Rows |   A-Time   | Buffers |  OMem |  1Mem | Used-Mem |
+----------------------------------------------------------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT                       |                      |      1 |        |     24 |00:00:00.01 |      67 |       |       |          |
+|   1 |  SORT ORDER BY                         |                      |      1 |     45 |     24 |00:00:00.01 |      67 |  6144 |  6144 | 6144  (0)|
+|*  2 |   HASH JOIN OUTER                      |                      |      1 |     45 |     24 |00:00:00.01 |      67 |   839K|   839K| 1289K (0)|
+|   3 |    NESTED LOOPS OUTER                  |                      |      1 |     45 |     24 |00:00:00.01 |      45 |       |       |          |
+|*  4 |     VIEW                               |                      |      1 |     18 |     10 |00:00:00.01 |      13 |       |       |          |
+|*  5 |      WINDOW NOSORT STOPKEY             |                      |      1 |     18 |     10 |00:00:00.01 |      13 | 73728 | 73728 |          |
+|*  6 |       FILTER                           |                      |      1 |        |     10 |00:00:00.01 |      13 |       |       |          |
+|   7 |        TABLE ACCESS BY INDEX ROWID     | ORDERS               |      1 |     18 |     10 |00:00:00.01 |      13 |       |       |          |
+|*  8 |         INDEX RANGE SCAN DESCENDING    | IX_ORDERS_USER_DATE  |      1 |     18 |     10 |00:00:00.01 |       3 |       |       |          |
+|   9 |     TABLE ACCESS BY INDEX ROWID BATCHED| ORDER_ITEMS          |     10 |      2 |     24 |00:00:00.01 |      32 |       |       |          |
+|* 10 |      INDEX RANGE SCAN                  | IX_ORDER_ITEMS_ORDER |     10 |      2 |     24 |00:00:00.01 |      22 |       |       |          |
+|  11 |    TABLE ACCESS FULL                   | PRODUCT              |      1 |   2001 |   2001 |00:00:00.01 |      22 |       |       |          |
+----------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+Peeked Binds (identified by position):
+--------------------------------------
+ 
+   1 - (VARCHAR2(30), CSID=873): 'u000021'
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+ 
+   2 - access("P"."PRODUCT_ID"="OI"."PRODUCT_ID")
+   4 - filter(("from$_subquery$_003"."rowlimit_$$_rownumber"<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3 AND 
+              "from$_subquery$_003"."rowlimit_$$_rownumber">:2))
+   5 - filter(ROW_NUMBER() OVER ( ORDER BY "ORDER_DATE" DESC ,"ORDER_ID" DESC )<=GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+   6 - filter(:2<GREATEST(FLOOR(TO_NUMBER(TO_CHAR(:2))),0)+:3)
+   8 - access("USER_ID"=:1)
+  10 - access("OI"."ORDER_ID"="from$_subquery$_003"."ORDER_ID")
+ 
+Note
+-----
+   - this is an adaptive plan
+ 

@@ -43,8 +43,10 @@ class MapperSqlTest {
     void m1_boundSqlHasNoMyBatisPlaceholdersAndTheExpectedBindCount() {
         String q1 = mapper.sql(MeasuredQuery.Q1, Map.of("userId", "u000001", "offset", 0, "size", 10));
         assertThat(q1).doesNotContain("#{");
-        assertThat(q1).contains("OFFSET ? ROWS FETCH NEXT ? ROWS ONLY");
-        assertThat(placeholders(q1)).isEqualTo(3);
+        assertThat(placeholders(q1)).isEqualTo(2);
+        String nextPage = mapper.sql(MeasuredQuery.Q1, Map.of("userId", "u000001", "offset", 10, "size", 10));
+        assertThat(nextPage).doesNotContain("#{");
+        assertThat(placeholders(nextPage)).isEqualTo(3);
 
         String q2 = mapper.sql(MeasuredQuery.Q2, Map.of("userId", "u000001"));
         assertThat(q2).doesNotContain("#{");
@@ -92,6 +94,27 @@ class MapperSqlTest {
             }
         }
         assertThat(List.copyOf(distinct)).containsExactlyElementsOf(expected);
+    }
+
+    @Test
+    void everyPaginationExperimentReturnsTheSameFirstPage() throws Exception {
+        for (Tier tier : CONFIG.tiers()) {
+            String userId = CONFIG.representative(tier.name());
+            List<Long> expected = newestOrderIds(schema.connection(), userId);
+            for (V3OrderVariant variant : V3OrderVariant.values()) {
+                LinkedHashSet<Long> actual = new LinkedHashSet<>();
+                try (PreparedStatement statement = mapper.withVariant(variant).prepare(schema.connection(),
+                        MeasuredQuery.Q1, Map.of("userId", userId, "offset", 0L, "size", 10),
+                        "V3 variants " + tier.name() + " " + variant);
+                        ResultSet rows = statement.executeQuery()) {
+                    while (rows.next()) {
+                        actual.add(rows.getLong("ORDER_ID"));
+                    }
+                }
+                assertThat(List.copyOf(actual)).as("%s/%s", tier.name(), variant)
+                        .containsExactlyElementsOf(expected);
+            }
+        }
     }
 
     @Test
